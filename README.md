@@ -17,4 +17,4 @@ curl https://install.meteor.com/ | sh
 meteor --settings settings.json
 
 ## Stop all
-kill -9 `ps ax | grep node | grep meteor | awk '{print $1}'`
+kill -9 \`ps ax | grep node | grep meteor | awk '{print $1}'\`
