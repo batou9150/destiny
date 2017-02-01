@@ -1,0 +1,34 @@
+table.group{
+	background-color:#ffffff;
+	color:#000000;
+	width:100%;
+	text-align:center;
+}
+
+table.group th{
+	font-size:20px;
+}
+
+table.group th, table.group td {
+	border:solid 1px black;
+}
+
+table.group td.isCompleted {
+	background-color:#ffc7ce;
+}
+
+table.group td.completed {
+	background-color:#c6efce;
+}
+
+table.group td.powerLevelMax, table.group td.levelMax {
+	background-color:#c6efce;
+}
+
+table.group td.powerLevelAssault, table.group td.levelAssault {
+	background-color:#ffeb9c;
+}
+
+table.group td.powerLevelOther, table.group td.levelOther {
+	background-color:#ffc7ce;
+}

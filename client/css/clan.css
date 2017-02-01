@@ -1,0 +1,3890 @@
+body.Clans {
+    padding-top: 55px;
+}
+
+    body.Clans #content {
+        background: none repeat scroll 0 0 #fff;
+        width: auto !important;
+    }
+
+    body.Clans #mainContent {
+        font-family: 'Roboto', Arial, sans-serif;
+    }
+
+        body.Clans #mainContent h1,
+        body.Clans #mainContent h2,
+        body.Clans #mainContent h3,
+        body.Clans #mainContent h4,
+        body.Clans #mainContent h5 {
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+.Clans.Index #mainContent {
+    background: none transparent;
+}
+
+.Clans.Welcome #mainContent {
+    background: url('/img/theme/destiny/bgs/bg_welcomeNoClan.png') center top no-repeat #151619;
+    background-size: 100% auto;
+}
+
+.Clans.Welcome .Sub_Nav {
+    display: none;
+}
+
+.Clans.Forum {
+    min-width: 1321px;
+}
+
+.settingsTips {
+    background: none repeat scroll 0 0 #1A1E24;
+    border-top: 4px solid #479CE4;
+    box-shadow: 0 9px 35px rgba(0, 0, 0, 0.75);
+    color: #FFFFFF;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    max-width: 200px;
+    padding: 10px;
+}
+
+#sidebar .select {
+}
+
+    #sidebar .select label {
+        background: #5e656b;
+        color: #eef2f6;
+    }
+
+        #sidebar .select label:after {
+            background: url("https://www.bungie.net/img/theme/destiny/icons/icon_selectArrow.png") no-repeat #5e656b center center;
+        }
+
+    #sidebar .select.opened label:after {
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_selectArrow_opened.png") no-repeat scroll center center #EEF2F6;
+    }
+
+    #sidebar .select .options {
+        background: none repeat scroll 0 0 #EEF2F6;
+        color: #000000;
+    }
+
+    #sidebar .select .option {
+        border-top: 1px solid #484f54;
+    }
+
+        #sidebar .select .option a {
+            color: #000;
+        }
+
+#container_ClanContent .select {
+    border: 1px solid #c4c7cb;
+}
+
+    #container_ClanContent .select.opened {
+        border-bottom: 0;
+        margin-bottom: 19px;
+    }
+
+    #container_ClanContent .select label {
+        background: #fff;
+        color: #666;
+        line-height: 41px;
+        height: 41px;
+    }
+
+        #container_ClanContent .select label:after {
+            background: url("https://www.bungie.net/img/theme/destiny/icons/icon_select.png") no-repeat center center;
+            line-height: 41px;
+            height: 41px;
+        }
+
+    #container_ClanContent .select.opened label:after {
+    }
+
+    #container_ClanContent .select .options {
+        background: none repeat scroll 0 0 #fff;
+        color: #666;
+        border: 1px solid #c4c7cb;
+        border-top: 0;
+        left: -1px;
+    }
+
+    #container_ClanContent .select .option {
+        border-top: 1px solid #484f54;
+    }
+
+        #container_ClanContent .select .option a {
+            color: #666;
+            white-space: nowrap;
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*.container_addTag
+{
+}
+    .container_addTag .container_tags
+    {
+    }
+    .container_addTag .container_textbox
+    {
+        min-height: 35px;
+    }
+    .container_addTag .tag
+    {
+		background:#606569;
+		border-radius:5px;
+		cursor: pointer;
+		font-size:12px;
+		float:left;
+		line-height:22px;
+		color:#fff;
+		margin-right:5px;
+		padding:0 5px;
+    }
+        .container_addTag .tag:before
+        {
+			position: relative;
+			top: 1px;
+            content:"-";
+            margin-right:5px;
+            font-size:20px;
+			line-height: 10px;
+        }
+    .container_addTag .btn_addTag
+    {
+        border: 1px solid #0096DB;
+        border-radius: 22px;
+        color: #0096DB;
+        display: inline-block;
+        font-weight: 700;
+        height: 22px;
+        line-height: 21px;
+        margin: 0;
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        top: 10px;
+        width: 22px;
+        cursor:pointer;
+    }*/
+
+.container_addTag .btn_addTag {
+    border: 1px solid #0096DB;
+    border-radius: 22px;
+    color: #0096DB;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Roboto',Arial,sans-serif;
+    height: 22px;
+    line-height: 21px;
+    margin: 0;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    top: 10px;
+    width: 22px;
+}
+
+.container_addTag .tag:before {
+    content: "-";
+    font-size: 20px;
+    margin-right: 5px;
+}
+
+.container_addTag .tag {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 18px;
+    margin-right: 15px;
+    -ms-word-wrap: break-word;
+    word-wrap: break-word;
+}
+
+
+
+
+#ClanCreate .container_addTag {
+    float: left;
+}
+
+    #ClanCreate .container_addTag .container_tags {
+        padding: 0;
+        width: 384px;
+        margin: 16px 0 0 16px;
+    }
+
+
+#AdvancedSearch_Tags.container_addTag {
+}
+
+#AdvancedSearch_Tags .container_tags {
+    margin: 9px;
+}
+
+#AdvancedSearch_Tags .tag {
+    color: #eef2f6;
+}
+
+#AdvancedSearch_Tags .btn_addTag {
+    border: 1px solid #000000;
+    color: #000000;
+}
+
+#groupHeader .container_addTag {
+}
+
+    #groupHeader .container_addTag .list_clantags {
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 20px;
+        margin-top: 0;
+    }
+
+    #groupHeader .container_addTag .container_textbox {
+        background: none repeat scroll 0 0 #FFFFFF;
+        line-height: 23px;
+        min-height: 0;
+        display: none;
+        vertical-align: middle;
+    }
+
+#groupHeader.isEditing .container_addTag .container_textbox {
+    display: inline-block;
+}
+
+#groupHeader .btn_addTag {
+    border-radius: 15px;
+    font-size: 13px;
+    height: 15px;
+    line-height: 13px;
+    top: 5px;
+    width: 15px;
+}
+
+
+#CreatePost_Tags .tag {
+    max-width: 152px;
+    min-height: 39px;
+}
+
+
+
+.panel_tagSuggestions {
+    background: #fff;
+    font-size: 12px;
+    border: 1px solid #c3c7cb;
+    border-top: 0;
+    padding: 0 8px;
+    position: absolute;
+    top: auto;
+    left: 0;
+    display: block;
+	z-index:2;
+}
+
+    .panel_tagSuggestions:empty {
+        display: none;
+    }
+
+    .panel_tagSuggestions:hover {
+        cursor: pointer;
+    }
+
+#ClanCreate .panel_tagSuggestions {
+    width: 173px;
+    left: -1px;
+}
+
+#AdvancedSearch_Tags .panel_tagSuggestions {
+    width: 185px;
+    left: 0;
+}
+
+
+
+.container_clanSettingsToggle {
+    overflow: hidden;
+    display: inline-block;
+    border: #a0a0a0 1px solid;
+    border-radius: 2px;
+}
+
+    .container_clanSettingsToggle input {
+        position: absolute;
+        left: -9999px;
+    }
+
+    .container_clanSettingsToggle label {
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .container_clanSettingsToggle span {
+        background: #fff;
+        color: #666;
+        line-height: 40px;
+        padding: 0 17px;
+        float: left;
+    }
+
+    .container_clanSettingsToggle label span.off,
+    .container_clanSettingsToggle input:checked + label span.on {
+        background: #4996d7;
+        color: #f5f5f5;
+    }
+
+    .container_clanSettingsToggle input:checked + label span.off {
+        background: #fff;
+        color: #666;
+    }
+
+.JS {
+    display: block !important;
+}
+
+.Clans {
+    background-size: cover;
+}
+
+    .Clans.Clan {
+        background: none #fff;
+    }
+
+    .Clans.Create {
+        background: url("https://www.bungie.net/img/theme/bungienet/bgs/bg_body_sword.gif");
+    }
+
+    .Clans .btn_blue,
+    .Clans .btn_red,
+    .Clans .btn_gray {
+        line-height: 41px;
+        height: 41px;
+        border: 0;
+        padding: 0 15px;
+        box-shadow: none;
+    }
+
+.clanTip {
+    float: none;
+    margin: 0;
+    right: 249px;
+    z-index: 10;
+}
+
+
+#groupHeader [contenteditable="true"], #groupHeader .container_textarea {
+    background: none repeat scroll 0 0 #E1E1E1;
+    border: 5px solid #E1E1E1;
+    color: #333333 !important;
+}
+
+#groupHeader .container_textarea,
+#groupHeader.isEditing #p_aboutClan {
+    display: none;
+}
+
+#groupHeader.isEditing .container_textarea,
+#groupHeader #p_aboutClan {
+    display: block;
+}
+
+#groupHeader .with_BBcode {
+    padding-top: 30px;
+}
+
+#groupHeader #groupName {
+    -moz-transition: color 800ms linear, min-width 200ms linear;
+    -o-transition: color 800ms linear, min-width 200ms linear;
+    -webkit-transition: color 800ms linear, min-width 200ms linear;
+    transition: color 800ms linear, min-width 200ms linear;
+    min-width: 0;
+}
+
+    #groupHeader #groupName[contenteditable="true"] {
+        min-width: 500px;
+        margin-bottom: 5px;
+        margin-top: -5px;
+    }
+
+    #groupHeader #groupName[contenteditable="true"],
+    #groupHeader .motto [contenteditable="true"] {
+        border-bottom: 0 none;
+        border-top: 0 none;
+        cursor: text;
+    }
+
+#groupHeader .empty [contenteditable="true"] {
+    display: inline-block;
+    min-width: 500px;
+    line-height: 37px;
+    height: 37px;
+}
+
+#groupHeader .empty span[contenteditable="true"]:before:focus {
+    display: none;
+}
+
+#groupHeader .characteristic .handle {
+    display: none;
+}
+
+#groupHeader.isEditing .characteristic .handle {
+    display: block;
+}
+
+
+#groupHeader.isEditing .characteristic .handle {
+    width: 12px;
+    height: 15px;
+    position: absolute;
+    top: -4px;
+}
+
+    #groupHeader.isEditing .characteristic .handle:before {
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_range_handle.png") no-repeat;
+        width: 12px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: -6px;
+        content: "";
+        display: block;
+    }
+
+#groupHeader #Tags_Clan {
+}
+
+#groupHeader.isEditing .tag {
+    cursor: pointer;
+}
+
+#groupHeader .tag:before {
+    display: none;
+}
+
+#groupHeader.isEditing .tag:before {
+    content: "-";
+    display: inline;
+    font-size: 20px;
+    line-height: 20px;
+    margin-right: 5px;
+    vertical-align: text-bottom;
+}
+
+
+#p_aboutClan {
+}
+
+    #p_aboutClan a {
+        color: #0096DB;
+    }
+
+    #p_aboutClan strong {
+        font-weight: bold;
+    }
+
+    #p_aboutClan .spoiler {
+        background: none repeat scroll 0 0 #EEEEEE;
+        border-color: #AAAAAA;
+        -moz-border-image: none;
+        -o-border-image: none;
+        -webkit-border-image: none;
+        border-image: none;
+        border-style: solid;
+        border-width: 1px 1px 1px 2px;
+        color: #EEEEEE;
+        cursor: default;
+        font-size: 11px;
+        margin: 7px;
+        overflow: hidden;
+        padding: 3px 7px;
+        position: relative;
+        width: 413px;
+    }
+
+        #p_aboutClan .spoiler a, #p_aboutClan .spoiler blockquote {
+            color: #eee;
+        }
+
+        #p_aboutClan .spoiler:after {
+            background: none repeat scroll 0 0 #DDDDDD;
+            color: #000000;
+            content: "Spoiler Alert - Click at your own risk";
+            cursor: pointer;
+            display: block;
+            left: 0;
+            padding: 3px 7px;
+            position: absolute;
+            top: 0;
+            width: 413px;
+        }
+
+        #p_aboutClan .spoiler.opened {
+            background: none repeat scroll 0 0 #AAAAAA;
+            border-color: #888888;
+            color: #000000;
+            height: auto;
+        }
+
+            #p_aboutClan .spoiler.opened blockquote {
+                color: #505050;
+            }
+
+            #p_aboutClan .spoiler.opened a {
+                color: #ffffff;
+            }
+
+                #p_aboutClan .spoiler.opened a:hover {
+                    color: #ffffff;
+                }
+
+            #p_aboutClan .spoiler.opened:after {
+                display: none;
+            }
+
+    #p_aboutClan blockquote {
+        -moz-border-bottom-colors: none;
+        -moz-border-left-colors: none;
+        -moz-border-right-colors: none;
+        -moz-border-top-colors: none;
+        border-color: #DDDDDD #DDDDDD #DDDDDD #0096DB;
+        -moz-border-image: none;
+        -o-border-image: none;
+        -webkit-border-image: none;
+        border-image: none;
+        border-style: solid;
+        border-width: 1px;
+        font-size: 12px;
+        margin: 7px;
+        padding: 3px 7px;
+        position: relative;
+        width: 413px;
+    }
+
+        #p_aboutClan blockquote blockquote {
+            width: auto;
+            overflow: hidden;
+        }
+
+    #p_aboutClan .spoiler blockquote {
+        border: 0 none;
+        margin: 0;
+        min-height: 0;
+        padding: 0;
+    }
+
+    #p_aboutClan .spoiler.opened blockquote {
+        border: 0 none;
+        margin: 5px 0px 5px 15px;
+        min-height: 22px;
+        padding: 3px 9px;
+        width: auto;
+        border-left: 3px solid #0096db;
+    }
+
+
+
+
+
+
+
+
+.header_clan {
+    padding: 0 15px;
+    position: relative;
+}
+
+    .header_clan p {
+        font-size: 12px;
+        line-height: 52px;
+        color: #fff;
+        position: relative;
+    }
+
+    .header_clan .title {
+        width: 100%;
+        font-size: 16px;
+        color: #323232;
+        font-weight: 400;
+    }
+
+.header_groupIndex {
+    background: url("https://www.bungie.net/img/theme/destiny/headers/groups_header.jpg") no-repeat 0 0 rgba(0, 0, 0, 0);
+    background-size: cover;
+    height: 419px;
+    text-align: center;
+}
+
+    .header_groupIndex .groupHeaderContent {
+        width: calc(100% - 250px);
+        padding-top: 60px;
+    }
+
+.compact .header_groupIndex .groupHeaderContent,
+.NoSidebar .header_groupIndex .groupHeaderContent {
+    width: 100%;
+}
+
+.header_groupIndex h1 {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_groups2.png") no-repeat scroll center 13px rgba(0, 0, 0, 0);
+    color: #FFFFFF;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 28px;
+    font-weight: 200;
+    margin-bottom: 5px;
+    padding-top: 136px;
+}
+
+.header_groupIndex p {
+    font-weight: 400;
+    font-size: 14px;
+    color: #fff;
+}
+
+
+
+.header_groupIndex .filterBarContainer {
+    margin-top: 22px;
+}
+
+.header_groupIndex .searchForClans {
+    display: inline-block;
+    margin-right: 12px;
+    width: 210px;
+    line-height: 30px;
+}
+
+.header_groupIndex .filterBar select {
+    padding-right: 24px;
+}
+
+
+
+
+
+
+#About_Clan #clanStyles {
+    border-bottom: 0;
+}
+
+    #About_Clan #clanStyles h4 {
+        border-bottom: 0;
+    }
+
+#clanStyles .characteristics {
+}
+
+    #clanStyles .characteristics h5 {
+        float: left;
+        color: #fff;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 30px;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    #clanStyles .characteristics li {
+        color: #242c35;
+        font-size: 12px;
+        padding: 0;
+        clear: both;
+        position: relative;
+        padding-left: 100px;
+        width: 384px;
+    }
+
+    #clanStyles .characteristics .container_bar {
+        height: 5px;
+        width: 100%;
+        position: relative;
+        background: rgba(0,0,0,.2);
+        border: 1px solid #000;
+    }
+
+    #clanStyles .characteristics .bar {
+        background: none repeat scroll 0 0 #0096db;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
+    #clanStyles .characteristics .labels {
+        text-align: right;
+        padding: 0 5px 0 0;
+        line-height: 22px;
+        font-size: 12px;
+        font-weight: 400;
+        color: #a8afb2;
+        margin-bottom: 2px;
+    }
+
+        #clanStyles .characteristics .labels span:first-child {
+            float: left;
+        }
+
+
+
+
+
+
+#list_groups {
+    padding: 0 0 100px 0;
+}
+
+.compact #list_groups {
+}
+
+#list_groups > li {
+    clear: both;
+}
+
+.list_suggestedGroups {
+    border-top: rgba(195,199,203, .5) 1px solid;
+    box-shadow: 0 1px 0 0 #fff inset;
+}
+
+    .list_suggestedGroups .title {
+        display: inline;
+    }
+
+    .list_suggestedGroups .header_clan .container_checkbox {
+        float: right;
+        line-height: 52px;
+    }
+
+
+
+#SidebarClanCreateSidebar h3 {
+    display: none;
+}
+
+
+
+#CreateGroupPanel {
+    position: absolute;
+    width: 100%;
+    display: none;
+}
+
+#ClanCreate .btn_cancelClanCreation {
+    background: #999;
+    color: #fff;
+    box-shadow: none;
+}
+
+.createState #CreateGroupPanel {
+    z-index: 2;
+    position: relative;
+    display: block;
+}
+
+#GroupSearchPanel {
+    flex-grow: 1;
+    position: relative;
+}
+
+    #GroupSearchPanel .loadingOverlaySpinner {
+        top: 103px !important;
+    }
+
+.createState #GroupSearchPanel {
+    display: none;
+}
+
+
+#SidebarClanCreate {
+    display: none;
+}
+
+.createState #SidebarClanCreate {
+    display: block;
+}
+
+
+
+.groupHeaderContent .btn_goCreateClan {
+  
+    margin: 11px 0 0;
+}
+
+    
+
+
+
+
+.GroupSettingsForm {
+}
+
+    .GroupSettingsForm .section {
+        border-top: 1px solid #c3c7cb;
+        float: left;
+        margin-bottom: 15px;
+        width: 100%;
+    }
+
+#ClanCreate.GroupSettingsForm .section {
+    padding: 0 17px;
+    width: auto;
+    float: none;
+}
+
+.GroupSettingsForm h4 {
+    color: #333;
+    font-weight: 500;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 49px;
+}
+
+.GroupSettingsForm label {
+    font-size: 12px;
+}
+
+.GroupSettingsForm .container_textbox,
+.GroupSettingsForm .container_select,
+.GroupSettingsForm .container_textarea {
+    margin-top: 2px;
+    margin-right: 2px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #c3c7cb;
+}
+
+.GroupSettingsForm .container_textbox {
+    height: 40px;
+    line-height: 40px;
+    width: 300px;
+}
+
+.GroupSettingsForm .container_textarea {
+    width: 600px;
+}
+
+.GroupSettingsForm textarea {
+    resize: none;
+}
+
+.GroupSettingsForm .container_select {
+    float: left;
+}
+
+    .GroupSettingsForm .container_select select {
+        padding: 5px;
+    }
+
+    .GroupSettingsForm .container_select select,
+    .GroupSettingsForm .container_select option {
+        border: 0;
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .GroupSettingsForm .container_select + div {
+        clear: both;
+    }
+
+.GroupSettingsForm .container_form .container_checkbox {
+    margin-bottom: 5px;
+    padding: 5px 0;
+}
+
+.GroupSettingsForm .container_checkbox label {
+    font-size: 14px;
+}
+
+
+
+.GroupSettingsForm .container_textbox .error,
+.GroupSettingsForm .container_textarea .error {
+    background: none repeat scroll 0 0 #ffffff;
+    border-top: 4px solid #ff0000;
+    box-shadow: 0 9px 35px rgba(0, 0, 0, 0.75);
+    color: #ffffff;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    left: 0;
+    line-height: 20px;
+    min-width: 96%;
+    padding: 0 2%;
+    position: absolute;
+    white-space: nowrap;
+    width: auto;
+}
+
+.GroupSettingsForm .container_textbox .error {
+    top: -40%;
+}
+
+.GroupSettingsForm .container_textarea .error {
+    top: 0;
+}
+
+.GroupSettingsForm .container_textbox .helper {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_textbox.png") no-repeat right center;
+    float: right;
+    height: 100%;
+    display: inline-block;
+    color: #c9c9c9;
+    font-size: 14px;
+    padding-right: 26px;
+    position: absolute;
+    right: 5px;
+    top: 0;
+    height: 100%;
+    min-width: 20px;
+}
+
+    .GroupSettingsForm .container_textbox .helper:empty {
+        padding-right: 0;
+    }
+
+.GroupSettingsForm .actions {
+    padding: 17px;
+}
+
+#AdminPages.GroupSettingsForm .actions .btn_blue,
+#AdminPages.GroupSettingsForm .actions .btn_gray {
+    color: #fff;
+    line-height: 41px;
+    font-family: 'Roboto',arial,sans-serif;
+    margin-left: 0;
+}
+
+#AdminPages.GroupSettingsForm .container_textbox_clanId {
+    margin-top: 17px;
+}
+
+
+.GroupSettingsForm .container_textbox_clanName {
+    margin-bottom: 10px;
+}
+
+.GroupSettingsForm .container_select_privacy {
+    margin: 5px 0;
+}
+
+.GroupSettingsForm .select_clanLanguage {
+    border: 1px solid #c3c7cb;
+    float: left;
+}
+
+.ClanCreate {
+    padding-left: 17px;
+    padding-top: 17px;
+    padding-bottom: 17px;
+}
+
+
+    .ClanCreate .container_textbox_clanTag {
+        width: 173px;
+        float: none;
+    }
+
+
+.GroupSettingsForm .container_textarea_missionStatement {
+    height: 125px;
+}
+
+#textarea_missionStatement {
+    height: 100%;
+}
+
+
+
+/*.container_textbox_clanTag{}
+        .container_textbox_clanTag .helper.btn_addTag
+        {
+            background:url("https://www.bungie.net/img/theme/destiny/icons/icon_addTag.png") no-repeat center center;
+            width:21px;
+        }
+        .container_textbox_clanTag .panel_tagSuggestions
+        {
+            width:173px;
+            left:-1px;
+        }
+    .list_clanTags{
+        width:190px;
+        float:left;            
+    }
+        .list_clanTags li
+        {
+            background-image: url("https://www.bungie.net/img/theme/destiny/icons/icon_removeTag.png");
+            background-position: 11px 10px;
+            background-repeat: no-repeat;
+            color: #16171A;
+            display: inline-block;
+            font-size: 12px;
+            line-height: 18px;
+            max-width: 152px;
+            min-height: 36px;
+            padding-left: 35px;
+            padding-top: 10px;
+            word-wrap: break-word;
+        }
+            .list_clanTags li:hover
+            {
+                cursor:pointer;
+                background-image:url("https://www.bungie.net/img/theme/destiny/icons/icon_removeTag_hover.png");
+            }*/
+
+.ClanCreate .container_playStyle {
+    border: 1px solid #c3c7cb;
+    width: 513px;
+    padding: 21px 17px;
+    background: #fff;
+    color: #7f7f7f;
+    margin-top: 17px;
+}
+
+.container_playStyle.active * {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ClanCreate .container_playStyle:first-child {
+    margin-top: 0;
+}
+
+.container_playStyle h5 {
+    font-size: 14px;
+}
+
+.container_playStyle .container_bar {
+    height: 5px;
+    width: 100%;
+    position: relative;
+    background: #c0c6ce;
+}
+
+.container_playStyle .bar {
+    background: none repeat scroll 0 0 #0096DB;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.container_playStyle .labels {
+    text-align: right;
+    padding: 0 5px;
+    line-height: 22px;
+    font-size: 12px;
+}
+
+    .container_playStyle .labels :first-child {
+        float: left;
+    }
+
+.container_playStyle .handle {
+    width: 12px;
+    height: 15px;
+    position: absolute;
+    top: -4px;
+}
+
+    .container_playStyle .handle:before {
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_range_handle.png") no-repeat;
+        width: 12px;
+        height: 15px;
+        position: absolute;
+        top: 0;
+        left: -6px;
+        content: "";
+        display: block;
+    }
+
+.container_playStyle .right {
+    left: 100%;
+}
+
+.container_playStyle .left {
+    left: 0%;
+}
+
+
+#SidebarClanCreate h3 {
+    display: none;
+}
+
+#sidebar #SidebarClanDetail {
+}
+
+    #sidebar #SidebarClanDetail .tab {
+        width: 25%;
+    }
+
+        #sidebar #SidebarClanDetail .tab > .trigger {
+        }
+
+body.compact #sidebar.opened .panel.on .tab.current > .trigger, body.ClosedSidebar #sidebar.opened .panel.on .tab.current > .trigger {
+    height: 49px;
+    left: 0;
+    top: 0;
+}
+
+#SidebarClanDetail .btn_loadMore,
+#SidebarClanSearch .btn_loadMore {
+    display: none;
+    width: 100%;
+    text-align: center;
+    line-height: 30px;
+    font-weight: 500;
+    font-size: 14px;
+    background: none repeat scroll 0 0 #479CE4;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+
+#SidebarClanDetail .open .btn_loadMore,
+#SidebarClanSearch .btn_loadMore {
+    display: block;
+}
+
+.activitySection {
+}
+
+    .activitySection li {
+        border-top: 1px solid #393D48;
+        padding: 11px;
+        clear: both;
+        display: block;
+        position: relative;
+        color: #B7BEC1;
+    }
+
+    .activitySection .content {
+        color: #B7BEC1;
+        font-size: 14px;
+    }
+
+        .activitySection .content .summary {
+            white-space: nowrap;
+            overflow: hidden;
+            -ms-text-overflow: ellipsis;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+        }
+
+        .activitySection .content a {
+            color: #B7BEC1;
+            font-size: 14px;
+        }
+
+
+.membersSection {
+    padding-top: 9px;
+}
+
+    .membersSection .container_textbox {
+        background: #fff;
+        color: #151619;
+        font-weight: 500;
+        margin: 0 9px 9px;
+        clear: both;
+    }
+
+    .membersSection li {
+    }
+
+    .membersSection li {
+        border-top: 1px solid #393D48;
+        padding: 11px;
+        clear: both;
+        display: block;
+        position: relative;
+    }
+
+        .membersSection li > .avatar {
+            width: 40px;
+            height: 40px;
+            margin-right: 11px;
+            float: left;
+        }
+
+        .membersSection li > .content {
+            color: #B7BEC1;
+            float: left;
+            font-size: 14px;
+            width: 146px;
+        }
+
+            .membersSection li > .content p {
+                white-space: nowrap;
+                overflow: hidden;
+                -ms-text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+            }
+
+            .membersSection li > .content a {
+                color: #aeb7bc;
+                font-size: 14px;
+            }
+
+
+#SidebarClanSearchOptions {
+}
+
+.tab_search .container_textbox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    clear: both;
+    color: #151619;
+    font-weight: 500;
+    height: 35px;
+    line-height: 35px;
+    margin: 0 9px 9px;
+}
+
+.tab_search .btn_advanceOptions {
+    background: #393d48;
+    display: block;
+    line-height: 36px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #b7bec1;
+    margin-bottom: 1px;
+}
+
+    .tab_search .btn_advanceOptions:before {
+        border: 2px solid #70747d;
+        border-radius: 18px 18px 18px 18px;
+        content: "";
+        display: inline-block;
+        height: 18px;
+        margin: 0 8px;
+        position: relative;
+        top: -2px;
+        vertical-align: middle;
+        width: 18px;
+    }
+
+    .tab_search .btn_advanceOptions.on:before {
+        background-color: #eef2f6;
+        box-shadow: 0 0 0 6px #393D48 inset;
+    }
+
+.tab_search .btn_searchGroups {
+    display: block;
+    line-height: 36px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #fff;
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_search.png") no-repeat scroll 10px center rgb(71, 156, 228);
+    padding-left: 38px;
+}
+
+.tab_search #AdvancedSearchOptions > ul {
+    display: none;
+}
+
+#AdvancedSearch_ClanAttributes .attribute,
+#AdvancedSearch_ClanAttributes .styles,
+#AdvancedSearch_ClanAttributes .activities {
+    background: #1c2129;
+    margin: 9px;
+}
+
+#AdvancedSearch_ClanAttributes {
+}
+
+#AdvancedSearch_ClanStyles {
+}
+
+    #AdvancedSearch_ClanStyles .style {
+        margin-top: 3px;
+    }
+
+        #AdvancedSearch_ClanStyles .style:first-child {
+            margin-top: 0;
+        }
+
+#AdvancedSearch_PreferredActivity {
+}
+/*#AdvancedSearch_Tags{}
+    #AdvancedSearch_Tags .container_tags
+    {
+        margin:9px;
+    }
+    #AdvancedSearch_Tags .tag
+    {
+        color:#eef2f6;
+        font-size:12px;
+        font-weight: 500;
+        display: inline-block;
+        font-size: 12px;
+        line-height: 18px;
+        word-wrap: break-word;
+        margin-right:15px;
+    }
+    #AdvancedSearch_Tags .tag:before
+    {
+        content:"-";
+        margin-right:5px;
+        font-size:20px;
+    }
+        #AdvancedSearch_Tags .tag:hover
+        {
+            cursor:pointer;
+        }
+    #AdvancedSearch_Tags .container_text
+    {
+        height:39px;
+    }
+    #AdvancedSearch_Tags .btn_addTag
+    {
+        border: 1px solid #000000;
+        border-radius: 22px 22px 22px 22px;
+        color: #000000;
+        display: inline-block;
+        height: 22px;
+        line-height: 22px;
+        margin: 0;
+        position: absolute;
+        right: 10px;
+        text-align: center;
+        top: 10px;
+        width: 22px;
+    }
+    .container_textbox_advancedSearch .panel_tagSuggestions
+    {
+        width:185px;
+        left:0;
+    }*/
+.btn_returnToSearch {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_backArrow.png") no-repeat scroll 8px center #16181C;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 36px;
+    padding-left: 24px;
+}
+
+.btn_returnToActivity {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_backArrow.png") no-repeat scroll 8px center #474e59;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 36px;
+    padding-left: 24px;
+}
+
+.btn_gotoRequests {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_forwardArrow.png") no-repeat scroll right center #16181C;
+    color: #FFFFFF;
+    display: block;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 36px;
+    padding: 0 11px;
+    border-right: 11px solid #16181C;
+}
+
+#SidebarClanPendingMembers {
+    position: absolute;
+    top: 0;
+}
+
+
+
+
+#sort_list_clanSearchResults {
+    border: 1px solid #7B869A;
+    border-radius: 5px 5px 5px 5px;
+    display: table;
+    margin: 9px;
+    overflow: hidden;
+    table-layout: fixed;
+    width: 230px;
+}
+
+    #sort_list_clanSearchResults li {
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+        border: 1px solid #7b869a;
+    }
+
+    #sort_list_clanSearchResults a {
+        color: #eef2f6;
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 23px;
+        display: block;
+        height: 23px;
+    }
+
+    #sort_list_clanSearchResults .on {
+        background: #7b869a;
+    }
+
+.tabSections {
+    background: rgb(21, 22, 25);
+}
+
+/* everything in the sidebar to do with search*/
+.tab_search {
+}
+
+    .tab_search .section {
+        display: none;
+    }
+
+    .tab_search .current {
+        display: block;
+    }
+    /* top with the search textfield */
+    .tab_search .searchSection {
+        padding-top: 9px;
+    }
+
+    /* advanced search section */
+    .tab_search .advancedsearchSection {
+    }
+
+    /* search results */
+    .tab_search .resultsSection {
+    }
+
+#list_clanSearchResults {
+    border-bottom: 1px solid #393D48;
+}
+
+.list_groupInSidebar li {
+    border-top: 1px solid #393D48;
+    padding: 11px;
+    clear: both;
+    display: block;
+    position: relative;
+}
+
+.list_groupInSidebar .empty {
+    color: #fff;
+    font-size: 12px;
+}
+
+.list_groupInSidebar li .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    left: 0;
+    top: 0;
+}
+
+.list_groupInSidebar .clanTip li {
+    border: 0;
+}
+
+.list_groupInSidebar li > .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 11px;
+    float: left;
+}
+
+.list_groupInSidebar li > .content {
+    color: #B7BEC1;
+    float: left;
+    font-size: 14px;
+    width: 176px;
+}
+
+    .list_groupInSidebar li > .content p {
+        white-space: nowrap;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    }
+
+    .list_groupInSidebar li > .content a {
+        color: #aeb7bc;
+        font-size: 14px;
+    }
+
+#sidebar {
+    overflow-x: visible;
+}
+
+    #sidebar .panel.on {
+        position: absolute;
+        top: 0;
+    }
+
+    #sidebar .accordion .trigger {
+        padding-left: 32px;
+        width: auto;
+    }
+
+        #sidebar .accordion .trigger:before {
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 18px;
+            content: "+";
+            font-size: 14px;
+            height: 18px;
+            left: 10px;
+            line-height: 17px;
+            position: absolute;
+            text-align: center;
+            text-indent: 0;
+            top: 13px;
+            width: 18px;
+        }
+
+    #sidebar .accordion .open .trigger:before {
+        content: "-";
+        font-size: 21px;
+        font-weight: 500;
+        line-height: 13px;
+    }
+
+#container_banners {
+    padding: 1px;
+}
+
+    #container_banners a {
+        display: block;
+        border: 1px solid #1d222b;
+    }
+
+.touch #container_banners a {
+    margin-top: 20px;
+}
+
+#container_banners a:hover,
+#container_banners .on a {
+    border-color: #d2d5d8;
+}
+
+#container_banners img {
+    width: 100%;
+    display: block;
+}
+
+#container_avatars {
+    padding: 1px;
+    overflow: hidden;
+}
+
+    #container_avatars a {
+        float: left;
+        width: 59px;
+        border: 1px solid #1d222b;
+    }
+
+.touch #container_avatars a {
+    margin: 20px;
+}
+
+#container_avatars a:hover,
+#container_avatars .on a {
+    border-color: #d2d5d8;
+}
+
+#container_avatars img {
+    width: 100%;
+    display: block;
+}
+
+
+
+#groupHeader {
+    height: 300px;
+    position: relative;
+    -moz-transition: height .8s ease-in-out 0s;
+    -o-transition: height .8s ease-in-out 0s;
+    -webkit-transition: height .8s ease-in-out 0s;
+    transition: height .8s ease-in-out 0s;
+    min-width: 599px;
+}
+
+    #groupHeader .bg {
+        background-position: center top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 300px;
+        padding: 0 15px;
+        position: relative;
+        z-index: 2;
+    }
+
+.compact #groupHeader .bg {
+    padding: 0 15px;
+}
+
+.Sub_Nav + #groupHeader .bg {
+    height: 254px;
+    padding-top: 46px;
+}
+
+#groupHeader .info {
+}
+
+#groupHeader .avatar {
+    width: 91px;
+    height: 91px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 15px;
+}
+
+#groupHeader .content {
+    display: inline-block;
+    vertical-align: middle;
+    height: 91px;
+    color: #fff;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    margin-bottom: 7px;
+}
+
+#groupHeader #groupName {
+    color: #FFFFFF;
+    display: inline-block;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 45px;
+    font-weight: 500;
+    vertical-align: middle;
+    width: auto;
+}
+
+#groupHeader .container_clanId {
+    font-size: 25px;
+    font-weight: 200;
+    vertical-align: middle;
+    color: #fff;
+    display: inline-block;
+    width: auto;
+}
+
+#groupHeader .motto {
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+}
+
+#groupHeader .empty span {
+    display: none;
+}
+
+#groupHeader .bar_actions {
+    clear: both;
+    margin-top: 7px;
+    position: relative;
+    z-index: 1;
+}
+
+    #groupHeader .bar_actions .trigger, #groupHeader .btn_saveSettings {
+        line-height: 34px;
+        padding: 0 14px;
+        color: #fff;
+        font-weight: normal;
+        font-size: 12px;
+        float: left;
+        cursor: pointer;
+        background-color: transparent;
+        -moz-transition: background-color 0.8s ease 0s;
+        -o-transition: background-color 0.8s ease 0s;
+        -webkit-transition: background-color 0.8s ease 0s;
+        transition: background-color 0.8s ease 0s;
+        border-radius: 6px;
+    }
+
+    #groupHeader .bar_actions .trigger_interact {
+        background: #1e242b;
+    }
+
+    #groupHeader .bar_actions .trigger:hover,
+    .opened#groupHeader .bar_actions .trigger_about,
+    #groupHeader .opened .trigger_interact,
+    .isEditing#groupHeader .btn_displaySettings {
+        background: #52a2e8;
+    }
+
+.isEditing#groupHeader .bar_actions .trigger_about {
+    color: #fff;
+    background: none transparent;
+}
+
+#groupHeader .btn_saveSettings {
+    background: #f00;
+}
+
+#groupHeader .bar_actions .trigger:before {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/sprite_icons_clanHeaders2.png") no-repeat 0 0;
+    content: "";
+    display: inline-block;
+    vertical-align: text-top;
+    width: 16px;
+    height: 16px;
+    margin: 0 8px 0 0;
+}
+
+#groupHeader .bar_actions .trigger_about:before {
+    background-position: -32px 0;
+}
+
+#groupHeader .bar_actions .btn_joinClan:before {
+    background-image: url("https://www.bungie.net/img/theme/bungienet/icons/sprite_left_nav.png");
+    background-position: -22px -217px;
+    background-repeat: no-repeat;
+}
+
+
+#groupHeader .bar_actions .btn_joinGroup:before {
+    background-position: -16px 0;
+}
+
+#groupHeader .bar_actions .trigger_interact:before {
+    background-position: 0 0;
+}
+
+#groupHeader .bar_actions .btn_displaySettings:before {
+    background-position: -48px 0;
+}
+
+#groupHeader .bar_actions .btn_saveSettings:before {
+    display: none;
+}
+
+#groupHeader .actions {
+    float: left;
+}
+
+#groupHeader .options {
+    background: none repeat scroll 0 0 #ffffff;
+    border-radius: 0 6px 6px;
+    padding: 0;
+    top: 30px;
+    width: auto;
+}
+
+#groupHeader .opened .options {
+    display: block;
+}
+
+#groupHeader .options h4 {
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 14px;
+    height: 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: 400;
+    padding: 0 13px;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+#groupHeader .options > li {
+    border-top: 1px solid #e1e8ed;
+    margin: 0 2px;
+    padding: 10px 0;
+}
+
+    #groupHeader .options > li:first-child {
+        border-top: 0;
+    }
+
+#groupHeader .option a {
+    color: #66757f;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 13px;
+}
+
+
+
+
+#groupHeader .info {
+    float: left;
+    width: 50%;
+    height: 100%;
+    min-width: 50%;
+}
+
+    #groupHeader .info > div {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
+
+#groupHeader .info_members {
+    float: right;
+    position: relative;
+    width: 50%;
+    height: 100%;
+    min-width: 400px;
+}
+
+    #groupHeader .info_members .numbers {
+        position: absolute;
+        bottom: 18px;
+        right: 0;
+        color: #fff;
+    }
+
+    #groupHeader .info_members .number {
+        float: right;
+        text-align: right;
+        border-right: 1px solid rgba(255,255,255,.5);
+        font-size: 14px;
+        padding: 0 21px;
+    }
+
+        #groupHeader .info_members .number:first-child {
+            border-right: 0;
+        }
+
+        #groupHeader .info_members .number span:first-child {
+            display: block;
+            font-size: 34px;
+            font-weight: 100;
+            line-height: 1;
+        }
+
+.info_groupHeaderNumbers.cloned {
+    background: none repeat scroll 0 0 #1A1E24;
+    border-top: 4px solid #479CE4;
+    box-shadow: 0 9px 35px rgba(0, 0, 0, 0.75);
+    font-size: 12px;
+    font-weight: 400;
+    color: #fff;
+    padding: 10px;
+    max-width: 150px;
+    font-family: Roboto, Arial, sans-serif;
+}
+
+#groupHeader .info_members .btn_joinGroup {
+    bottom: 90px;
+    color: #FFFFFF;
+    font-size: 12px;
+    height: 29px;
+    line-height: 29px;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+    background: #479ce4;
+    padding-right: 10px;
+    border-radius: 5px;
+}
+
+    #groupHeader .info_members .btn_joinGroup:before {
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_btn_join.png") no-repeat scroll center center #2B7ABD;
+        border-radius: 5px 0 0 5px;
+        content: "";
+        float: left;
+        height: 29px;
+        margin-right: 8px;
+        width: 29px;
+    }
+
+#groupHeader .alliances {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    color: #ffffff;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 14px;
+    height: 52px;
+    left: 10px;
+    line-height: 52px;
+    padding: 0 6px;
+    position: absolute;
+    right: 10px;
+    text-align: right;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+    top: 47px;
+}
+
+#msg_clanprobation ~ #content .alliances {
+    top: 66px;
+}
+
+.compact #groupHeader .alliances {
+    padding-right: 0;
+}
+
+#groupHeader .alliances > p:first-child {
+    float: left;
+}
+
+#groupHeader .alliances .select {
+    display: inline-block !important;
+    height: 32px;
+    line-height: 32px;
+    vertical-align: middle;
+}
+
+#groupHeader .alliances .options {
+    background: none repeat scroll 0 0 #eef2f6;
+    border-radius: 0 0 6px 6px;
+    color: #000000;
+    display: block;
+    position: static;
+    visibility: hidden;
+}
+
+    #groupHeader .alliances .options h4 {
+        white-space: nowrap;
+        height: 32px;
+        line-height: 32px;
+        padding: 0 11px;
+        background: none repeat scroll 0 0 #5E656B;
+        color: #EEF2F6;
+    }
+
+#groupHeader .alliances .opened .options {
+    visibility: visible;
+    width: auto;
+}
+
+#groupHeader .alliances .select .option a {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 11px;
+    color: #000000;
+    white-space: nowrap;
+}
+
+#groupHeader .alliances .select label {
+    color: #EEF2F6;
+    height: 32px;
+    line-height: 32px;
+    padding: 0 46px 0 11px;
+}
+
+    #groupHeader .alliances .select label:after {
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_selectArrow.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+        border: 0 none;
+        content: "";
+        display: block;
+        height: 32px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 32px;
+    }
+
+#groupHeader .alliances .select.opened label:after {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_selectArrow_opened.png") no-repeat scroll center center #EEF2F6;
+}
+
+/*#groupHeader .btn_saveSettings
+                {
+                    color:#fff;
+                    font-size:12px;
+        font-weight: 500;
+                    background:url("https://www.bungie.net/img/theme/destiny/icons/icon_settingsGear.png") no-repeat 10px center #BD5E58;
+                    line-height:30px;
+                    padding:0 10px 0 39px;
+                    display:inline-block;
+                    margin-left:15px;
+                    transition:all .5 linear;
+                }
+                
+                
+                #groupHeader #clanId
+                {
+
+                }
+                
+                #groupHeader .description
+                {
+
+                }
+                    #groupHeader .block_description
+                    {
+                        float:left;
+                        color:#fff;
+                        margin-left:15px;
+                    }
+                        #groupHeader .block_description:first-child
+                        {
+                            margin-left:0;
+                        }
+                        #groupHeader .block_description .value
+                        {
+                            font-size:20px;
+                            border-bottom:1px solid rgba(255,255,255,.5);
+                            line-height:40px;
+                            min-height:40px;
+                        }
+                            #groupHeader #trigger_about
+                            {
+                                color:#fff;
+                                background:url("https://www.bungie.net/img/theme/destiny/icons/icon_openAbout.png") no-repeat right center;
+                                display:block;
+                                height:40px;
+                                padding-right:30px;
+                            }
+                            .isEditing#groupHeader #trigger_about
+                            {
+                                cursor:default;
+                            } 
+                        #groupHeader .block_description .label
+                        {
+                            font-size:12px;
+                            line-height:26px;
+                        }
+    */
+
+
+
+
+#About_Clan {
+    background: none repeat scroll 0 0 rgba(26, 30, 36, 0.95);
+    border-bottom: 3px solid #52A2E8;
+    border-top: 3px solid #52A2E8;
+    color: #FFFFFF;
+    height: 440px;
+    margin-top: 0;
+    padding: 15px 0;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    -moz-transition: opacity .8s ease-in-out;
+    -o-transition: opacity .8s ease-in-out;
+    -webkit-transition: opacity .8s ease-in-out;
+    transition: opacity .8s ease-in-out;
+    display: table;
+    table-layout: auto;
+}
+
+    #About_Clan > div {
+        padding: 0 15px;
+    }
+
+.opened #About_Clan {
+    opacity: 1;
+}
+
+.About_Clan h4 {
+    font-family: 'Roboto', Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 200;
+    line-height: 42px;
+}
+
+.About_Clan .section {
+    margin-top: 15px;
+}
+
+#Content_Clan {
+    position: relative;
+    margin-top: 0;
+}
+
+
+
+
+.list_clantags {
+}
+
+    .list_clantags > li {
+    }
+
+.en .list_clantags a {
+    text-transform: capitalize;
+}
+
+.list_clantags a {
+    color: #1e242b;
+    display: block;
+    font-family: "Roboto",Arial,sans-serif;
+    font-size: 14px;
+    line-height: 19px;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 0 18px;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+    .list_clantags a:hover {
+        color: #0096db;
+    }
+
+
+
+
+#Tags_Clan {
+}
+
+    #Tags_Clan .exclaim {
+        font-size: 14px;
+        font-style: italic;
+        color: #aeb7bc;
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_exclaim.png") no-repeat center left;
+        line-height: 42px;
+        padding-left: 28px;
+        float: right;
+    }
+
+.ja #Tags_Clan .exclaim {
+    font-style: normal;
+}
+
+#Tags_Clan ul {
+    margin-top: 5px;
+}
+
+#Tags_Clan .tag {
+    background: #606569;
+    border-radius: 5px;
+    font-size: 12px;
+    float: left;
+    line-height: 22px;
+    color: #fff;
+    margin-right: 5px;
+    padding: 0 5px;
+}
+
+
+
+#About_Clan_sidebar {
+    color: #FFFFFF;
+    min-height: 30px;
+    padding-left: 15px;
+    position: relative;
+    width: 244px;
+    font-size: 14px;
+    display: table-cell;
+    vertical-align: top;
+}
+
+    #About_Clan_sidebar .avatar {
+        width: 22px;
+        height: 22px;
+        margin-right: 5px;
+        vertical-align: middle;
+    }
+
+    #About_Clan_sidebar .displayName {
+        color: #aeb7bc;
+        line-height: 22px;
+    }
+
+    #About_Clan_sidebar span {
+        color: #656c72;
+        margin-left: 5px;
+    }
+
+#About_Clan_content {
+    display: table-cell;
+    vertical-align: top;
+    padding-right: 266px !important;
+}
+
+.compact #About_Clan_content {
+    padding-right: 15px !important;
+}
+
+
+
+#SubNav_Clan {
+    background: url("https://www.bungie.net/img/theme/destiny/bgs/bg_new.jpg") no-repeat fixed 50% 0 #091219;
+    height: 37px;
+    line-height: 37px;
+    overflow: hidden;
+    padding: 1px 0;
+    position: relative;
+    text-align: center;
+    padding-right: 250px;
+}
+
+.compact #SubNav_Clan,
+.NoSidebar #SubNav_Clan {
+    padding-right: 0;
+}
+
+#SubNav_Clan:before {
+    background: none repeat scroll 0 0 #333E49;
+    content: "";
+    height: 37px;
+    left: 0;
+    position: absolute;
+    top: 1px;
+    width: 100%;
+}
+
+#SubNav_Clan .actions {
+    float: right;
+}
+
+.subnav_clan {
+    display: inline-block;
+    overflow: hidden;
+    text-align: center;
+}
+
+    .subnav_clan li {
+        background: url("https://www.bungie.net/img/theme/destiny/bgs/bg_new.jpg") no-repeat fixed 50% 0 #091219;
+        color: #FFFFFF;
+        display: inline-block;
+        float: left;
+        padding-right: 1px;
+        position: relative;
+    }
+
+        .subnav_clan li:first-child {
+            padding-left: 1px;
+        }
+
+        .subnav_clan li span {
+            background: none repeat scroll 0 0 #CE2E24;
+            border-radius: 18px 18px 18px 18px;
+            color: #FFFFFF;
+            display: inline-block;
+            font-weight: 500;
+            font-size: 10px;
+            line-height: 18px;
+            margin-left: 5px;
+            min-height: 18px;
+            min-width: 18px;
+            padding: 0 1px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+            .subnav_clan li span:empty {
+                display: none;
+            }
+
+    .subnav_clan a {
+        display: block;
+        font-size: 12px;
+        padding: 0 20px;
+        color: #fff;
+        background: #333E49;
+    }
+
+        .subnav_clan a:hover,
+        .subnav_clan li.on a {
+            background: #1a1e24;
+        }
+
+    .subnav_clan li.on a {
+        box-shadow: 0 -3px 0 #209ee5 inset;
+    }
+
+
+
+
+#groupHeader .actions .btn_blue {
+    box-shadow: none;
+    float: left;
+    height: 30px;
+    line-height: 30px;
+    margin-top: 7px;
+    margin-left: 15px;
+}
+
+.container_sort {
+    clear: both;
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid #e5e6e6;
+    border-bottom: 1px solid #e5e6e6;
+    padding: 0 15px;
+    height: 28px;
+}
+
+    .container_sort .sort {
+        float: left;
+        margin-right: 30px;
+    }
+
+        .container_sort .sort h2 {
+            color: #40505a;
+            float: left;
+            font-weight: 500;
+            font-size: 12px;
+            font-weight: normal;
+            line-height: 28px;
+            padding-right: 15px;
+        }
+
+        .container_sort .sort ul {
+            float: left;
+        }
+
+        .container_sort .sort li {
+            float: left;
+        }
+
+            .container_sort .sort li.on {
+                background: rgb(71, 156, 228);
+            }
+
+        .container_sort .sort a {
+            float: left;
+            padding: 0 7px;
+            line-height: 28px;
+            font-size: 12px;
+            color: #40505a;
+            font-weight: 500;
+        }
+
+        .container_sort .sort li.on a {
+            color: #fff;
+        }
+
+#ClanForum {
+    position: relative;
+}
+
+#list_clanAnnouncements {
+    border-top: 1px solid #e5e6e6;
+}
+
+
+
+
+
+
+
+#ClanForum .container_newPostForm {
+}
+
+#ClanForum .container_newPostForm {
+    padding-left: 25px;
+    padding-top: 48px;
+}
+
+#forumPost .container_newPostForm {
+}
+
+
+
+
+
+
+
+
+
+
+
+#ClanAdmin {
+}
+
+    #ClanAdmin:before {
+        background: none repeat scroll 0 0 #d0d3d8;
+        border-left: 1px solid #c3c7cb;
+        border-right: 1px solid #c3c7cb;
+        content: "";
+        display: block;
+        height: 100%;
+        position: absolute;
+        width: 248px;
+        z-index: 0;
+    }
+
+    #ClanAdmin .count {
+        background: none repeat scroll 0 0 #CE2E24;
+        border-radius: 18px 18px 18px 18px;
+        color: #FFFFFF;
+        display: inline-block;
+        font-weight: 500;
+        font-size: 10px;
+        line-height: 18px;
+        margin-left: 5px;
+        min-height: 18px;
+        min-width: 18px;
+        padding: 0 1px;
+        text-align: center;
+        text-indent: 0;
+        vertical-align: middle;
+    }
+
+    #ClanAdmin .section .count {
+        color: #fff;
+        background: #868c91;
+    }
+
+        #ClanAdmin .section .count:empty {
+            display: none;
+        }
+
+
+#AdminPages,
+.clanUsersPage,
+#ClanCreate {
+}
+
+    #AdminPages .section,
+    .clanUsersPage .section {
+        border-top: 1px solid #c3c7cb;
+        float: left;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+        #AdminPages .section > *,
+        .clanUsersPage .section > * {
+            margin: 0 17px;
+        }
+
+        #AdminPages .section:first-child,
+        .clanUsersPage .section:first-child {
+            border-top: 0;
+        }
+
+        #AdminPages .section h4,
+        .clanUsersPage .section h4 {
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 49px;
+            font-weight: normal;
+        }
+
+            #AdminPages .section h4 .count,
+            .clanUsersPage .section h4 .count {
+                display: none;
+            }
+
+        #AdminPages .section h5,
+        .clanUsersPage .section h5 {
+            color: #666;
+            font-size: 14px;
+            font-weight: 500;
+            font-weight: normal;
+        }
+
+    #AdminPages .subsection,
+    .clanUsersPage .subsection {
+        padding: 15px 0 15px 15px;
+    }
+
+    #AdminPages .actions a {
+        font-size: 12px;
+        font-weight: 500;
+        color: #0096DB;
+        margin-left: 15px;
+        line-height: 44px;
+    }
+
+    #AdminPages .checkbox {
+        background: none repeat scroll 0 0 #E4E7EA;
+        border: 1px solid #C3C7CB;
+        border-radius: 3px 3px 3px 3px;
+        height: 15px;
+        position: absolute;
+        right: 1px;
+        top: 1px;
+        width: 15px;
+        display: block;
+    }
+
+    #AdminPages .selected .checkbox {
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_checkMark.png") no-repeat center center rgba(21,22,25,.8);
+    }
+
+
+
+
+
+.description_section {
+    width: 851px;
+    background-color: #1e242b;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding-bottom: 15px;
+    min-height: 243px;
+    margin-top: 17px !important;
+}
+
+    .description_section.clanFeatures {
+        border-top: 3px solid #479ce4;
+        background-image: url("https://www.bungie.net/img/theme/destiny/bgs/bg_clanFeatures.png");
+    }
+
+	.description_section.clanFeatures p {
+		text-align: left;
+		padding-right: 15px;
+		width: 260px;
+		margin-left: 500px;
+	}
+
+    .description_section.clanActivation {
+        border-top: 3px solid #e98421;
+        background-image: url("https://www.bungie.net/img/theme/destiny/bgs/bg_clanActivation.png");
+    }
+
+    .description_section h3 {
+        color: #fff;
+        font-family: 'Roboto',Arial,sans-serif;
+        font-size: 18px;
+        font-weight: 500;
+        letter-spacing: 3px;
+        margin-left: 300px;
+        margin-top: 15px;
+        text-transform: uppercase;
+    }
+
+    .description_section p {
+        color: #fff;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        margin-top: 15px;
+        margin-left: 300px;
+    }
+
+    .description_section ul {
+        margin-top: 15px;
+        margin-left: 300px;
+        padding-left: 20px;
+    }
+
+    .description_section li {
+        color: #fff;
+        list-style: disc inside;
+    }
+
+
+.clanSettingsBox {
+    display: inline-block;
+    padding-top: 17px;
+    width: 400px;
+}
+
+    .clanSettingsBox + .clanSettingsBox {
+        margin-left: 51px;
+    }
+
+    .clanSettingsBox label {
+        display: block;
+        margin-top: 12px;
+    }
+
+    .clanSettingsBox .container_textbox {
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+        width: 292px;
+    }
+
+
+#AdminPages.GroupSettingsForm label[for=textbox_clanId] {
+    display: block;
+    margin-top: 12px;
+}
+
+#AdminPages.GroupSettingsForm .container_textbox_clanId {
+    margin-top: 0;
+    width: 390px;
+}
+
+.btn_clanToggle {
+    border: 1px solid #A0A0A0;
+    border-radius: 2px;
+    display: inline-block;
+    background: #fff;
+}
+
+    .btn_clanToggle span {
+        display: inline-block;
+        vertical-align: middle;
+        border-left: 1px solid #a0a0a0;
+        padding-left: 10px;
+        margin-left: 10px;
+        font-family: 'Roboto', Arial, sans-serif;
+        font-size: 12px;
+        color: #333;
+        padding: 10px;
+    }
+
+        .btn_clanToggle span strong {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+    .btn_clanToggle:before {
+        content: "";
+        height: 31px;
+        width: 28px;
+        display: inline-block;
+        background-image: url("https://www.bungie.net/img/theme/bungienet/icons/sprite_platforms_signUp.png");
+        background-repeat: no-repeat;
+        margin-left: 10px;
+        vertical-align: middle;
+    }
+
+    .btn_clanToggle.xbox:before {
+        background-position: 0 0;
+    }
+
+    .btn_clanToggle.psn:before {
+        background-position: -1px -32px;
+    }
+
+    .btn_clanToggle.demon:before {
+        background: none red;
+    }
+
+
+.btn_disableClan {
+    font-size: 14px;
+    padding: 12px;
+}
+
+    .btn_disableClan.xbox,
+    .btn_disableClan.psn {
+        padding: 0;
+    }
+
+    .btn_disableClan:before {
+        display: none;
+    }
+
+
+    .btn_disableClan.xbox:before,
+    .btn_disableClan.psn:before {
+        display: inline-block;
+    }
+
+
+.list_pendingMembers {
+    margin-top: -15px;
+    margin-left: -15px;
+}
+
+    .list_pendingMembers li {
+        border: 1px solid #c3c7cb;
+        width: 355px;
+        background: #fff;
+        font-weight: 500;
+        float: left;
+        margin: 15px 0 0 15px;
+        position: relative;
+    }
+
+    .list_pendingMembers .selected {
+        border: 1px solid #5e656b;
+    }
+
+    .list_pendingMembers .avatar {
+        width: 58px;
+        height: 58px;
+        display: inline-block;
+        vertical-align: middle;
+        margin: 1px 15px 1px 1px;
+    }
+
+    .list_pendingMembers .content {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .list_pendingMembers .displayName a {
+        color: #333;
+        font-weight: 500;
+        font-size: 14px;
+    }
+
+    .list_pendingMembers .platformId {
+        color: #89949b;
+        font-size: 12px;
+    }
+
+    .list_pendingMembers .message {
+        color: #666;
+        font-size: 14px;
+        padding: 0 15px;
+        background: #e4e7ea;
+        overflow: hidden;
+        -ms-text-overflow: ellipsis;
+        -o-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        line-height: 63px;
+        height: 63px;
+    }
+
+    .list_pendingMembers .actions {
+        line-height: 35px;
+    }
+
+        .list_pendingMembers .actions a {
+            font-size: 12px;
+            font-weight: 500;
+            color: #0096DB;
+            margin: 0 15px;
+        }
+
+.clanUsersPage .list_members {
+}
+
+    .clanUsersPage .list_members li {
+        border-bottom: 1px solid #C3C7CB;
+        display: block;
+        font-weight: 500;
+        margin-left: 15px;
+        padding: 7px 0;
+        position: relative;
+    }
+
+    .clanUsersPage .list_members .empty {
+        border: 0;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .clanUsersPage .list_members .avatar {
+        width: 31px;
+        height: 31px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .clanUsersPage .list_members .content {
+        display: inline-block;
+        line-height: 16px;
+        vertical-align: middle;
+        margin-left: 15px;
+    }
+
+    .clanUsersPage .list_members .displayName a {
+        color: #40505a;
+        font-size: 12px;
+        font-weight: 500;
+    }
+
+    .clanUsersPage .list_members .platformId {
+        color: #89949b;
+        font-size: 12px;
+    }
+
+    .clanUsersPage .list_members .actions {
+        float: right;
+        line-height: 31px;
+        padding-left: 30px;
+    }
+
+.clanUsersPage.container_GroupMainContent .list_members .actions {
+    display: none;
+	color:#fff;
+}
+    #clanMembersContainer.container_GroupMainContent .list_members .actions{
+        display:inline;
+    }
+    
+.clanUsersPage .list_members .actions.busy {
+    background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_loading_gray.gif") 0 50% no-repeat;
+    background-size: 30px;
+}
+
+.clanUsersPage .list_members .actions a {
+    margin: 0 15px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(242, 193, 97);
+}
+
+.clanUsersPage .list_members .actions .disabled,
+.clanUsersPage .list_members .actions span,
+.clanUsersPage .list_members .actions.busy a {
+    color: #fff;
+    cursor: default;
+    margin: 0 15px;
+    font-size: 12px;
+}
+
+
+#AdminPages .section > .list_groupCards {
+    margin-left: -2px;
+    margin-top: -15px;
+}
+
+.list_groupCards li {
+    border: 1px solid #c3c7cb;
+    width: 355px;
+    background: #fff;
+    font-weight: 500;
+    float: left;
+    margin: 15px 0 0 15px;
+    position: relative;
+}
+
+.list_groupCards .selected {
+    border: 1px solid #5e656b;
+}
+
+.list_groupCards .avatar {
+    width: 58px;
+    height: 58px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1px 15px 1px 1px;
+}
+
+.list_groupCards .content {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.list_groupCards .displayName a {
+    color: #333;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.list_groupCards .counts {
+    color: #89949b;
+    font-size: 12px;
+}
+
+    .list_groupCards .counts span {
+        margin-right: 15px;
+    }
+
+.list_groupCards .message {
+    color: #666;
+    font-size: 14px;
+    padding: 0 15px;
+    background: #e4e7ea;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 63px;
+}
+
+.list_groupCards .actions {
+    line-height: 35px;
+    background: #f6f6f6;
+    text-align: right;
+    height: 35px;
+}
+
+    .list_groupCards .actions a {
+        font-size: 12px;
+        font-weight: 500;
+        color: #0096DB;
+        margin: 0 15px;
+    }
+
+
+
+.container_pager {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: center;
+}
+
+    .container_pager a {
+        font-size: 14px;
+        font-weight: 500;
+    }
+
+    .container_pager .disabled {
+        color: rgba(40,49,57,.2) !important;
+        cursor: default;
+    }
+
+    .container_pager .pager {
+        font-weight: 700;
+        line-height: 21px;
+        margin-top: 15px;
+    }
+
+    .container_pager .currentPage {
+        color: #3b434b;
+        float: left;
+        font-weight: 500;
+    }
+
+    .container_pager .pager a {
+        border: 0 none;
+        border-radius: 5px 5px 5px 5px;
+        color: #283139;
+        display: inline-block;
+        margin: 0 5px;
+        padding: 0 6px;
+        vertical-align: middle;
+    }
+
+    .container_pager .pager .on {
+        color: #fff;
+        background: #3b434a;
+    }
+
+    .container_pager .btn_firstPage {
+    }
+
+    .container_pager .btn_prevPage {
+    }
+
+    .container_pager .btn_nextPage {
+    }
+
+    .container_pager .btn_lastPage {
+    }
+
+    .container_pager .selected {
+        background: none repeat scroll 0 0 #FFFFFF;
+        border: 1px solid #C3C7CB;
+        display: inline-block;
+        font-size: 13px;
+        line-height: 23px;
+        margin-top: 15px;
+        padding: 0 0 0 14px;
+        position: relative;
+    }
+
+        .container_pager .selected a {
+            color: #0096DB;
+        }
+
+    .container_pager .selectMessage {
+        color: #666;
+    }
+
+    .container_pager .selected .btn_selectAll {
+        font-size: 13px;
+        margin-right: 14px;
+    }
+
+    .container_pager .btn_cancel {
+        position: absolute;
+        top: auto;
+        margin-left: 14px;
+        white-space: nowrap;
+    }
+
+    .container_pager .actions {
+        text-align: right;
+    }
+
+        .container_pager .actions a {
+            color: #0096DB;
+        }
+
+        .container_pager .actions .btn_selectAll {
+            float: left;
+        }
+
+#members .container_pager {
+    display: none;
+}
+
+#members.default .container_pager {
+    display: block;
+}
+
+
+.header_withSort {
+    display: inline-block;
+}
+
+.membersort {
+    font-weight: 500;
+    font-size: 12px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 15px;
+}
+
+    .membersort span {
+        color: #89949b;
+        font-size: 12px;
+        margin-right: 15px;
+    }
+
+    .membersort a {
+        color: #0096DB;
+        margin-right: 15px;
+    }
+
+    .membersort .on {
+        opacity: .5;
+    }
+
+#sidebar .pendingSectionSidebar li {
+    position: relative;
+}
+
+    #sidebar .pendingSectionSidebar li:hover,
+    #sidebar .pendingSectionSidebar li.on {
+        margin-bottom: 37px;
+        background: #2d323b;
+    }
+
+        #sidebar .pendingSectionSidebar li:hover:before,
+        #sidebar .pendingSectionSidebar li.on:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100px;
+            z-index: 1;
+            border-left: 5px solid #0096DB;
+        }
+
+#sidebar .pendingSectionSidebar .actions {
+    background: none repeat scroll 0 0 #151619;
+    border-bottom: 1px solid #353B48;
+    border-top: 1px solid #353B48;
+    bottom: -38px;
+    display: none;
+    height: 37px;
+    left: 5px;
+    line-height: 37px;
+    position: absolute;
+    width: 244px;
+}
+
+#sidebar .pendingSectionSidebar li:hover .actions,
+#sidebar .pendingSectionSidebar li.on .actions {
+    display: block;
+}
+
+#sidebar .pendingSectionSidebar .actions a {
+    color: #FFFFFF;
+    float: left;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 37px;
+    text-align: center;
+    width: 33%;
+}
+
+
+.header_alliances {
+    margin: 18px;
+    border: 1px solid #c3c7cb;
+}
+
+    .header_alliances h2 {
+        background: none repeat scroll 0 0 #479CE4;
+        color: #FFFFFF;
+        font-size: 18px;
+        font-weight: 200;
+        height: 41px;
+        line-height: 41px;
+    }
+
+        .header_alliances h2:before {
+            background: url("https://www.bungie.net/img/theme/destiny/icons/icon_septagon.png") no-repeat center center #428ecf;
+            width: 41px;
+            height: 41px;
+            display: block;
+            content: "";
+            float: left;
+            margin-right: 10px;
+        }
+
+    .header_alliances .content {
+        background: url("https://www.bungie.net/img/theme/destiny/bgs/bg_groupAlliances.jpg") no-repeat scroll 0 0 #FFFFFF;
+        float: left;
+        font-weight: 500;
+        font-size: 12px;
+        height: 197px;
+        padding-left: 153px;
+        padding-right: 10px;
+    }
+
+        .header_alliances .content p {
+            line-height: 22px;
+            margin-top: 16px;
+        }
+
+.btn_startAlliance:before {
+    background-image: url("https://www.bungie.net/img/theme/destiny/icons/icon_circleArrow.png");
+}
+
+
+.btn_btnWithIcon {
+    background: none repeat scroll 0 0 #479CE4;
+    border-bottom: 1px solid #326EA0;
+    border-radius: 5px;
+    color: #FFFFFF !important;
+    display: inline-block;
+    font-family: 'Roboto',Arial,sans-serif;
+    font-size: 12px !important;
+    font-weight: 400 !important;
+    height: 33px;
+    line-height: 33px;
+    margin: 11px 0 0;
+    padding: 0 10px 0 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+    .btn_btnWithIcon:before {
+        background-color: #2B7ABD;
+        background-position: center center;
+        background-repeat: no-repeat;
+        border-color: #2B7ABD;
+        -moz-border-image: none;
+        -o-border-image: none;
+        -webkit-border-image: none;
+        border-image: none;
+        border-radius: 5px 0 0 5px;
+        content: "";
+        float: left;
+        height: 33px;
+        margin-right: 10px;
+        width: 33px;
+    }
+
+
+.alert {
+    font-family: Roboto, Arial, sans-serif;
+    color: #16181c;
+}
+
+    .alert h1,
+    .alert h2,
+    .alert h3,
+    .alert h4,
+    .alert h5 {
+        font-family: Roboto, Arial, sans-serif;
+    }
+
+    .alert .content {
+        width: 475px;
+    }
+
+    .alert .innerContent {
+        background: #fff;
+    }
+
+    .alert .header {
+        background: none repeat scroll 0 0 #479CE4;
+        height: 30px;
+    }
+
+        .alert .header .btn_close {
+            color: #FFFFFF;
+            float: right;
+            font-size: 12px;
+            line-height: 24px;
+            margin-right: 3px;
+            text-transform: uppercase;
+            width: auto;
+        }
+
+            .alert .header .btn_close:before {
+                background: none repeat scroll 0 0 #3D82BC;
+                content: "Close";
+                display: inline-block;
+                height: 24px;
+                line-height: 24px;
+                margin-right: 1px;
+                margin-top: 3px;
+                padding: 0 8px;
+            }
+
+            .alert .header .btn_close:after {
+                background: none repeat scroll 0 0 #3D82BC;
+                content: "X";
+                float: right;
+                height: 24px;
+                line-height: 24px;
+                margin-top: 3px;
+                padding: 0 8px;
+            }
+
+    .alert h2 {
+        color: #FFFFFF;
+        display: block;
+        font-size: 14px;
+        left: 8px;
+        line-height: 30px;
+        position: absolute;
+        text-transform: uppercase;
+        top: 0;
+        z-index: 1;
+    }
+
+    .alert .content h2 + p {
+        margin-top: 0;
+    }
+
+    .alert p {
+        font-size: 14px;
+    }
+
+    .alert .btnsWithIcons {
+        text-align: center;
+    }
+
+    .alert .btns {
+    }
+
+    .alert .btn_blue {
+    }
+
+    .alert .container_textbox,
+    .alert .container_textarea {
+        border: 1px solid rgba(22,24,28,.1);
+    }
+
+    .alert .choices {
+        height: 187px;
+        margin-top: 15px;
+    }
+
+    .alert .choice {
+        border: 1px solid #c3c7cb;
+        display: block;
+        float: left;
+        position: relative;
+        text-align: center;
+        width: 230px;
+        padding-top: 25px;
+    }
+
+        .alert .choice .head {
+            background: none repeat scroll 0 0 #f5f5f5;
+            border: 1px solid #c3c7cb;
+            color: #222;
+            display: inline-block;
+            line-height: 30px;
+            padding-right: 10px;
+        }
+
+            .alert .choice .head:before {
+                display: inline-block;
+                content: "";
+                background: url("https://www.bungie.net/img/theme/destiny/icons/icon_blueSept.png") no-repeat center center;
+                width: 30px;
+                height: 30px;
+                border-right: 1px solid #c3c7cb;
+                margin-right: 10px;
+                float: left;
+            }
+
+        .alert .choice .group {
+            background: none repeat scroll 0 0 #f5f5f5;
+            border: 1px solid #c3c7cb;
+            color: #222;
+            display: inline-block;
+            line-height: 25px;
+            margin: 40px 10px 0;
+            padding-right: 10px;
+            position: relative;
+        }
+
+            .alert .choice .group:before {
+                border-right: 1px solid #c3c7cb;
+                content: "";
+                display: inline-block;
+                float: left;
+                height: 25px;
+                margin-right: 10px;
+                width: 25px;
+            }
+
+            .alert .choice .group:after {
+                content: "";
+                width: 19px;
+                height: 20px;
+                position: absolute;
+                margin-left: -10px;
+                left: 50%;
+                top: -30px;
+                background: url("https://www.bungie.net/img/theme/destiny/icons/icon_circleUpArrow.png") no-repeat center center;
+                display: block;
+            }
+
+        .alert .choice .button {
+            background: none repeat scroll 0 0 #479CE4;
+            height: 30px;
+            line-height: 30px;
+            display: block;
+            color: #fff;
+            margin-top: 25px;
+        }
+
+    .alert .btn_startNewGroup {
+        margin-right: 11px;
+    }
+
+
+.inviteGroupToAlliance {
+}
+
+    .inviteGroupToAlliance .section {
+        border-bottom: 1px solid rgba(22,24,28,.1);
+        padding-bottom: 17px;
+    }
+
+    .inviteGroupToAlliance h5 {
+        font-size: 12px;
+        font-weight: 400;
+        margin-bottom: 3px;
+        margin-top: 17px;
+    }
+
+    .inviteGroupToAlliance .groupCard {
+        margin: 0;
+    }
+
+        .inviteGroupToAlliance .groupCard .content {
+            background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+            box-shadow: none;
+            display: inline-block;
+            max-height: none;
+            position: static;
+            vertical-align: middle;
+        }
+
+            .inviteGroupToAlliance .groupCard .content p {
+                color: #89949B;
+                line-height: 2;
+                margin-top: 0;
+            }
+
+        .inviteGroupToAlliance .groupCard .name a {
+            color: #333;
+            font-size: 14px;
+            font-weight: 400;
+        }
+
+.btn_sendInvites:before {
+    background-image: url("https://www.bungie.net/img/theme/destiny/icons/icon_circleArrow.png");
+}
+
+.input_multipleGroups {
+    max-height: 78px;
+    overflow: auto;
+}
+
+    .input_multipleGroups li {
+        margin-top: 13px;
+    }
+
+        .input_multipleGroups li:first-child {
+            margin-top: 0;
+        }
+
+    .input_multipleGroups input {
+        visibility: hidden;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .input_multipleGroups label {
+        background-color: #FFFFFF;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        background-size: 30px 30px;
+        border: 1px solid rgba(22,24,28,.1);
+        display: block;
+        height: 30px;
+        line-height: 30px;
+        padding-left: 40px;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .input_multipleGroups input:disabled + label {
+        opacity: .5;
+    }
+
+    .input_multipleGroups input:checked + label:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 2;
+        width: 30px;
+        height: 30px;
+        display: block;
+        background: url("https://www.bungie.net/img/theme/destiny/icons/icon_checkMark.png") no-repeat center center #479CE4;
+    }
+
+#welcomeNoClan {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_clan_big.png") center 39px no-repeat;
+    text-align: center;
+    padding-top: 202px;
+}
+
+    #welcomeNoClan p {
+        color: #fff;
+        font-size: 18px;
+        margin-bottom: 1.8em;
+    }
+
+        #welcomeNoClan p a {
+            color: #479ce4;
+        }
+
+#msg_clanprobation {
+    background: none repeat scroll 0 0 #c14443;
+    color: #fff;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    line-height: 25px;
+    position: fixed;
+    text-align: center;
+    top: 60px;
+    width: calc(100% - 250px);
+    z-index: 51;
+    white-space: nowrap;
+}
+
+.compact #msg_clanprobation,
+.NoSidebar #msg_clanprobation {
+    left: 0;
+    padding-left: 87px;
+    right: 0;
+    width: calc(100% - 87px);
+}
+
+#msg_clanprobation + .Sub_Nav {
+    top: 79px;
+}
+
+#msg_clanprobation span + span {
+    margin-left: 60px;
+}
+
+#toolTip_clanprobation {
+    background: none repeat scroll 0 0 #1a1e24;
+    border-top: 4px solid #479ce4;
+    box-shadow: 0 9px 35px rgba(0, 0, 0, 0.75);
+    color: #fff;
+    display: none;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    left: 50%;
+    margin-left: -125px;
+    padding: 10px;
+    position: absolute;
+    top: 27px;
+    width: 250px;
+    white-space: normal;
+}
+
+#msg_clanprobation:hover #toolTip_clanprobation,
+#msg_clanprobation.hover #toolTip_clanprobation {
+    display: block;
+	z-index:100;
+}
+
+#list_groups + .pager {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.compact #list_groups + .pager,
+.ClosedSidebar #list_groups + .pager {
+    padding-right: 0;
+}
+
+
+
+
+
+
+/* new layout */
+
+.content_main {
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    min-height: calc(100vh - 60px);
+}
+
+
+
+#container_belowClanHeader {
+    position: relative;
+    flex-grow: 1;
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-flow: column nowrap;
+    flex-flow: column nowrap;
+    -webkit-flex-flow: column nowrap;
+}
+
+
+
+
+.content_belowGroupHeader {
+    display: flex;
+    display: -webkit-flex;
+    -ms-flex-flow: row nowrap;
+    -webkit-flex-flow: row nowrap;
+    flex-flow: row nowrap;
+    min-height: 100%;
+}
+
+.container_GroupMainContent h4 {
+    color: #2B2B2B;
+    font-weight: 500;
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 48px;
+    padding: 0 15px;
+    clear: both;
+}
+
+
+.container_GroupSidebar {
+    background: rgba(221, 225, 228, 0.4) none repeat scroll 0 0;
+    padding-top: 17px;
+    position: relative;
+    width: 300px;
+}
+
+    .container_GroupSidebar > li {
+        background: #f1f4f6 none repeat scroll 0 0;
+        border-top: 2px solid #479ce4;
+        list-style: outside none none;
+        margin: 0 auto 23px;
+        overflow: hidden;
+        width: 221px;
+    }
+
+    .container_GroupSidebar h4 {
+        color: #2b2b2b;
+        font-family: "Roboto",Arial,sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+        margin-bottom: 14px;
+        padding: 14px 5px 0 18px;
+    }
+
+    .container_GroupSidebar .innerSideNav {
+        color: #1e242b;
+        font-size: 12px;
+        line-height: 22px;
+        padding: 0 18px;
+    }
+
+    .container_GroupSidebar p.innerSideNav {
+        margin-bottom: 15px;
+        -ms-word-wrap: break-word;
+        word-wrap: break-word;
+    }
+
+
+    .container_GroupSidebar .list_leadership > li {
+        display: flex;
+        display: -webkit-flex;
+        -ms-flex-flow: row nowrap;
+        -webkit-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+        font-size: 14px;
+    }
+
+    .container_GroupSidebar .list_leadership .avatar {
+    }
+
+    .container_GroupSidebar .list_leadership .content {
+        flex-grow: 1;
+    }
+
+
+.list_leadership .avatar {
+    width: 22px;
+    height: 22px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.list_leadership .displayName {
+    color: #1e242b;
+}
+
+.list_leadership span {
+    color: #656c72;
+    margin-left: 5px;
+}
+
+
+
+
+
+
+
+.container_GroupMainContent {
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+    max-width: calc(100% - 300px);
+}
+
+
+#clanMembersContainer h4 {
+    margin: 32px 32px 0;
+    padding-left: 0;
+}
+
+
+
+#clanMembersContainer label[for=textbox_clanName] {
+    display: block;
+    font-size: 12px;
+    margin: 32px 32px 0;
+}
+
+.container_editClanName {
+    border: 1px solid #c3c7cb;
+    margin: 0 32px 32px;
+    padding-right: 106px;
+    width: 300px;
+}
+
+    .container_editClanName .loaderSlice {
+        width: 25px !important;
+        height: 25px !important;
+        margin-left: -12px !important;
+        margin-top: -12px !important;
+    }
+
+    .container_editClanName input {
+    }
+
+    .container_editClanName .helper {
+        color: #c9c9c9;
+        display: inline-block;
+        float: right;
+        font-size: 12px;
+        height: 100%;
+        position: absolute;
+        right: 8px;
+        top: 2px;
+    }
+
+    .container_editClanName input:focus + .helper {
+        display: none;
+    }
+
+#clanMembersContainer .clanErrorMessage + h4 {
+    margin-top: 6px;
+}
+
+
+#clanMembersContainer .subsection {
+    padding-top: 0;
+}
+
+#clanMembersContainer .platformId.psn:before,
+#clanMembersContainer .platformId.xbox:after {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/sprite_gameplatforms.png") no-repeat 0 0;
+    background-size: auto 15px;
+    content: "";
+    display: inline-block;
+    float: left;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+#clanMembersContainer .platformId.psn:before {
+    background-position: left top;
+}
+
+#clanMembersContainer .platformId.xbox:after {
+    background-position: right top;
+}
+
+
+#clanMembersContainer .clanErrorMessage {
+    background: #d8dde1 none repeat scroll 0 0;
+    color: #666;
+    font-size: 12px;
+    line-height: 48px;
+    margin: 32px 32px 0;
+    padding-left: 56px;
+    position: relative;
+}
+
+.clanErrorMessage:before {
+    background: url("https://www.bungie.net/img/theme/destiny/icons/icon_ghost.png") no-repeat center center #c2c3c5;
+    content: "";
+    display: block;
+    height: 48px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 48px;
+}
+
+
+
+
+.container_leaderboards {
+}
+
+    .container_leaderboards .tabs {
+        border-top: 1px solid #c3c7cb;
+        border-bottom: 1px solid #c3c7cb;
+        margin: 15px;
+    }
+
+    .container_leaderboards .tab {
+        background: #479ce4 none repeat scroll 0 0;
+        color: #fff;
+        display: inline-block;
+        font-family: "Roboto",arial,sans-serif;
+        font-size: 12px;
+        font-weight: 500;
+        height: 41px;
+        line-height: 41px;
+        margin-left: 0;
+        padding: 0 15px;
+        text-align: center;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+        .container_leaderboards .tab.on {
+            background: none;
+            color: #000;
+        }
+
+
+
+.leaderboards {
+    color: #fff;
+    display: none;
+    -ms-flex-flow: wrap row;
+    -webkit-flex-flow: wrap row;
+    flex-flow: wrap row;
+    justify-content:space-between;
+    margin: 0 15px;
+
+}
+
+    .leaderboards.on {
+        display: flex;
+    }
+
+    .leaderboards h4 {
+        -ms-flex: 1 1 100%;
+        -webkit-flex: 1 1 100%;
+        flex: 1 1 100%;
+        padding:0;
+    }
+
+    .leaderboards .header {
+        background: rgba(245, 245, 245, 0.1) none repeat scroll 0 0;
+        font-size: 13px;
+        height: 30px;
+        line-height: 30px;
+        margin-bottom: 1px;
+        overflow: hidden;
+        padding: 0 8px;
+        position: relative;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
+
+    .leaderboards .leaderboard {
+        background: #1A2129;
+        -ms-flex: 1 1 50%;
+        -webkit-flex: 1 1 50%;
+        flex: 1 1 50%;
+        margin: 0 0 15px;
+        max-width: 49%;
+        position: relative;
+        vertical-align: top;
+    }
+		.leaderboard .empty {
+			padding: 10px;
+		}
+
+.react-medium .leaderboards .leaderboard {
+    -ms-flex: 1 1 100%;
+    -webkit-flex: 1 1 100%;
+    flex: 1 1 100%;
+    max-width:none;
+}
+
+.leaderboard .player {
+    font-size: 16px;
+    font-weight: 100;
+    height: 40px;
+    line-height: 20px;
+    white-space: nowrap;
+}
+
+.leaderboard .playerDetail div:nth-of-type(2) {
+    font-size: 12px;
+    line-height: 12px;
+    opacity: 0.5;
+}
+
+.leaderboard .player.isCurrentPlayer {
+    background: rgba(245, 245, 245, 0.05) none repeat scroll 0 0;
+}
+
+.leaderboard .player > div {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.leaderboard .player .placement {
+    text-indent: 10px;
+    width: 35px;
+}
+
+.leaderboard .player .avatar {
+    width: 45px;
+}
+
+    .leaderboard .player .avatar img {
+        width: 35px;
+    }
+
+.leaderboard .player .playerDetail {
+}
+
+.leaderboard .player a {
+    color: #f5f5f5;
+}
+
+.leaderboard .player .value {
+    padding-right: 10px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    width: 100px;
+}

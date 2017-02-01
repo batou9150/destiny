@@ -1,0 +1,3345 @@
+/************************/
+/* NAVIGATION */
+/************************/
+
+header {
+	position: fixed;
+	display: block;
+	z-index: 999;
+	top:0;
+	left:0;
+
+	width: 100%;
+	min-width:954px;
+	height: 60px;
+
+	background: #2A333E;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+	transition: top 0.25s;
+}
+
+	html.scroll-hidden header
+	{
+		top: -60px;
+	}
+
+	.scroll-hidden.mobile-nav-enabled header{
+		top: 0;
+	}
+
+	html.mobile-nav-enabled header
+	{
+		min-width: 0;
+	}
+
+	.no-rgba header
+	{
+		background:#000;
+	}
+
+	header.notFixed{
+			position:absolute;
+		}
+	.android.no-mobile header
+	{
+	}
+
+/*
+	=== BANNER NAV ===
+*/
+
+.banner-nav
+{
+	position: absolute;
+	z-index: 99;
+
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 48px;
+
+	text-align: center;
+}
+
+	.banner-nav > a
+	{
+		position: relative;
+		display: inline-block;
+
+		padding: 0 20px;
+		line-height: 45px;
+
+		color: rgba(245,245,245,0.5);
+
+		-webkit-transition: 0.25s;
+		transition: 0.25s;
+	}
+
+		.banner-nav > a:hover
+		{
+			color: #F5F5F5;
+		}
+
+		.banner-nav > a.current
+		{
+			color: #F5F5F5;
+			border-bottom: 3px solid #F5F5F5;
+		}
+
+/*
+	=== STREAMING ALERTS ===
+*/
+
+html.streaming-alerts-active body
+{
+	padding-top: 110px;
+}
+
+#streaming-alerts
+{
+	position: relative;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	width: 0;
+	height: 50px;
+
+	background: rgb(255, 206, 31);
+	border-top: 1px solid rgb(255, 206, 31);
+	opacity: 0;
+	cursor: pointer;
+
+	color: white;
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+	#streaming-alerts.streaming-alerts-transition
+	{
+		transition: width 1s, background 2s 0.10s;
+	}
+
+	#streaming-alerts.on
+	{
+		width: 100%;
+		background: #181D25;
+		opacity: 1;
+	}
+
+	#streaming-alerts.done.streaming-alerts-transition
+	{
+		transition: background 0.15s;
+	}
+
+	#streaming-alerts:hover
+	{
+		background: rgb(30, 36, 43);
+	}
+
+	#streaming-alerts .streaming-alerts-content
+	{
+		align-items: center;
+		white-space: nowrap;
+
+		height: 0;
+		opacity: 0;
+
+		transform: translateY(-100%);
+	}
+
+	#streaming-alerts.on .streaming-alerts-content
+	{
+		height: auto;
+
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+		#streaming-alerts.streaming-alerts-transition .streaming-alerts-content
+		{
+			transition: 1s 0.9s;
+		}
+
+	#streaming-alerts .streaming-alerts-text
+	{
+		position: relative;
+		line-height: 1.3;
+	}
+
+		#streaming-alerts .streaming-alerts-text .top
+		{
+			font-size: 11px;
+			font-weight: 200;
+			text-transform: none;
+		}
+
+			#streaming-alerts .streaming-alerts-text .top span
+			{
+				color: rgb(255, 206, 31);
+			}
+
+		#streaming-alerts .streaming-alerts-text .bottom
+		{
+			font-size: 13px;
+			letter-spacing: 5px;
+		}
+
+	#streaming-alerts .arrows
+	{
+		position: relative;
+
+		width: 66px;
+		height: 40px;
+		margin-top: 10px;
+
+		background: url("https://www.bungie.net/img/theme/bungienet/bgs/bg_streamingalert_arrows.png") 0 0 no-repeat;
+	}
+
+	#streaming-alerts .dot-container
+	{
+		position: relative;
+		-ms-flex: 1 0;
+		-webkit-flex: 1 0;
+		flex: 1 0;
+
+		align-items: center;
+		margin-right: 5px;
+	}
+
+	#streaming-alerts .dot
+	{
+		position: relative;
+
+		width: 12px;
+		height: 12px;
+
+		background: rgb(244, 67, 54);
+		border-radius: 50%;
+		transform: translateX(-50%);
+	}
+
+	#streaming-alerts .streaming-alerts-pulse
+	{
+		position: absolute;
+
+		top: 50%;
+		left: 50%;
+		width: 0;
+		height: 0;
+
+		border-radius: 50%;
+		background: rgba(255, 0, 0, 0);
+		border: 5px solid rgb(244, 67, 54);
+
+		transform: translateY(-50%) translateX(-50%);
+		animation: 2s streaming-alerts-expand ease infinite;
+	}
+
+	@keyframes streaming-alerts-expand
+	{
+		0%
+		{
+			width: 0;
+			height: 0;
+			opacity: 0.5;
+		}
+
+		100%
+		{
+			width: 750%;
+			height: 750%;
+			opacity: 0;
+			background-color: transparent;
+			border-width: 2px;
+		}
+	}
+
+	#modal-streaming-alert .modal
+	{
+		display: -ms-flexbox;
+		display: -webkit-flex;
+		display: flex;
+
+		width: 80%;
+		height: 80%;
+	}
+
+		#modal-streaming-alert .modal .modal-content
+		{
+			-ms-flex: 1 0;
+			-webkit-flex: 1 0;
+			flex: 1 0;
+			flex-basis: auto;
+
+			height: 100%;
+			padding: 0;
+			margin: 0;
+		}
+
+		#modal-streaming-alert .modal .modal-content iframe
+		{
+			display: block;
+		}
+
+/*
+	=== SUB NAV ===
+*/
+
+.Sub_Nav
+{
+	position: relative;
+	z-index: 50;
+
+	top: 0;
+	left: 0;
+
+	height: 50px;
+	width: 100%;
+	width: calc(100% - 250px);
+	min-width: 960px;
+	margin-bottom: -50px;
+
+	overflow: visible;
+	white-space: nowrap;
+
+	background: rgba(23,30,36,0.45);
+
+	-webkit-backface-visibility:hidden;
+
+	transition: 0.25s ease;
+}
+
+	.Sub_Nav.Sub_Nav_Legacy
+	{
+		position: fixed;
+		top: 60px;
+		margin-bottom: 0;
+	}
+
+	html.scroll-hidden .Sub_Nav
+	{
+		top: 0;
+	}
+
+	html.mobile-nav-enabled .Sub_Nav
+	{
+		min-width: 0;
+	}
+
+	.Sub_Nav.scrolled
+	{
+		background: rgba(23, 30, 36, 0.95);
+		box-shadow: 0 1px 15px -3px rgba(0,0,0,1);
+	}
+
+	.Sub_Nav.empty
+	{
+		display: none;
+	}
+
+	body.compact .Sub_Nav,
+	body.NoSidebar .Sub_Nav,
+	body.ClosedSidebar .Sub_Nav
+	{
+		width: 100%;
+	}
+
+	.Sub_Nav > a,
+	.Sub_Nav li a
+	{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+
+		line-height: 54px;
+		height: 54px;
+		padding: 0 20px;
+
+		color: #FFF;
+		font-size: 14px;
+		text-decoration: none;
+	}
+
+	.nav_sub a.current,
+	.nav_sub a:hover
+	{
+		opacity: 1;
+	}
+
+	.nav_sub a.current:after {
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+
+		width: 100%;
+		height: 2px;
+		border: 0;
+
+		background: #f5f5f5;
+	}
+
+	.AboutUs .Sub_Nav, .Index .Sub_Nav
+	{
+		background: none;
+		z-index: 4;
+	}
+
+	.Index .nav_sub
+	{
+		width: auto;
+		margin-right: 21px;
+	}
+
+	.nav_sub
+	{
+		height: 50px;
+		overflow: hidden;
+		white-space: nowrap;
+
+		width: calc(100% - 255px);
+		text-align: center;
+
+		transition: 0.25s;
+
+		border-bottom: 1px solid rgba(245,245,245,.05);
+	}
+
+		.compact .nav_sub,
+		.NoSidebar .nav_sub
+		{
+			width: 100%;
+		}
+
+		.nav_sub.overflow
+		{
+			overflow: visible;
+		}
+
+		.nav_sub li
+		{
+			display: inline-block;
+			list-style: none;
+		}
+
+		.nav_sub > .removed
+		{
+			display: none;
+		}
+
+		.nav_sub > a,
+		.nav_sub li a
+		{
+			display: inline-block;
+			color: #fff;
+			font-size: 11px;
+			font-weight: 400;
+			padding: 0 1rem;
+			line-height: 50px;
+			height: 50px;
+			position: relative;
+
+			opacity: 0.6;
+			transition: 0.25s ease;
+
+			text-transform: uppercase;
+		}
+
+		.nav_sub .header a
+		{
+			color: #0096db;
+			background: rgba(0,0,0,.5);
+		}
+
+		.nav_sub .on a:after
+		{
+			content: "";
+			background: url("https://www.bungie.net/img/theme/bungienet/bgs/point_subnav_on.png") no-repeat;
+			width: 11px;
+			height: 6px;
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			margin-left: -5.5px;
+		}
+
+		.nav_sub .nav_more
+		{
+			display: inline-block;
+			position: relative;
+			position: absolute;
+		}
+
+			.nav_sub .nav_more.opened
+			{
+				display: inline-block !important;
+			}
+
+			.nav_sub .nav_more > a:hover
+			{
+				cursor: default;
+				text-decoration: none;
+			}
+
+	.nav_more ul
+	{
+		display: none;
+		position: absolute;
+		left: 0;
+		top: 45px;
+		background: #000;
+	}
+
+	.no-mobile .nav_more:hover ul, .nav_more.opened ul
+	{
+		display: block;
+	}
+
+	.nav_more li
+	{
+		display: block;
+		clear: both;
+	}
+
+	.nav_sub .preorder {
+		position: absolute;
+		right: 0;
+		top: 11px;
+	}
+
+	.nav_sub .btn_preorder
+	{
+		width: auto;
+		height: 54px;
+		display: inline-block;
+		background: url("https://www.bungie.net/img/theme/bungienet/btns/btn_preorder.png") no-repeat center center;
+		background-size: 100% 41px;
+		font-weight: 500;
+		color: #fff;
+		line-height: 54px;
+		text-transform: uppercase;
+		padding: 0 27px 0 11px;
+		opacity:1;
+	}
+
+	@media all and (max-width: 1075px)
+	{
+		.nav_sub
+		{
+			position: relative;
+		}
+
+			.nav_sub .preorder
+			{
+				right: 0;
+			}
+	}
+
+.nav-mini
+{
+	position: relative;
+	height: 30px;
+
+	background: #1E242B;
+}
+
+	.nav-mini > a
+	{
+		position: relative;
+		display: inline-block;
+
+		height: 100%;
+	}
+
+	.nav-mini > a.logo-small
+	{
+		width: 64px;
+		margin-right: 18px;
+
+		background: url("https://www.bungie.net/img/theme/bungienet/logo-bungie-small.png") 18px 6px no-repeat;
+	}
+
+	.nav-mini > a[class*="social"]
+	{
+		width: 30px;
+
+		background: url("https://www.bungie.net/img/theme/bungienet/sprite-social.png") 0 50% no-repeat;
+	}
+
+		.nav-mini > a.social-facebook
+		{
+			background-position: -30px 50%;
+		}
+
+		.nav-mini > a.social-twitter
+		{
+			background-position: -60px 50%;
+		}
+
+		.nav-mini > a.social-youtube
+		{
+			background-position: -90px 50%;
+		}
+
+.Bungie .Sub_Nav {
+	border: 14px transparent solid;
+	border-width: 0 14px;
+	margin-bottom: 0;
+	margin-left: -14px;
+	padding-top: 14px;
+	position: absolute;
+	top: -64px;
+	width: 100%;
+}
+
+/* high level top nav css */
+.Nav_Top {
+	position: relative;
+	height: 60px;
+	min-width:960px;
+}
+
+	html.mobile-nav-enabled .Nav_Top
+	{
+		width: 100%;
+		min-width: 0;
+	}
+
+	.nav_top
+	{
+		height:100%;
+		min-width:960px;
+	}
+
+		html.mobile-nav-enabled .nav_top
+		{
+			min-width: 0;
+		}
+
+	.Nav_Top li {
+		list-style: none;
+	}
+	.Nav_Top .link {
+		cursor:pointer;
+		color:#2b2b2b;
+		background-color:#fcfcfc;
+	}
+
+	.Nav_Top .link .btn_clear
+	{
+		-moz-transition: 0.4s ease-out opacity;
+		-o-transition: 0.4s ease-out opacity;
+		-webkit-transition: 0.4s ease-out opacity;
+		transition: 0.4s ease-out opacity;
+		background: url("https://www.bungie.net/img/theme/bungienet/btns/btn_message_delete.png") no-repeat scroll left center transparent;
+		display: block;
+		float: right;
+		height: 16px;
+		margin-right: -4px;
+		opacity: 0;
+		position: absolute;
+		right: 0;
+		top: 36px;
+		width: 16px;
+	}
+		.Nav_Top .link:hover .btn_clear
+		{
+			opacity:1;
+		}
+		.Nav_Top .link:hover
+		{
+			background-color:#ECECEC;
+		}
+
+	.Nav_Top .opened {
+		position: relative;
+		color: #2B2B2B;
+	}
+		.Nav_Top .signedIn .opened:after {
+			background: url("https://www.bungie.net/img/theme/bungienet/bgs/point_dropdown_header_blue.png") no-repeat scroll center top transparent;
+			content: "";
+			display: block;
+			height: 13px;
+			position: absolute;
+			bottom: 0;
+			width: 100%;
+		}
+
+	.Nav_Top .dropdown {
+		display: none;
+		position: absolute;
+	}
+
+.nav_top {
+}
+	.nav_top > li
+	{
+		height: 100%;
+	}
+
+	.nav_top > li.right
+	{
+		float:right;
+	}
+
+	.nav_top > li.left
+	{
+		float:left;
+		display:block;
+	}
+
+	.nav_top .level_one {
+		float: right;
+	}
+
+		.nav_top .level_one.communities
+		{
+			display:none !important;
+		}
+
+	.nav_top .dropTrigger {
+		position: relative;
+		display: block;
+
+		height: 100%;
+		width: 50px;
+
+		background-repeat: no-repeat;
+		background-position: center center;
+	}
+
+	.nav_top .nav_links > ul,
+	.nav_top .nav_links > ul li
+	{
+		height: 100%;
+	}
+
+	.nav_top .nav_links > .username,
+	.nav_top .nav_links > ul
+	{
+		float: left;
+	}
+
+	.nav_top .roster .dropTrigger .badge
+	{
+		background:#209EE5;
+		border-color:#209EE5;
+	}
+		.nav_top .dropTrigger:hover
+		{
+			text-decoration:none;
+		}
+
+			.nav_top .dropTrigger .badge:before
+			{
+				background-image:url("https://www.bungie.net/img/theme/bungienet/bgs/point_badge_black.png");
+			}
+
+			.nav_top .roster .dropTrigger .badge:before
+			{
+				background-image:url("https://www.bungie.net/img/theme/bungienet/bgs/point_badge_blue.png");
+			}
+
+	.nav_top .icons {
+		background:none;
+	}
+
+	.nav_top .level_one .dropTrigger
+	{
+		background-image: url(https://www.bungie.net/img/theme/bungienet/icons/sprite_notifications.png);
+	}
+
+	.nav_top .level_one.roster .dropTrigger { background-position: 4px 4px; }
+	.nav_top .level_one.communities .dropTrigger { background-position: -62px 4px; }
+	.nav_top .level_one.notifications .dropTrigger { background-position: -124px 4px; }
+	.nav_top .level_one.mail .dropTrigger { background-position: -186px 4px; }
+
+	.nav_top .level_one.roster .dropTrigger:hover { background-position: 4px -50px; }
+	.nav_top .level_one.communities .dropTrigger:hover { background-position: -62px -50px; }
+	.nav_top .level_one.notifications .dropTrigger:hover { background-position: -124px -50px; }
+	.nav_top .level_one.mail .dropTrigger:hover { background-position: -186px -50px; }
+
+	.nav_top_search .btn_search
+	{
+		position: absolute;
+		overflow: visible;
+
+		background-image: url(https://www.bungie.net/img/theme/bungienet/icons/sprite_notifications.png);
+		background-position: -270px 0;
+		height: 60px;
+		width: 54px;
+	}
+
+	.nav_top_search .btn_search:hover,
+	.nav_top_search.active .btn_search
+	{
+		background-position: -270px -54px;
+		background-color: #479ce4;
+	}
+
+		.nav_top_search .btn_search:hover:after,
+		.nav_top_search.active .btn_search:after
+		{
+			position: absolute;
+			content: "";
+			left: -8px;
+			top: 23px;
+			z-index: 4;
+
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 7.5px 8px 7.5px 0;
+			border-color: transparent #479be4 transparent transparent;
+		}
+
+/* specific for first levels */
+.nav_logo {
+	float: left;
+}
+	.nav_top .nav_logo h1{
+		width:auto;
+		padding:0;
+		vertical-align:middle;
+		margin-left:0px;
+		border:0;
+	}
+
+		.nav_logo .logo {
+			display:block;
+			vertical-align: middle;
+
+			width: 110px;
+			height: 60px;
+			margin-right: 1.8vw;
+			padding: 0;
+
+			background: url("/favicon.png?v=2") no-repeat scroll 18px 50% rgba(0, 0, 0, 0);
+		}
+
+#nav-items
+{
+	font-size: 0;
+}
+
+	.react-mobile:not(.delay-interaction) #nav-items
+	{
+		display: none;
+	}
+
+		.react-mobile.documentReady:not(.delay-interaction) #nav-items
+		{
+			display: block;
+		}
+
+	.nav-bucket
+	{
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+
+		height: 60px;
+		min-width: 50px;
+		line-height: 60px;
+
+		font-size: 13px;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: rgba(245, 245, 245, 0.5);
+
+		transition: color 0.25s, background 0.25s;
+	}
+
+		.nav-bucket[data-id=home]{
+			display:none;
+		}
+			.mobile-nav-enabled.react-medium .nav-bucket[data-id=home]{
+				display:inline-block;
+			}
+
+		.nav-bucket > a
+		{
+			display: block;
+			box-sizing: border-box;
+			vertical-align: top;
+
+			height: 100%;
+			width: 100%;
+			padding: 0 1.8vw;
+
+			text-align: center;
+			color: rgba(245, 245, 245, 0.5);
+		}
+
+			.nav-bucket:hover a,
+			.nav-bucket.open a,
+			.nav-bucket.on a
+			{
+				color: rgba(245, 245, 245, 1);
+				text-decoration: none;
+			}
+
+			.mobile-nav-enabled.react-medium .nav-bucket > a {
+				font-size:17px;
+				padding-left: 18px;
+				padding-right:0;
+				text-align: left;
+			}
+				.mobile-nav-enabled.react-medium.touch .nav-bucket > a{
+				}
+
+				.nav-bucket .expandIcon{
+					display:none;
+				}
+
+				.mobile-nav-enabled.react-medium .nav-bucket .expandIcon {
+					display: inline-block;
+					float: right;
+					padding:17px 40px;
+					vertical-align: middle;
+				}
+
+				.mobile-nav-enabled.react-medium .nav-bucket .expandIcon:after{
+					color: #4f545a;
+					content: "";
+					display: inline-block;
+					font-size: 16px;
+				}
+					.mobile-nav-enabled.react-medium .nav-bucket.open .expandIcon:after{
+						content: "";
+					}
+
+			.nav-bucket a.link-in-group
+			{
+				line-height: 50px;
+				height: 36px;
+			}
+				.mobile-nav-enabled.react-medium .nav-bucket a.link-in-group{
+					height:auto;
+				}
+			.nav-bucket a.link-in-group .label
+			{
+				position: absolute;
+				display: block;
+
+				top: 30px;
+				left: 0;
+				height: 30px;
+				width: 100%;
+
+				text-align: center;
+				line-height: 20px;
+				font-size: 10px;
+
+				opacity: 0.5;
+			}
+				.mobile-nav-enabled.react-medium .nav-bucket a.link-in-group .label {
+					display:none;
+				}
+		.nav-bucket:after
+		{
+			content: "";
+			position: absolute;
+
+			bottom: 0;
+			left: 50%;
+			width: 0;
+			height: 3px;
+
+			background: rgba(245, 245, 245, 0);
+
+			transition: 0.25s;
+		}
+
+			.nav-bucket:hover:after,
+			.nav-bucket.on:after,
+			.nav-bucket.open:after
+			{
+				left: 0;
+				width: 100%;
+				background: rgb(255, 206, 31);
+			}
+				.mobile-nav-enabled.react-medium .nav-bucket:after
+				{
+					display:none;
+				}
+		.nav-bucket .nav-bucket-items
+		{
+			position: absolute;
+			overflow: hidden;
+			z-index: 5;
+
+			top: 60px;
+			left: 0;
+			height: 0;
+			width: 200px;
+			min-width: 100%;
+
+			height:0;
+
+			opacity: 0;
+			box-shadow: 0 5px 10px -2px rgba(0, 0, 0, 0.25);
+
+			-webkit-transform: translateY(-10px);
+			transform: translateY(-10px);
+
+			transition: 0.25s;
+		}
+
+			.mobile-nav-enabled.react-mobile .nav-bucket-items.sign-in-triggers {
+				left: auto;
+				right: 0;
+			}
+			.nav-bucket .nav-bucket-items a
+			{
+				position: relative;
+				display: block;
+				box-sizing: border-box;
+
+				min-width: 100%;
+				padding: 12px 18px;
+				line-height: 16px;
+
+				background: rgba(30, 36, 43, 1);
+				color: rgba(245, 245, 245, 1);
+				border-color: rgba(255, 206, 31, 1);
+				font-size: 12px;
+
+				text-transform: none;
+				transition: 0.25s;
+			}
+
+				#nav-items .nav-bucket-items a
+				{
+					padding: 12px 1.8vw;
+				}
+
+				.mobile-nav-enabled.react-medium #nav-items .nav-bucket-items > a {
+					color: rgba(245, 245, 245, 0.5);
+					font-size: 17px;
+					padding: 18px 18px 18px 18px;
+				}
+
+				.mobile-nav-enabled.react-medium #nav-items .nav-bucket-items > a.on {
+					color: rgba(245, 245, 245, 0.85);
+				}
+
+				.nav-bucket .nav-bucket-items a:after
+				{
+					content: "";
+					position: absolute;
+
+					top: 0;
+					left: 0;
+					right: 0;
+					height: 1px;
+
+					background: rgba(0, 0, 0, 0.1);
+				}
+
+				 .mobile-nav-enabled.react-medium .nav-bucket .nav-bucket-items a:after
+				{
+					height: 0;
+
+					background: none;
+				}
+
+				.nav-bucket .nav-bucket-items a:hover,
+				.nav-bucket .nav-bucket-items a.on
+				{
+					background: rgba(43, 51, 62, 1);
+				}
+				.mobile-nav-enabled.react-medium.touch #nav-items .nav-bucket .nav-bucket-items a.on
+				{
+					background: rgba(43, 51, 62, 1);
+				}
+					.mobile-nav-enabled.react-medium.touch #nav-items .nav-bucket .nav-bucket-items a
+					{
+						background: none;
+						color: rgba(245, 245, 245, 0.5);
+					}
+
+			.nav-bucket.open .nav-bucket-items,
+			.nav-bucket:hover .nav-bucket-items
+			{
+				height: auto;
+
+				opacity: 1;
+
+				-webkit-transform: translateY(0);
+				transform: translateY(0);
+			}
+
+				.mobile-nav-enabled.react-medium #nav-items .nav-bucket .nav-bucket-items{
+					display:none;
+					height:auto;
+					opacity:1;
+					width:100%;
+				}
+
+				.mobile-nav-enabled.react-medium #nav-items .nav-bucket.open .nav-bucket-items{
+					display:block;
+				}
+
+#btn_signUp
+{
+	color: rgba(255, 206, 31, 1);
+}
+
+.nav_links
+{
+	margin-right: 9px;
+	transition: 0.25s 0.45s;
+}
+
+	.nav_links.searchmove
+	{
+		opacity: 0;
+
+		transition: 0.15s;
+	}
+
+.nav_links .username
+{
+	position: relative;
+
+	height: 100%;
+
+	font-weight: 400;
+	font-size: 14px;
+
+	transition: 0.25s ease;
+}
+
+	.nav-bucket.username:hover
+	{
+		background:#151619;
+	}
+
+	.nav_links .username .profileLink
+	{
+		display:block;
+		height: 100%;
+		padding:0 18px;
+		text-decoration: none;
+	}
+
+		.nav_links .username .profileLink span
+		{
+			display: inline-block;
+			height: 30px;
+			overflow: hidden;
+			vertical-align: top;
+
+			width: 30px;
+			margin-top:15px;
+
+			background-size: contain;
+			background-repeat:no-repeat;
+			background-position:0 0;
+
+			color:  #f5f5f5;
+			line-height: 30px;
+		}
+
+		.nav_links .username .profileLink .fa
+		{
+			display: inline-block;
+
+			margin-top: 14px;
+			line-height: 30px;
+
+			color: #FFF;
+		}
+
+.nav_identity {
+	margin-left: 0px;
+	white-space: nowrap;
+}
+	.nav_identity.opened
+	{
+		background:none transparent;
+	}
+	.nav_identity > div
+	{
+		padding-right: 0px;
+		position: relative;
+	}
+	 .nav_identity h2
+	{
+		font-size: 18px;
+		line-height: 37px;
+		color: #fff;
+		padding-left: 15px;
+		border-left:0px solid #fff;
+		font-size:13px;
+		line-height:23px;
+		display:inline-block;
+		vertical-align:middle;
+	}
+		.nav_identity .signedOut
+		{
+			cursor:pointer;
+			display:none;
+		}
+
+			.nav_identity .signedOut .nav-bucket
+			{
+				width: 200px;
+			}
+				.mobile-nav-enabled.react-mobile .nav_identity .signedOut .nav-bucket{
+					width:auto;
+					margin-right:10px;
+				}
+
+				.nav_identity .signedOut .nav-bucket a
+				{
+					text-align: left;
+				}
+
+			.nav_identity .signedOut .nav-bucket:hover
+			{
+				background: transparent;
+				color: #F5F5F5;
+			}
+
+			.nav_identity .signedOut .nav-bucket:hover a
+			{
+				color: #F5F5F5;
+			}
+
+	.nav_identity .container_connect
+	{
+	}
+
+	.nav_identity .dropTrigger {
+		display:inline;
+		white-space:nowrap;
+		line-height:54px;
+		min-width:100px;
+		width:auto;
+		border:0;
+		letter-spacing: 1px;
+	}
+	.nav_identity img {
+		width: 28px;
+		height: 28px;
+		padding:16px 20px 17px;
+		vertical-align:middle;
+		margin-right:10px;
+		float:left;
+	}
+		.nav_identity.opened img
+		{
+			background-color:#0096db;
+		}
+	.nav_identity span {
+		line-height: 49px;
+		padding: 0 33px 0 0;
+	}
+	.Nav_Top .nav_identity .dropdown
+	{
+		width: 270px;
+		left: 0;
+		text-align:left;
+		background:#fff;
+		box-shadow:none;
+	}
+
+	.Nav_Top .nav_identity .signedIn .dropdown
+	{
+	}
+
+		.Nav_Top .nav_identity .signedIn .dropdown a
+		{
+			text-transform: uppercase;
+		}
+
+			.Nav_Top .nav_identity .container_connect .dropdown a:before
+			{
+				content:"";
+				background:url("https://www.bungie.net/img/theme/bungienet/icons/sprite_platforms_1.png") no-repeat;
+				width:26px;
+				height:26px;
+				display:inline-block;
+				vertical-align:middle;
+				margin-right:15px;
+			}
+				.Nav_Top .nav_identity .container_connect .dropdown a.live:before
+				{
+					background-position:0 0;
+				}
+				.Nav_Top .nav_identity .container_connect .dropdown a.psn:before
+				{
+					background-position:0 -26px;
+				}
+				.Nav_Top .nav_identity .container_connect .dropdown a.facebook:before
+				{
+					background-position:0 -52px;
+				}
+				.Nav_Top .nav_identity .container_connect .dropdown a.google:before
+				{
+					background-position:0 -78px;
+				}
+
+.nav_top_search {
+	position:relative;
+	width: 54px;
+
+	transition: 0.5s ease;
+}
+	.nav_top_search.active
+	{
+		width: 314px;
+	}
+
+	.mobile-nav-enabled.react-mobile .nav_top_search {
+		position: absolute;
+		right: 0;
+		z-index: 2;
+
+		display:none;
+	}
+
+	.nav_top_search .form_search{
+		margin-top: 0;
+		position: relative;
+		height: auto;
+	}
+	.nav_top_search .container_textfield
+	{
+		float: left;
+		overflow: hidden;
+
+		width: 0;
+		height: 60px;
+		line-height: 32px;
+		padding: 0;
+
+		font-size: 14px;
+		background: none repeat scroll 0 0 #FCFCFC;
+		border: 0 none;
+		color: #000000;
+
+		transition: 0.5s ease;
+	}
+		.nav_top_search .container_textfield input
+		{
+			box-sizing: border-box;
+			color:#010101;
+			font-size:14px;
+			padding: 11px 20px 10px 10px;
+			height: 100%;
+		}
+
+		.nav_top_search.active .container_textfield
+		{
+			width: 260px;
+		}
+	.nav_top_search .btn_clear
+	{
+		-moz-transition: 0.4s ease-out opacity;
+		-o-transition: 0.4s ease-out opacity;
+		-webkit-transition: 0.4s ease-out opacity;
+		transition: 0.4s ease-out opacity;
+		background: url("https://www.bungie.net/img/theme/bungienet/btns/btn_search_clear.png") no-repeat scroll left center transparent;
+		display: block;
+		height: 17px;
+		position: absolute;
+		right: 0;
+		top: 2px;
+		width: 17px;
+		visibility:visible;
+	}
+
+	#SearchWidget
+	{
+		display: none;
+		position:absolute;
+	}
+		.open #SearchWidget.open {
+			display:block;
+			z-index: 5;
+			right:21px;
+			top:52px;
+		}
+	.flyout_search
+	{
+		display:none;
+		z-index:1000;
+		overflow-y: auto;
+
+		width: 328px;
+		max-height: 90vh;
+		max-height: calc(90vh - 60px);
+
+		background: none repeat scroll 0 0 #fff;
+		box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3), inset 0 0 0 1px #fff;
+	}
+		.flyout_search h2
+		{
+			background: #E5E5E5; /* for non-css3 browsers */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E5E5E5'); /* for IE */
+			background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E5E5E5)); /* for webkit browsers */
+			background: -moz-linear-gradient(top,  #FFFFFF,  #E5E5E5); /* for firefox 3.6+ */
+			background: -moz-linear-gradient(center top , #FFFFFF, #E5E5E5) repeat scroll 0 0 transparent;
+			border-bottom: 1px solid #BCBCBC;
+			box-shadow: 0 1px 0 #FFFFFF;
+			color: #333333;
+			font-size: 10px;
+			line-height: 27px;
+			overflow: hidden;
+			padding: 0 5px 0 8px;
+			text-overflow: ellipsis;
+			text-shadow: 0 1px #FFFFFF;
+			white-space: nowrap;
+		}
+			.flyout_search h2.hasMore
+			{
+				background-image: url("https://www.bungie.net/img/theme/bungienet/btns/btn_searchPreview_more.png") no-repeat scroll 312px center;
+				background: #E5E5E5; /* for non-css3 browsers */
+
+				filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E5E5E5'); /* for IE */
+				background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E5E5E5)); /* for webkit browsers */
+				background: -moz-linear-gradient(top,  #FFFFFF,  #E5E5E5); /* for firefox 3.6+ */
+				background: -moz-linear-gradient(center top , #FFFFFF, #E5E5E5) repeat scroll 0 0 transparent;
+
+				cursor: pointer;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				padding-right:20px;
+				position:relative;
+			}
+				.flyout_search h2.hasMore:after
+				{
+					background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_arrow_blogMore.png") no-repeat scroll 0 center transparent;
+					content: "";
+					display: block;
+					height: 23px;
+					position: absolute;
+					right: 5px;
+					top: 0;
+					width: 10px;
+					z-index: 2;
+				}
+		.flyout_search ul
+		{
+			padding:0 10px 10px;
+		}
+			.flyout_search ul:empty
+			{
+				height:50px;
+				background:url("https://www.bungie.net/img/theme/bungienet/icons/icon_loading_white.gif") center center no-repeat;
+			}
+			.flyout_search ul.noResults:empty
+			{
+				display:none;
+			}
+		.flyout_search li
+		{
+			color: #828282;
+			margin-top: 5px;
+			width: 154px;
+			float:left;
+		}
+
+		.flyout_search .container_search_news li,
+		.flyout_search .container_search_help li
+		{
+			float: none;
+			width: 100%;
+		}
+
+		.flyout_search .noResults
+		{
+			width:auto;
+		}
+		.flyout_search .avatar
+		{
+			margin: 5px 10px 0 0;
+			width:15px;
+			height:15px;
+			border-radius:0px;
+			display:inline-block;
+			vertical-align:middle;
+		}
+			.flyout_search .avatar img
+			{
+				background-size:auto 100%;
+				background-position:center center;
+				background-repeat:no-repeat;
+				border-radius:0;
+			}
+		.flyout_search .content
+		{
+			display:inline-block;
+			vertical-align:middle;
+			width:120px;
+			overflow:hidden;
+			white-space:nowrap;
+			text-overflow:ellipsis;
+		}
+
+		.Search .flyout_search .container_users
+		{
+			min-height: 0px;
+		}
+
+		.flyout_search .container_search_news .content
+		{
+			width: 200px;
+			padding-left: 5px;
+			height: 54px;
+		}
+
+		.flyout_search .container_search_help .content
+		{
+			width: 95%;
+			padding-left: 5%;
+			height: 54px;
+		}
+
+		.flyout_search .content a, .flyout_search .news a, .flyout_search .help a
+		{
+			color:#2b2b2b;
+			font-size:11px;
+		}
+			.flyout_search .help a
+			{
+				max-width:100%;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+			}
+
+			.flyout_search .content a:hover, .flyout_search .news a:hover, .flyout_search .help a:hover
+			{
+			color:#0096db;
+			}
+
+			.flyout_search .title span
+			{
+				border: 0 none;
+				color: #828282;
+				margin: 0;
+				padding: 0;
+			}
+
+		.flyout_search p
+		{
+			font-size:12px;
+			line-height:20px;
+		}
+			.flyout_search .help p
+			{
+				max-width:100%;
+				overflow:hidden;
+				text-overflow:ellipsis;
+				white-space:nowrap;
+			}
+		.flyout_search span:first-child
+		{
+			margin-right:10px;
+			color:#0096db;
+		}
+
+		.flyout_search .btn_viewMore
+		{
+			line-height:22px;
+			color:#0096db;
+			text-shadow:0 1px 0 #fff;
+			font-size:11px;
+			text-align:center;
+			display:block;
+			border-top:0px solid #e0e0e0;
+			box-shadow: 0 1px 0 0 #FFFFFF inset;
+			background: #E5E5E5; /* for non-css3 browsers */
+
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#FFFFFF', endColorstr='#E5E5E5'); /* for IE */
+			background: -webkit-gradient(linear, left top, left bottom, from(#FFFFFF), to(#E5E5E5)); /* for webkit browsers */
+			background: -moz-linear-gradient(top,  #FFFFFF,  #E5E5E5); /* for firefox 3.6+ */
+			background: -moz-linear-gradient(center top , #FFFFFF, #E5E5E5) repeat scroll 0 0 transparent;
+		}
+
+		.flyout_search .searchPanel
+		{
+			clear:both;
+			border-bottom:1px solid #ccc;
+		}
+		.flyout_search .container_groups .content div, .flyout_search .container_groups .content p
+		{
+			display:none;
+		}
+		.Search .flyout_search .container_topics
+		{
+			margin-top:0;
+		}
+		.flyout_search .container_topics li
+		{
+			width:100%;
+		}
+
+			.flyout_search .container_topics article {
+				min-height: 0;
+			}
+			.flyout_search .container_topics article,
+			.flyout_search .container_postTags article,
+			.flyout_search .container_groupTags article
+			{
+				padding:0;
+			}
+			.flyout_search .container_topics li .avatar, .flyout_search .container_topics li .content time, .flyout_search .container_topics li .content p
+			{
+				display:none;
+			}
+			.flyout_search .container_topics .content
+			{
+				float:none;
+				display:block;
+			}
+
+	.flyout_search img
+	{
+		width: 15px;
+		height: 15px;
+		display: inline-block;
+		overflow: hidden;
+		vertical-align: top;
+	}
+
+		.flyout_search .container_search_news img
+		{
+			width: auto;
+			height: 40px;
+		}
+/* top nav dropdowns */
+.Nav_Top .dropdown {
+	display: none;
+}
+	.Nav_Top .opened .dropdown {
+		display: block;
+		z-index: 5;
+	}
+
+	.mobile-nav-enabled.react-mobile .Nav_Top .dropdown{
+		width:100%;
+		left:0;
+		height:calc(100vh - 60px);
+	}
+
+.Nav_Top .menu {
+	min-width: 100%;
+	top: 54px;
+	box-shadow: 0 4px 8px -2px rgba(0, 0, 0, .4);
+	margin-left: 0px;
+	width:309px;
+}
+	.Nav_Top .menu li {
+		display: block;
+		border:0;
+		background:none transparent;
+		position:static;
+		margin-top:0;
+	}
+		.Nav_Top .menu > li:first-child
+		{
+		}
+	.Nav_Top .menu li a,
+	.Nav_Top .menu .disabled
+	{
+		text-decoration: none;
+		color: #171717;
+		font-size: 16px;
+		text-shadow: none;
+		text-transform: uppercase;
+		line-height:40px;
+		display: block;
+		line-height: 9px;
+		padding: 15px 20px;
+	}
+		.Nav_Top .menu .disabled {
+			line-height: unset;
+			text-transform: none;
+			white-space: normal;
+		}
+		.Nav_Top .menu li a:hover
+		{
+			background-color:rgb(71, 156, 228);
+			color:#fff;
+		}
+		.Nav_Top .menu.subIsLocked > li > a:hover
+		{
+			color: #171717;
+			background-color:transparent;
+		}
+		.Nav_Top .menu.subIsLocked > li.opened > a:hover
+		{
+			background-color:rgb(71, 156, 228);
+			color:#fff;
+		}
+	.Nav_Top .signedOut .menu li a
+	{
+		letter-spacing: 0px;
+	}
+
+	.Nav_Top .menu li h2
+	{
+		color:#888;
+		min-width:145px;
+		display:block;
+		line-height: 9px;
+		padding: 15px 14px 5px;
+	}
+
+.Nav_Top .panel {
+	position: fixed;
+	background: none repeat scroll 0px 0px #FFFFFF;
+	top: 60px;
+	right: 50px;
+	width: 450px;
+	box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.25);
+
+	transition: right 0.5s ease;
+}
+
+	.nav-open .dropdown.panel {
+		z-index: 100;
+	}
+
+	.Nav_Top .nav_links.searchmove .panel
+	{
+		right: 310px;
+	}
+
+	.Nav_Top .panel .hgroup {
+		background: #479ce4;
+		color: #f3f3f3;
+		font-size: 13px;
+		padding: 6px 8px;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+	}
+		.Nav_Top .panel .hgroup a {
+			color: #f3f3f3;
+			font-weight: 400;
+			font-size:13px;
+			line-height:17px;
+			float:right;
+		}
+			.Nav_Top .hgroup .btn_settings
+			{
+			}
+				.Nav_Top .hgroup .btn_settings:before
+				{
+					background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_settings_header.png") no-repeat scroll 5px center transparent;
+					border-left: 1px solid #F3F3F3;
+					content: "";
+					font-size: 10px;
+					margin: 0 5px;
+					padding-left: 19px;
+					position: relative;
+					vertical-align: middle;
+				}
+
+.Nav_Top .hgroup .sort {
+}
+	.Nav_Top .hgroup .sort li{
+		display: inline;
+		padding-left: 10px;
+		margin-left:10px;
+		border-left:1px solid #d5d5d5;
+	}
+		.Nav_Top .hgroup .sort li:first-child {
+			margin-left: 0;
+			padding-left:0;
+			border-left:0;
+		}
+	.Nav_Top .hgroup .sort a {
+		color: #D5D5D5;
+		font-size: 13px;
+		text-shadow:none;
+		float:none;
+	}
+	.Nav_Top .hgroup .sort .on a {
+		color: #f3f3f3;
+	}
+
+.Nav_Top .container_textarea {
+	border:1px solid #fff;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+}
+
+.Nav_Top .container_section {
+	background: none repeat scroll 0 0 #f3f3f3;
+	height: 400px;
+	overflow: auto;
+	width:100%;
+}
+	.react-mobile .Nav_Top .container_section{
+		height:calc(100vh - 91px);
+		-webkit-overflow-scrolling:touch;
+	}
+	.react-mobile .Nav_Top .roster_list .container_section {
+		height: calc(100vh - 132px);
+	}
+
+	.react-mobile .Nav_Top .mail_create .container_section {
+		height: calc(100vh - 194px);
+	}
+
+	.react-mobile .Nav_Top .mail_conversation .container_section {
+		height: calc(100vh - 238px);
+	}
+
+.dropdown .btn_blue {
+	float: right;
+	position: absolute;
+	bottom: -29px;
+	right: 0;
+	background: -moz-linear-gradient(center top , #459BDD, #358BD6) repeat scroll 0 0 transparent;
+	border: 1px solid #317DB8;
+	box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(86, 172, 239, 0.25) inset;
+	font-weight: 400;
+	font-size: 12px;
+	padding: 0 8px;
+	text-shadow: none;
+	text-transform: none;
+}
+
+.Nav_Top .section {
+	color: #000;
+}
+	.Nav_Top .section > li, .pinned .section > li {
+		border-bottom: 1px solid #E5E5E5;
+		box-shadow: 0 1px 0 0 #F8F8F8 inset;
+		min-height: 54px;
+	}
+	.Nav_Top .section > li:first-child {
+		border-top: 0 none;
+		box-shadow: none;
+		color: #2b2b2b;
+		font-size: 11px;
+	}
+.Nav_Top .section .noResults
+{
+	padding:11px;
+}
+	.Nav_Top .notifications .section .noResults,
+	.Nav_Top #mail_conversations .section .noResults
+	{
+		background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_notifications_empty.gif") no-repeat scroll center 37px #fff;
+		border-bottom: 0 none;
+		color: #2b2b2b;
+		height: 149px;
+		padding: 244px 0 0;
+		position: absolute;
+		width: 100%;
+	}
+		.Nav_Top #mail_conversations .section .noResults
+		{
+			background-image: url("https://www.bungie.net/img/theme/bungienet/icons/icon_messages_empty.gif");
+			background-position:center 70px;
+		}
+	.Nav_Top .notifications .section .noResults p,
+	.Nav_Top #mail_conversations .section .noResults p
+	{
+		margin-bottom:32px;
+		text-align:center;
+		font-family:Roboto,Arial, sans-serif;
+		font-size:18px;
+		color:#999a9a;
+		padding:0 20px;
+	}
+
+.Nav_Top article, .pinned article {
+	 padding-left: 71px;
+	position: relative;
+	display: block;
+	padding-right: 10px;
+	min-height:62px;
+}
+	.Nav_Top .link article{
+	}
+	.Nav_Top article .avatar, .pinned .avatar {
+		background: none repeat scroll 0 0 transparent;
+		border-radius: 0 0 0 0;
+		height: 62px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 62px;
+	}
+
+	.Nav_Top article .content, .pinned article .content {
+		float: left;
+		position: relative;
+		width: 100%;
+		padding-bottom:10px;
+	}
+		.Nav_Top article h1, .pinned article h1 {
+			display: inline-block;
+			font-family: "Roboto",sans-serif;
+			font-weight: 500;
+			font-size: 14px;
+			margin-top: 9px;
+			overflow: hidden;
+			position: relative;
+			text-overflow: ellipsis;
+			top: 0;
+			white-space: nowrap;
+			max-width: 240px;
+		}
+			.Nav_Top .notifications article h1
+			{
+				white-space:normal;
+			}
+			.Nav_Top article h1 .badge {
+				display: inline-block;
+				left: auto;
+				position: relative;
+				right: -6px;
+				top: -2px;
+			}
+			.Nav_Top article h1 a, .pinned article h1 a {
+				cursor:pointer;
+				font-weight: 500;
+				font-size:14px;
+				color: #222222;
+			}
+				.Nav_Top article h1 a:hover, .pinned article h1 a:hover {
+					color: #0096db;
+				}
+
+		.Nav_Top article time, .pinned article time {
+			color: #979797;
+			float: right;
+			font-size: 11px;
+			margin-top: 7px;
+		}
+		.Nav_Top article p, .pinned article p {
+			clear: both;
+			font-size: 13px;
+			line-height: 16px;
+			margin-top: -2px;
+			max-width: 450px;
+			min-height: 20px;
+			overflow: hidden;
+			padding-bottom: 0;
+			text-overflow: ellipsis;
+		}
+			.Nav_Top .me .con_list p
+			{
+				font-style:italic;
+			}
+
+.Nav_Top .notifications{
+}
+	.Nav_Top .groupMemberRequest .btn_groupJoinNotification{
+		border: 0 none;
+		box-shadow: none;
+		float: none;
+		height: 25px;
+		line-height: 25px;
+		margin-right: 10px;
+		padding: 0 15px;
+		position: static;
+		text-transform:none;
+	}
+		.Nav_Top .groupMemberRequest .btn_gray{
+			background:#d2d2d2;
+			color:rgba(0, 0, 0, 0.45);
+		}
+
+.Nav_Top .mail .dropdown {
+	width: 500px;
+}
+	.Nav_Top .mail .section
+	{
+		border-bottom: 0px solid #CCCCCC;
+		width:100%;
+	}
+		.Nav_Top .mail .section > li{
+			display:block;
+		}
+
+	.Nav_Top .mail .section.info
+	{
+		border-bottom: none;
+	}
+
+	.mail .dropdown .hgroup .link_back {
+		background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_backArrow.png") no-repeat scroll left center transparent;
+		float: left;
+		margin-right: 50px;
+		padding-left: 25px;
+		line-height:20px;
+	}
+
+	.Nav_Top .mail article .container_avatar
+	{
+		width:54px;
+		height:54px;
+		position:absolute;
+		top:0;
+		left:0;
+	}
+		.Nav_Top .mail article .avatar, .pinned .mail .avatar {
+			background: none repeat scroll 0 0 transparent;
+			border-radius: 0;
+			float: left;
+			height: 25px;
+			margin: 1px;
+			position: relative;
+			width: 25px;
+		}
+			.Nav_Top article .avatar.only
+			{
+				width:54px;
+				height:54px;
+				float:none;
+				margin:0;
+			}
+				.Nav_Top .mail_conversation article .avatar.only
+				{
+					display: block;
+					height: 30px;
+					margin-left: 15px;
+					margin-top: 15px;
+					width: 30px;
+				}
+
+.mail_conversation {
+}
+
+	.Nav_Top .mail_conversation .hgroup
+	{
+		min-height:18px;
+		position:relative;
+	}
+	.Nav_Top .mail_conversation .tooltip
+	{
+		display: none;
+	}
+	.Nav_Top .panel .mail_conversation .hgroup h4 a
+	{
+		position:absolute;
+		top:0;
+		z-index:3;
+		text-align:center;
+		font-weight: 500;
+		background: none repeat scroll 0 0 #479CE4;
+		color: #F3F3F3;
+		font-size: 13px;
+		padding: 0;
+		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.25);
+		left: 50%;
+		margin-left: -32.5%;
+		width:65%;
+		height:30px;
+		line-height:30px;
+	}
+	.mail_conversation article
+	{
+		display: block;
+		padding-left: 59px;
+		padding-right: 15px;
+		position: relative;
+	}
+	.mail_conversation h4 {
+		text-align: center;
+
+		font-weight: 400;
+		font-size: 13px;
+		position:absolute;
+		top:0;
+		left:50%;
+		margin-left:-32.5%;
+		height:30px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width:65%;
+	}
+		.mail_conversation h4 a:hover
+		{
+			text-decoration:underline;
+		}
+		.nav_top .mail_conversation h4 a
+		{
+			float:none;
+			line-height:30px;
+		}
+	.mail_conversation article a
+	{
+		color: rgb(71, 156, 228);
+	}
+
+	.mail_conversation article time
+	{
+		color: #979797;
+		float: right;
+		font-weight: 400;
+		font-size: 11px;
+		height: 20px;
+		margin-bottom: -1px;
+		margin-top: 2px;
+	}
+	.mail_conversation article p
+	{
+		clear: both;
+		color: #222222;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 16px;
+		margin-top: -2px;
+		max-width: 450px;
+		min-height: 30px;
+		overflow: hidden;
+		padding-bottom: 20px;
+		position: relative;
+		text-overflow: ellipsis;
+	}
+		.mail_conversation article .actions
+		{
+			padding-bottom:0
+		}
+			.mail_conversation article .actions a
+			{
+				font-size:12px;
+				margin-right:10px;
+			}
+	.nav_top .mail_conversation .me{
+		background: none repeat scroll 0 0 #FBFBFB;
+		box-shadow: 0 1px 0 0 #FFFFFF inset;
+	}
+		.nav_top .mail_conversation .me article, .pinned .me article{
+			padding-right: 59px;
+			padding-left: 15px;
+			position: relative;
+		}
+		.nav_top .mail_conversation .me .container_avatar, .pinned .me .container_avatar {
+			left: auto;right: 0;
+		}
+		.nav_top .mail_conversation .me .avatar, .pinned .me .avatar {
+			left: auto;right: 0;
+		}
+		.nav_top .mail_conversation .me .content, .pinned .me .content {
+			float: right;
+			text-align: right;
+		}
+		.nav_top .mail_conversation .me .content p, .pinned .me .content p {
+			text-align: right;
+		}
+		.nav_top .mail_conversation .me time, .pinned .me time {
+			float: left;
+		}
+.mail_conversations {
+	display: block;
+}
+	.mail_conversations .hgroup h4 {
+		display:inline-block;
+	}
+	.mail_conversations .hgroup .sort {
+		display:inline-block;
+		margin-left:20px;
+	}
+	.mail_conversations article .content p
+	{
+		max-height:35px;
+	}
+	.mail_conversations .message_invitation a
+	{
+		color:rgb(71, 156, 228);
+		font-size:13px;
+	}
+		.mail_conversations .message_invitation a:hover
+		{
+			text-decoration:underline;
+		}
+	.btn_pin {
+		background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_pin.png") no-repeat center center;
+		display: inline-block;
+		width: 9px;
+		height: 19px;
+		margin-left: 10px;
+		float: right;
+	}
+	.mail_conversations .new
+	{
+		background:#ffffe8;
+	}
+		.mail_conversations .new:hover
+		{
+			background-color:#F7F7F7;
+		}
+
+.mail_conversation h1 a.btn_reportMessage
+{
+	font-size: 11px;
+	color: #479ce4;
+	display:none;
+}
+	.mail_conversation h1:hover a.btn_reportMessage
+	{
+		display:inline;
+	}
+
+.mail_conversations .btn_gotoCreate
+{
+	background:url("https://www.bungie.net/img/theme/bungienet/icons/icon_createMessage.png") no-repeat left center;
+	padding-left:22px;
+	line-height:19px;
+}
+	.react-mobile .btn_gotoCreate {
+		text-indent: -999px;
+	}
+.mail_create {
+}
+
+	.mail_create h4 {
+		text-align: right;
+	}
+	.mail_create .container_section
+	{
+		height:auto;
+	}
+	.mail_create .container_createReply
+	{
+		box-shadow: 0 0 3px rgba(0, 0, 0, 0.1) inset;
+	}
+	.mail_create .btn_sendMessage,
+	.mail_conversation .btn_reply
+	{
+		background: none repeat scroll 0 0 #E4E4E4;
+		filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E4E4E4', endColorstr='#E4E4E4');
+		border: 0 none;
+		bottom: auto;
+		box-shadow: none;
+		color: #FFFFFF;
+		font-weight: 700;
+		height: 41px;
+		line-height: 41px;
+		padding: 0 25px;
+		position: relative;
+	}
+		.mail_create .btn_sendMessage.ready,
+		.mail_conversation .btn_reply.ready
+		{
+			background: #459bdd; /* for non-css3 browsers */
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#459bdd', endColorstr='#358bd6'); /* for IE */
+			background: -webkit-gradient(linear, left top, left bottom, from(#459bdd), to(#358bd6)); /* for webkit browsers */
+			background: -moz-linear-gradient(top,  #459bdd,  #358bd6); /* for firefox 3.6+ */
+			border: 1px solid #317DB8;
+			box-shadow: 0 2px 5px -1px rgba(0, 0, 0, 0.4), 0 0 1px 1px rgba(86, 172, 239, 0.25) inset;
+			height: 38px;
+			line-height: 38px;
+			margin-bottom: -1px;
+			top: -1px;
+		}
+
+	.mail_create .btn_sendMessage.busy:after,
+	.mail_conversation .btn_reply.busy:after
+	{
+		background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_loading_white.gif") no-repeat scroll 0 0 / cover rgba(0, 0, 0, 0);
+		content: "";
+		height: 38px;
+		left: -40px;
+		position: absolute;
+		width: 38px;
+	}
+
+.whoIsTyping
+{
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.5);
+}
+
+.recipients
+{
+	background: none repeat scroll 0 0 #F5F5F5;
+	border: 1px solid #FFFFFF;
+	color: #2B2B2B;
+}
+.no-rgba .recipients{border-top:1px solid #a9a9a9;}
+	.recipients span.label
+	{
+		color: #000;
+		left: 10px;
+		line-height: 54px;
+		position: absolute;
+		z-index:2;
+		font-size:15px;
+		font-weight: 400;
+	}
+	.recipients ul
+	{
+		background: none repeat scroll 0 0 #fff;
+		border-bottom: 1px solid #AAAAAA;
+		box-shadow: 0 0 0 1px #FFFFFF inset;
+		color: #000000;
+		display: block;
+		font-size: 13px;
+		height: auto;
+		line-height: 54px;
+		min-height: 54px;
+		padding: 0 0 0 20px;
+	}
+
+		.recipients ul li
+		{
+			display: inline-block;
+			line-height: 30px;
+			vertical-align: middle;
+			white-space: nowrap;
+			margin-top:-4px;
+		}
+			.recipients ul li:last-child:nth-child(-n+7):after
+			{
+				content:"";
+				display:inline-block;
+				width:30px;
+				height:30px;
+				background:url("https://www.bungie.net/img/theme/bungienet/btns/btn_addRecipient.gif") no-repeat 0 0;
+				vertical-align:middle;
+				margin-left:5px;
+			}
+				.recipients .suggest li:last-child:nth-child(-n+7):after
+				{
+					display:none;
+				}
+
+	.recipients .container_textbox
+	{
+		padding-left: 40px;
+	}
+	.es .recipients .container_textbox,
+	.pt-br .recipients .container_textbox
+	{
+		padding-left: 54px;
+	}
+	.recipients .recipient
+	{
+		/*background: none repeat scroll 0 0 #fff;
+		border: 1px solid #DDDDDD;*/
+		color: #2b2b2b;
+		display: inline-block;
+		margin-right: 4px;
+		/*padding: 0 7px 0 7px;*/
+		font-size:15px;
+		overflow: hidden;
+		max-width: 80%;
+	}
+		.recipients .recipient:first-child
+		{
+			display: inline;
+			margin: 0;
+			min-width: 0;
+			padding: 0;
+			width: 0;
+		}
+.recipients p {
+	background: none repeat scroll 0 0 #479CE4;
+	color: #FFFFFF;
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	min-width: 10px;
+	padding: 0 10px;
+	vertical-align: middle;
+}
+.recipients .error {
+	display: block;
+	height: auto;
+	line-height: 30px;
+	padding: 0 8px;
+}
+
+	.recipients .btn_delete {
+		background: none repeat scroll 0 0 #479CE4;
+		border: 0 none;
+		color: #FFFFFF;
+		cursor: pointer;
+		display: inline-block;
+		font-size: 9px;
+		font-weight: bold;
+		height: 30px;
+		line-height: 30px;
+		margin: 0;
+		min-width: 0;
+		padding: 0;
+		position: relative;
+		text-align: center;
+		vertical-align: middle;
+		width: 30px;
+		z-index: 2;
+	}
+	.recipients .recipient.highlight
+	{
+		min-width:0;
+		width:auto;
+	}
+
+	.recipients .invalid
+	{
+		color: #f00;
+	}
+	.recipients .suggest
+	{
+		font-size: 11px;
+		font-weight: normal;
+		padding: 0;
+		border-bottom:0;
+	}
+		.recipients .suggest li
+		{
+			display:block;
+			width:auto;
+			color:#000;
+			line-height: 54px;
+			clear:both;
+			border-bottom:1px solid #e5e5e5;
+			box-shadow: 0 1px 0 #FFFFFF inset;
+			margin-top:0;
+		}
+			.recipients .suggest li:first-child
+			{
+				box-shadow:none;
+			}
+			.recipients .suggest li img {
+				width: 54px;
+				margin-right: 10px;
+				height: 54px;
+				float: left;
+			}
+		.recipients .suggest li.on, .recipients .suggest li.hovered
+		{
+			color:#fff;
+			background:#5787b5;
+		}
+
+.Nav_Top .signedIn,
+.Nav_Top .menu li.signedIn
+{
+	display:none;
+}
+	.Nav_Top .opened .signedIn
+	{
+	}
+	.Nav_Top .signIn .dropTrigger {
+		width: auto;
+		line-height: 37px;
+		border:0;
+	}
+	.Nav_Top .signIn .dropdown {
+		width: 281px;
+	}
+
+.nav_identity .menu {
+	right: 0;
+	text-align: right;
+}
+
+.Nav_Top .communities {
+}
+
+.Nav_Top .badge.groupbadge {
+	color: black;
+	right: 8px;
+	top: 18px;
+	height: 6px;
+	min-width: 6px;
+	border: 2px solid #2A333E;
+}
+
+.Nav_Top .badge {
+	display: inline-block;
+	right: 5px;
+	top: 9px;
+}
+.Nav_Top .communities .links {
+	padding-bottom: 8px;
+}
+	.Nav_Top .communities .section h5 {
+		background: none repeat scroll 0 0 #F9F9F9;
+		border-bottom: 1px solid #E0E0E0;
+		box-shadow: 0 1px 0 #FFFFFF inset;
+		color: #777777;
+		font-size: 11px;
+		line-height: 25px;
+		padding: 0 8px;
+	}
+	.Nav_Top .communities .section li {
+		padding: 0;
+		}
+		.Nav_Top .communities .section li li
+		{
+			padding-left:8px;
+		}
+
+	.Nav_Top .communities .section a {
+		color: #5787B5;
+		padding: 0 8px;
+		position: relative;
+		font-size: 11px;
+		line-height: 24px;
+	}
+		.Nav_Top .communities .section a:hover {
+			color: #0096db;
+		}
+
+.roster_list h4, .followed_list h4{
+	float: left;
+	font-size: 13px;
+	line-height: 17px;
+	margin-right: 15px;
+}
+
+	.roster_list .editStatusText{
+		background: #2f79b8 none repeat scroll 0 0;
+		border-top: 1px solid rgba(255, 255, 255, 0.3);
+		left: -8px;
+		margin-bottom: -6px;
+		margin-top: 6px;
+		padding: 6px 8px;
+		width: 100%;
+	}
+		.roster_list .editStatusText label{
+			background-position: 0 center;
+			background-repeat: no-repeat;
+			background-size: 20px auto;
+			line-height:30px;
+			padding-left: 25px;
+		}
+
+		.roster .editStatusText .characterCount{
+			padding:0 6px;
+		}
+
+.Nav_Top #followed_list .links.group > li,
+.Nav_Top #followed_list .links.user > li
+{
+	position:relative;
+	padding-left:71px;
+}
+
+	.followed_list .section .links h1 a
+	{
+		display: inline-block;
+		font-weight: 500;
+		font-size: 15px;
+		margin-top: 9px;
+		overflow: hidden;
+		padding: 0;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		width: 100%;
+		color: #222222;
+	}
+
+		.followed_list .links .actions
+		{
+			margin-top:-4px;
+		}
+	.followed_list .links .actions a
+	{
+		color: #0096DB;
+		padding: 0;
+	}
+	.followed_list .section .tag li
+	{
+		min-height:0;
+	}
+	.followed_list .container_avatar
+	{
+		height: 62px;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 62px;
+	}
+
+		.followed_list .container_avatar img
+		{
+			width:100%;
+			height:100%;
+		}
+
+.roster_list h5, .followed_list h5 {
+	background: none repeat scroll 0 0 #F9F9F9;
+	border-bottom: 1px solid #E0E0E0;
+	box-shadow: 0 1px 0 #FFFFFF inset;
+	color: #777777;
+	font-size: 11px;
+	line-height: 25px;
+	padding: 0 8px;
+	border-top: 0 none;
+}
+
+	.roster_list .section > li:first-child h5, .followed_list .section > li:first-child h5 {
+		border-top: 0;
+	}
+
+.roster_list .container_section{
+	position:relative;
+}
+
+.roster_list li, .followed_list li {
+	padding: 0;
+	border: 0;
+}
+	.roster_list .sort li,  .followed_list .sort li
+	{
+		border-left:1px #d5d5d5 solid;
+		padding-left:10px;
+	}
+		.roster_list .sort li:first-child, .followed_list .sort li:first-child
+		{
+			padding-left:0;
+			border-left:0;
+		}
+
+.roster_list .section > .errorSection, .followed_list .section > .errorSection
+{
+	padding: 11px;
+}
+
+	.roster_list .section > li {
+	}
+
+.roster_list .section {}
+	.roster_list .section h1, .followed_list .section h1 {
+		font-size: 15px;
+		font-weight: normal;
+		margin-top: 0;
+		position: static;
+		vertical-align: middle;
+	}
+
+	.roster_list .section ul {}
+		.roster_list .section ul:empty, .followed_list .section ul:empty {
+			display: none;
+		}
+		.roster_list .section ul li, .followed_list .section ul li {
+			font-size:11px;
+			min-height:62px;
+			border-top:1px solid #f3f3f3;
+			border-bottom:1px solid #e5e5e5;
+		}
+
+			.roster_list .section ul li:first-child, .followed_list .section ul li:first-child
+			{
+				border-top:0;
+			}
+			.roster_list .section ul li.nofriends
+			{
+				background: none no-repeat scroll center 37px #fff;
+				border-bottom: 0 none;
+				color: #2b2b2b;
+				height: 149px;
+				padding-top: 251px;
+				position: absolute;
+				width: 100%;
+			}
+				.roster_list .nofriends p
+				{
+					margin-bottom:32px;
+					text-align:center;
+					font-family:Roboto,Arial, sans-serif;
+					font-size:18px;
+					color:#999a9a;
+				}
+				.roster_list .section .bungiestatus li.nofriends
+				{
+					background-image:url("https://www.bungie.net/img/theme/bungienet/icons/icon_followers_empty.png");
+				}
+
+				.roster_list .section .psn li.nofriends
+				{
+					background-image:url("https://www.bungie.net/img/theme/bungienet/icons/icon_psnFriends_empty.png");
+				}
+				.roster_list .section .xbox li.nofriends
+				{
+					background-image: url("https://www.bungie.net/img/theme/bungienet/icons/icon_xboxFriends_empty.png");
+					height: 169px;
+					padding-top: 224px;
+				}
+				.roster_list .section .facebook li.nofriends
+				{
+					background-image: url("https://www.bungie.net/img/theme/bungienet/icons/icon_facebookFriends_empty.gif");
+					height: 191px;
+					padding-top: 208px;
+				}
+
+				.roster_list .section li.disabled
+				{
+					background-image:url("https://www.bungie.net/img/theme/bungienet/icons/icon_followers_disabled.png") !important;
+				}
+
+				.roster_list .nofriends .btn_blue
+				{
+					float: none;
+					height: 39px;
+					line-height: 39px;
+					position: static;
+				}
+			.roster_list .section article, .followed_list .section article {
+				padding-right: 24px;
+			}
+				.roster_list .section article p, .followed_list .section article p
+				{
+					font-size:13px;
+					margin:0;
+					padding:0;
+				}
+
+				.roster_list .section article span, .followed_list .section article span
+				{
+					font-size:14px;
+				}
+					.roster_list .section article .status,
+					.followed_list .section article .status
+					{
+						vertical-align:middle;
+					}
+
+					.roster_list .section article span a,
+					.roster_list .section article span h1
+					{
+						font-family: "Roboto",sans-serif;
+						font-weight: 500;
+						font-size: 14px;
+						vertical-align:middle;
+					}
+						.roster_list .section article span a{
+							color: #0096db;
+						}
+
+						.roster_list .section article span h1,
+						.roster_list .section article span a:hover{
+							color: #222;
+						}
+
+					.roster_list .section article .statusText {
+						display: block;
+						font-size: 13px;
+						margin-top: 4px;
+						font-style:italic;
+					}
+						.roster_list .section article .statusText a {
+							color: #0096db;
+						}
+
+			.roster_list .section .idle article {
+				background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_idle.png") center right no-repeat;
+				margin-right:15px;
+			}
+			.roster_list .section .online article {
+				background: url("https://www.bungie.net/img/theme/bungienet/icons/icon_online.png") center right no-repeat;
+				margin-right:15px;
+			}
+
+.roster_list .actions a, .followed_list .actions a
+{
+	font-size:13px;
+	margin-right:10px;
+}
+
+	.roster_list .actions a:before, .followed_list .actions a:before
+	{
+		content:"";
+		border-left:1px solid #222;
+		margin-right:10px;
+		font-size:9px;
+	}
+
+	.roster_list .actions a:first-child:before, .followed_list .actions a:first-child:before
+	{
+		display:none;
+	}
+
+#roster_list .errorSection p
+{
+	background: #f3f3f3 none repeat scroll 0 0;
+	border: 0 none;
+	font-size:16px;
+	height: 100px;
+	padding: 12px;
+	position: absolute;
+}
+
+.container_psn
+{
+	position:relative;
+}
+.container_psn .reauthPSN
+{
+	background: none repeat scroll 0 0 #f3f3f3;
+	height: 400px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top:0;
+	z-index:1;
+}
+	.container_psn .reauthPSN img
+	{
+		display:block;
+		margin:40px auto;
+	}
+	.container_psn .reauthPSN p
+	{
+		color:#89949b;
+		font-size:15px;
+		padding:0 20px;
+	}
+	.container_psn .reauthPSN .btn_reauthPSN
+	{
+		float: none;
+		margin-top: 35px;
+		padding: 14px 18px;
+		position: static;
+	}
+
+.container_xbox
+{
+	position:relative;
+}
+.container_xbox .reauthXbox
+{
+	background: none repeat scroll 0 0 #f3f3f3;
+	height: 400px;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top:0;
+	z-index:1;
+}
+	.container_xbox .reauthXbox img
+	{
+		display:block;
+		margin:40px auto;
+	}
+	.container_xbox .reauthXbox p
+	{
+		color:#89949b;
+		font-size:15px;
+		padding:0 20px;
+	}
+	.container_xbox .reauthXbox .btn_reauthXbox
+	{
+		float: none;
+		margin-top: 35px;
+		padding: 14px 18px;
+		position: static;
+	}
+
+.container_pinned
+{
+	position:fixed;
+	bottom:0;
+	left:10px;
+	height:22px;
+}
+	.iPad .container_pinned
+	{
+		display:none;
+	}
+.pinned {
+	width: 400px;
+	z-index:3;
+	position:absolute;
+
+	top:0;
+	left:0;
+}
+	.pinned.opened
+	{
+		box-shadow:2px 2px 3px rgba(1,1,1,.43);
+		z-index:4;
+	}
+	.pinned .tab
+	{
+		height:20px;
+		border:1px solid #335b84;
+		background:#477098;
+		color:#fff;
+		font-size:12px;
+		padding:0 28px 0 8px;
+		line-height:20px;
+		white-space:nowrap;
+		overflow:hidden;
+		text-overflow:ellipsis;
+		width:64px;
+		box-shadow:2px 2px 3px rgba(1,1,1,.43);
+		position:relative;
+	}
+	.pinned.opened .tab
+	{
+		width:auto;
+		box-shadow:none;
+	}
+		.pinned .tab a
+		{
+			color:#fff;
+		}
+	.pinned .btn_close
+	{
+		float: right;
+		font-size: 14px;
+		height: 20px;
+		line-height: 18px;
+		position: absolute;
+		right: 8px;
+	}
+		.pinned .btn_close:hover
+		{
+			color:#fff;
+		}
+
+	.pinned .container_section
+	{
+		border:1px solid #aaa;
+		border-top:0;
+		overflow:auto;
+		max-height:400px;
+	}
+	.pinned li
+	{
+		list-style:none;
+		background:#fff;
+	}
+	.pinned .me
+	{
+		background-image:none;
+	}
+	.pinned li:nth-child(odd)
+	{
+		background:#f9fafc;
+	}
+	.pinned .container_textarea
+	{
+		padding-right:28px;
+		resize:none;
+	}
+	.pinned .btn_reply_pinned
+	{
+		background: url("https://www.bungie.net/img/theme/bungienet/btns/btn_reply_pinned.png") center center no-repeat #bfbfbf;
+		display:block;
+		width: 20px;
+		height:20px;
+		position:absolute;
+		top:4px;
+		right:4px;
+	}
+
+.nav_secondary {
+	padding:0 90px;
+	margin-bottom:21px;
+}
+	.nav_secondary li {
+		list-style: none;
+		display: inline;
+	}
+	.nav_secondary a {
+		color: #777777;
+		font-weight: 700;
+		font-size: 18px;
+		padding: 0 10px;
+		text-shadow: 0 1px 1px #000000;
+	}
+	.nav_secondary .on a {
+		color: #fff;
+	}
+
+.Sub_Nav h2
+{
+	display: inline-block;
+
+	padding: 0 20px 0 63px;
+	line-height: 54px;
+
+	font-weight: 400;
+	font-size: 14px;
+	color: #FFF;
+
+	background:url("https://www.bungie.net/img/theme/bungienet/icons/sprite_destinyDropDown.png") no-repeat;
+	background-position: 23px -486px;
+}
+
+/************************/
+/* SIDE NAVIGATION */
+/************************/
+
+.TabNav
+{
+	background:#e8ebef;
+	min-height:100vh;
+
+	font-family: 'Roboto', arial, sans-serif;
+	font-weight: 400;
+}
+
+.TabNav_Main
+{
+	padding-left:250px;
+}
+
+	.TabNav_Main .container_textbox
+	{
+		background: none repeat scroll 0 0 #FFFFFF;
+		border: 1px solid #C4C7CB;
+		font-size: 14px;
+		width:300px;
+	}
+
+	.TabNav_Main .container_textarea
+	{
+		background: none repeat scroll 0 0 #FFFFFF;
+		border: 1px solid #C4C7CB;
+
+		font-size: 14px;
+	}
+
+.TabNav_Side
+{
+	float:left;
+	width:248px;
+	background:#d0d3d8;
+	border-right:1px solid #c3c7cb;
+	border-left:1px solid #c3c7cb;
+	overflow:visible;
+	min-height:100vh;
+}
+	.TabNav_Side h4
+	{
+		position: relative;
+		color:#2c2b2b;
+		font-size:18px;
+		font-weight: 500;
+		padding-left:44px;
+		font-weight:normal;
+		background:url("https://www.bungie.net/img/theme/destiny/icons/icon_admintools.png") no-repeat 11px center;
+		line-height:49px;
+	}
+	.tabnav_side_list
+	{
+	}
+		.tabnav_side_list li
+		{
+			position: relative;
+			list-style:none;
+		}
+		.tabnav_side_list li a
+		{
+			display:block;
+			padding-left:4px;
+			line-height:40px;
+			border-top:1px solid #c3c7cb;
+			color:#666;
+			font-size:14px;
+			font-weight: 500;
+			text-indent:39px;
+		}
+			.tabnav_side_list li:first-child a
+			{
+				border-top:0;
+			}
+		.tabnav_side_list li.on a
+		{
+			background: none repeat scroll 0 0 #E8EBEF;
+			border-top: 1px solid rgba(0, 0, 0, 0); /* invisible border to prevent tab jump */
+			border-left: 4px solid #0096DB;
+			color: #333333;
+			padding-left: 0;
+			position: relative;
+			width: 254px;
+		}
+		.tabnav_side_list li:first-child.on a
+		{
+			border-top: 0;
+		}
+		.tabnav_side_list .count
+		{
+			background: none repeat scroll 0 0 #CE2E24;
+			border-radius: 18px 18px 18px 18px;
+			color: #FFFFFF;
+			display: inline-block;
+			font-weight: 500;
+			font-size: 10px;
+			line-height: 18px;
+			margin-left: 5px;
+			min-height: 18px;
+			min-width: 18px;
+			padding: 0 1px;
+			text-align: center;
+			text-indent: 0;
+			vertical-align: middle;
+		}
+
+.TabNav_Side ul li ul
+{
+	padding-left:53px;
+}
+	.TabNav_Side ul li ul ul
+	{
+		padding-left:10px;
+	}
+	.TabNav_Side ul li ul a {
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+		border: 0 none;
+		line-height: 1.2em;
+		padding: 10px 5px 10px 0;
+		text-indent: 0;
+		width: auto;
+	}
+	.TabNav_Side ul li.on ul a,
+	.TabNav_Side ul li ul .on a
+	{
+		background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+		border: 0 none;
+		width: auto;
+	}
+
+.TabNav_Side .trigger
+{
+	position:relative;
+}
+	.TabNav_Side .trigger:before
+	{
+		border: 2px solid #999999;
+		border-radius: 20px;
+		content: "+";
+		display: inline-block;
+		font-weight: 200;
+		height: 20px;
+		left: 12px;
+		line-height: 17px;
+		margin: 0;
+		padding: 0;
+		position: absolute;
+		text-align: center;
+		text-indent: 0;
+		top: 8px;
+		vertical-align: middle;
+		width: 20px;
+	}
+		.TabNav_Side .open .trigger:before,
+		.TabNav_Side .on .trigger:before
+		{
+			left:8px;
+		}
+		.TabNav_Side .open .trigger:before
+		{
+			content:"-";
+		}
+		.TabNav_Side ul .open ul .trigger:before {
+			content:"+";
+			left: -31px;
+		}
+			.TabNav_Side ul .open ul .open .trigger:before {
+				content:"-";
+			}
+
+.TabNav_Side .expandable > .collapsible
+{
+	display:none;
+}
+.TabNav_Side .expandable.open > .collapsible
+{
+	display: block;
+}
+
+/*=======================================
+
+	MOBILE - KEEP AT BOTTOM
+
+=======================================*/
+
+html.mobile.no-ipad header {
+  min-width: 0;
+}
+
+html.mobile.no-ipad .Sub_Nav {
+  left: 0;
+  max-width: none;
+  width: 100%;
+  min-width: 0;
+}
+
+html.mobile.no-ipad .Sub_Nav .nav_sub a {
+  padding: 0 5px;
+  font-size: 12px;
+}
+
+html.mobile.no-ipad #leftNav {
+  display: none;
+}
+
+html.mobile.no-ipad .navOpen #leftNav {
+  display: block;
+}
+
+/*=======================================
+
+	REACT Medium
+
+=======================================*/
+
+	html.mobile-nav-enabled.react-large
+	{
+		font-size: 14px;
+	}
+
+	html.mobile-nav-enabled.react-medium
+	{
+		font-size: 13px;
+	}
+
+	html.mobile-nav-enabled.react-mobile
+	{
+		font-size: 12px;
+	}
+
+	html.mobile-nav-enabled.react-medium .small-menu
+	{
+		position: absolute;
+		z-index: 10;
+
+		top: 0;
+		left: 0;
+		width: 60px;
+		height: 60px;
+
+		background: url("https://www.bungie.net/img/theme/bungienet/menu.png") 18px 50% no-repeat;
+		cursor: pointer;
+	}
+
+	html.mobile-nav-enabled.react-medium .nav_logo .logo
+	{
+		display: none;
+	}
+
+	html.mobile-nav-enabled.react-medium .nav-open .Nav_Top .nav_logo
+	{
+		position: fixed;
+		z-index: 99;
+
+		top: 0;
+		left: 0;
+		width: 100%;
+
+		background-color: rgb(42, 51, 62);
+	}
+
+	html.mobile-nav-enabled.react-medium .nav-open .Nav_Top .nav_logo .logo
+	{
+		display: none;
+
+		width: 189px;
+		margin: 0 auto;
+		padding: 0;
+
+		background-position: 50% 50%;
+	}
+
+	html.mobile-nav-enabled.react-medium .nav-open .nav_links
+	{
+		position: fixed;
+		display: block;
+		z-index: 99;
+
+		top: 0;
+		right: 0;
+		height: 60px;
+
+		transition: 0s;
+	}
+
+	html.mobile-nav-enabled.react-medium #nav-items
+	{
+		background: rgb(42, 51, 62) none repeat scroll 0 0;
+		height: calc(100vh - 60px);
+		left: -30px;
+		overflow: auto;
+		position: absolute;
+		top: 60px;
+		transition: all 0.25s ease 0s;
+		width: 0;
+		z-index: 99;
+
+		-webkit-overflow-scrolling: touch;
+	}
+
+		html.mobile-nav-enabled.react-medium.nav-open .Nav_Top #nav-items
+		{
+			background:rgba(18, 22, 27, 1.0) none repeat scroll 0 0;
+			width: 40%;
+			left:0;
+		}
+
+		html.mobile-nav-enabled.react-mobile.nav-open .Nav_Top #nav-items
+		{
+			width: 85%;
+		}
+
+	html.mobile-nav-enabled.react-medium #nav-items .nav-bucket
+	{
+		display: block;
+
+		width: 100%;
+		height: auto;
+
+		background: rgba(30, 36, 43, 0.5) none repeat scroll 0 0;
+		box-shadow: 0 0 10px rgba(0, 0, 0, 0);
+		margin:3px 0;
+
+		font-weight: 400;
+	}
+
+		html.mobile-nav-enabled.react-medium #nav-items .nav-bucket .nav-bucket-items
+		{
+			position: relative;
+
+			top: auto;
+
+			opacity: 1;
+
+			-webkit-transform: translateY(0);
+			transform: translateY(0);
+		}
+
+		html.mobile-nav-enabled.react-medium.touch #nav-items .nav-bucket:hover
+		{
+			background: rgba(30, 36, 43, 0.5) none repeat scroll 0 0;
+		}
+
+		html.mobile-nav-enabled.react-medium #nav-items .nav-bucket:hover,
+		html.mobile-nav-enabled.react-medium #nav-items .nav-bucket.on,
+		html.mobile-nav-enabled.react-medium.touch #nav-items .nav-bucket.on:hover
+		{
+			background: rgb(30, 36, 43);
+		}
+
+		html.mobile-nav-enabled.react-medium #nav-items .nav-bucket a:hover,
+		html.mobile-nav-enabled.react-medium.touch #nav-items .nav-bucket.on a:hover
+		{
+			color: #fff;
+		}
+
+		html.mobile-nav-enabled.react-medium.touch #nav-items .nav-bucket a:hover
+		{
+			color: rgba(245, 245, 245, 0.5);
+		}
+
+		html.mobile-nav-enabled.react-medium #nav-items .nav-bucket.on > a
+		{
+			 border-bottom: 2px solid rgba(255, 206, 31, 1);
+		}

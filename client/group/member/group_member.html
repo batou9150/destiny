@@ -1,0 +1,58 @@
+<template name='GroupMembers'>
+	<ul>
+	{{#each GroupMemberResults}}
+		{{#if $eq membershipType 1}}
+			{{> GroupMemberSingle}}
+		{{/if}}
+	{{/each}}
+	</ul>
+
+	{{#if HasMore}}
+		<div>
+			<button class="moreGroupMemberResults">Suite</button>
+		</div>
+	{{/if}}
+</template>
+
+<template name='GroupMemberSingle'>
+	{{#each destinyAccount in groupMemberSingle.Response.destinyAccounts}}
+		{{#if $eq destinyAccount.userInfo.membershipType 1}}
+		<div id="profileMainTop">
+		
+			<div class="grid account-switcher-wrapper">
+				<div class="grid-col-12">
+					<div class="destiny-account-switcher">
+					<a class="destiny-account current" href="https://www.bungie.net/fr/Profile/1/{{destinyAccount.userInfo.membershipId}}">
+						<div class="icon" style="background-image: url('https://www.bungie.net/common/destiny_content/icons/ee9d2fe8b039751ad3d9e48c7f476dc2.jpg')"></div>
+						<div class="standardTitle display-name">{{groupMemberSingle.Response.bungieNetUser.xboxDisplayName}}</div>
+						<div class="standardTitle display-name">{{destinyAccount.grimoireScore}}</div>
+					</a>
+					</div>
+				</div>
+			</div>
+
+			{{#each character in destinyAccount.characters}}
+			<div class="destiny-info grid flex">
+				<div class="characters grid-block grid-col-4 grid-col-6-large grid-col-12-mobile">
+					<div class="characterList active" data-membershiptype="1">
+						<a id="guardian{{character.characterId}}" class="characterPlate normal" href="/fr/Legend/1/{{destinyAccount.userInfo.membershipId}}/{{character.characterId}}" data-url="https://www.bungie.net/img/placeholders/guardian.png" data-characterid="{{character.characterId}}" data-gender="0" style="background-image: url(https://www.bungie.net/{{character.backgroundPath}});">
+							<div class="emblem" style="background-image: url(https://www.bungie.net/{{character.emblemPath}});"></div>
+							<div class="characterDetails">
+								<span class="characterClass">{{character.characterClass.className}}</span>
+								<span class="raceGender">{{character.race.raceName}}</span>
+								<span class="level">{{character.level}}</span>
+								<span class="powerLevel light">{{character.powerLevel}}</span>
+							</div>
+							<div class="characterProgress">
+								<div class="barFill" style="width: {{character.percentToNextLevel}}%;"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+
+		</div>
+		{{/if}}
+	{{/each}}
+</template>

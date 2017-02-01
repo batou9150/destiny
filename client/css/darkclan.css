@@ -1,0 +1,1676 @@
+
+body.Clans .bg_secondary{
+	position:relative;
+}
+
+body.Clans #content {
+    background: rgb(18, 22, 27) none repeat scroll 0 0;
+
+}
+
+.Clans .Sub_Nav {
+        background: rgba(25, 30, 36,0.75);
+        overflow: hidden;
+}
+
+.characterBar .select_styled {
+    display: none;
+}
+
+.react-mobile .characterBar a {
+    display: none;
+}
+
+
+
+html.mobile.no-ipad .Sub_Nav .nav_sub a{
+    padding: 0 18px;
+    font-size: 14px;
+}
+
+#container_ClanContent #p_aboutClan  a {
+   color: #fff;
+   font-weight: 400;
+}
+
+  #container_ClanContent h4 {
+        color: rgb(242, 193, 97);
+        text-transform: uppercase;
+    }
+
+
+.content_main {
+    width: 100%;
+   
+    
+}
+
+.Clans.Forum {
+    min-width: 0;
+}
+
+
+#groupHeader {
+    min-width: 0;
+   height: auto;
+
+}
+
+#groupHeader .motto {
+    font-size: 20px;
+}
+
+#groupHeader .alliances .select label {
+    font-size: 14px;
+    font-weight: 200;
+    padding: 0 40px 0 0px;
+}
+
+#groupHeader .alliances .select label:after {
+
+ 
+}
+
+#groupHeader .content {
+  
+}
+
+.react-medium #groupHeader .content {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+
+}
+
+#groupHeader .bar_actions .trigger, #groupHeader .btn_saveSettings {
+    font-size: 14px;
+    margin-left: 15px;
+   
+}
+
+
+
+#groupHeader .bg::before {
+   
+    
+    background: -webkit-linear-gradient(top, rgba(11, 13, 16, 0.0), rgba(11, 13, 16, 0.35));
+    background: -moz-linear-gradient(top, rgba(11, 13, 16, 0.0), rgba(11, 13, 16, 0.35));
+    background: -ms-linear-gradient(top, rgba(11, 13, 16, 0.0), rgba(11, 13, 16, 0.35));
+    background-color: rgba(11, 13, 16, 0.15);
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.react-medium #groupHeader .bg::before {
+   
+   background: -webkit-linear-gradient(top, rgba(11, 13, 16, 0.0), rgba(11, 13, 16, 1.0));
+    background: -moz-linear-gradient(top, rgba(11, 13, 16, 0.0), rgba(11, 13, 16, 1.0));
+    background: -ms-linear-gradient(top, rgba(11, 13, 16, 0.0), rgba(11, 13, 16, 1.0));
+    background-color: rgba(42, 51, 62,0.4);
+   
+}
+
+#groupHeader .bar_actions {
+    margin-top: 13px;
+     display: flex;
+     align-items: flex-start;
+}
+
+.react-medium #groupHeader .bar_actions .trigger, #groupHeader .btn_saveSettings {
+    
+    margin-bottom: 12px;
+    margin-left: 7px;
+    margin-right: 7px;
+      
+}
+
+.react-mobile #groupHeader .bar_actions {
+   
+    flex-wrap: wrap;
+   
+}
+
+#groupHeader #groupName {
+    font-weight: 200;
+    font-size: 50px;
+
+}
+
+.react-medium #groupHeader #groupName {
+    font-size: 25px;
+}
+
+.react-medium #groupHeader .avatar {
+    width: 50px;
+    height: 50px;
+    margin-right: 0px;
+}
+
+#groupHeader .bg {
+    border-bottom: 2px solid rgba(30, 36, 43, 0.95);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-direction:column;
+    height: 280px;
+	margin-top: 50px;
+    
+}
+
+.react-mobile #groupHeader .bg {
+      
+    background-position: 50% 0%;
+     min-height: 250;
+         border-bottom: 2px solid rgba(44, 52, 62, 0.6);
+    
+}
+
+
+
+#groupHeader .alliances > p:first-child {
+
+    float: right;
+    margin-right: 10px;
+}
+
+.react-medium #groupHeader .alliances {
+       margin-top: 20px;
+}
+
+#container_belowClanHeader {
+    align-items: center;
+}
+
+.content_belowGroupHeader {
+        width: 100%;
+    max-width: 1280px;
+        display: flex;
+        flex-direction: row;
+    
+}
+
+.content_belowGroupHeader.TabNav {
+    
+        flex-direction: row;
+    
+}
+
+.react-medium .content_belowGroupHeader {
+
+    flex-direction: column;
+}
+
+#groupHeader .alliances {
+    border-bottom: none;
+    position: static;
+    display:flex;
+    justify-content: flex-start;
+    width: 100%;
+    max-width:1280px;
+    margin-top: 64px;
+    flex: 1;
+    z-index: 6;
+}
+
+#groupHeader .infoAll {
+   display: flex;
+    flex: 6;
+    flex-direction: column;
+    /* align-items: flex-end; */
+    justify-content: flex-start;
+    align-content: center;
+    width: 100%;
+    max-width: 1280px;
+    z-index: 5;
+    margin-bottom:25px;
+
+}
+
+.react-medium #groupHeader .infoAll {
+
+       flex-direction: column;
+       align-items: center;
+       margin-bottom: 5px;
+       margin-top:0px;
+}
+
+
+
+#groupHeader .info {
+    display: flex;
+    flex: 3;
+    float: none;
+    width: auto;
+    height: auto;
+    min-width: 0;
+     align-items: flex-end; 
+    /* margin-bottom: 20px; */
+    margin-top: 40px;
+    
+}
+
+.react-medium #groupHeader .info {
+    margin-top: 0px;
+}
+
+#groupHeader .actions {
+    float: none;
+}
+
+#groupHeader .interactJoin {
+        display: flex;
+    /* flex: 1; */
+    justify-content: flex-end;
+    /* margin-top: 43px; */
+ 
+    
+}
+
+.react-medium #groupHeader .interactJoin  {
+     margin-top: 0px;
+     margin-bottom: 24px;
+}
+
+#groupHeader .info_members {
+    display: flex;
+    flex: 1;
+    float: none;
+    position: static;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    justify-content: flex-end;
+
+}
+
+#groupHeader .info_members .numbers {
+    position: static;
+    bottom: auto;
+    right: auto;
+    color: #fff;
+}
+
+#groupHeader .info > div {
+    position: static;
+    bottom: auto;
+    left: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+}
+
+.react-medium #groupHeader  .info > div {
+
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+#container_ClanContent .container_GroupMainContent {
+  flex: 6;
+  max-width: 960px;
+  flex-direction:column;
+  margin-top: 15px;
+      
+}
+
+.react-medium #container_ClanContent .container_GroupMainContent {
+    display:block;
+	margin-top: 0;
+    flex: auto;
+	order:1;
+	position:relative;
+}
+
+#container_ClanContent .container_GroupSidebar {
+    background: rgb(18, 22, 27) none repeat scroll 0 0;
+    padding-top: 13px;
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    width: auto;
+	max-width: 320px;
+}
+
+.react-medium #container_ClanContent .container_GroupSidebar {
+    display:block;
+	order: 2;
+    flex: auto;
+}
+
+  
+
+    #container_ClanContent .container_GroupSidebar .innerSideNav {
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 200;
+    }
+
+
+    #container_ClanContent .container_GroupSidebar br {
+        /* br hacks, blame stosh */
+        content: "";
+        margin: 2.2em;
+        display: flex;
+        margin-bottom: -22px; 
+
+    }
+
+        #container_ClanContent .container_GroupSidebar br:after {
+        
+           /* hack for chrome */
+            content: "";
+            height: 0;
+        
+        }
+
+#container_ClanContent .container_GroupSidebar > li {
+        background: rgba(30, 36, 43, 0.6) none repeat scroll 0 0;
+        border-top: none;
+        margin: 0px 15px 15px 0px;
+        width: auto;
+
+}
+
+    .react-medium #container_ClanContent .container_GroupSidebar > li {
+        margin: 0px 0px 15px 0px;
+    }
+
+.list_leadership .displayName {
+    color: #fff;
+    margin-left: 5px;
+
+}
+
+.list_clantags a {
+     color: #fff;
+}
+
+.list_clantags a:hover {
+    color: #fff;
+}
+
+
+#ClanForum {
+    /* position: relative; */
+    width: 100%; 
+  
+   
+}
+
+#ClanForum .pager_prevnext {
+    margin: 20px 0px 5px 0px;
+}
+
+.react-medium #ClanForum {
+    margin-top: -3px;
+}
+
+#groupHeader .alliances .select {
+    margin-right: 23px;
+}
+
+.numbers {
+    display: flex;
+    /* padding-top: 6px; */
+    flex-direction: column;
+    padding-left: 19px;
+    padding-bottom: 15px;
+    color: #fff;
+    font-weight: 200;
+    line-height: 33px;
+}
+
+.number.members {
+    margin-right: 20px;
+}
+
+ #ClanForum .clantopic {
+    background: rgba(30, 36, 43, 0.6) none repeat scroll 0 0;
+    border: none;
+}
+
+  #ClanForum .announcements > li {
+    background: rgba(30, 36, 43, 1.0) none repeat scroll 0 0;
+}
+
+.innerSideNav > li {
+    margin-bottom: 15px !important;
+    color: #666;
+}
+
+#msg_clanprobation + .Sub_Nav {
+    top: 0;
+    overflow: hidden;
+}
+
+
+/*clan chat*/
+
+#container_ClanContent .list_clanChat .content {
+    margin-left: 50px;
+}
+
+#container_ClanContent .list_clanChat .avatar {
+    top: 18px;
+}
+
+#container_ClanContent .list_clanChat .date {
+    color: rgba(255, 255, 255, 0.5);
+    margin-right: 20px;
+}
+
+#container_ClanContent .list_clanChat {
+    background: #191E24;
+    position: static;
+      bottom: 0;
+      width:100%;
+      min-height: 0;
+     
+     
+}
+
+#container_ClanContent .list_clanChat li {
+    border-top: none;
+     border-bottom: #262D35 1px solid;
+     padding: 15px 20px 15px 20px;
+}
+
+    #container_ClanContent .list_clanChat li:last-child {
+       
+    }
+
+#container_ClanContent .chatbar {
+    background: #191E24;
+      padding: 0;
+      width: 100%;
+      position: relative;
+      margin-bottom: 15px;
+      border-top: initial;
+	  z-index:3;
+}
+
+#container_ClanContent .chatbar .newmessage {
+    position: absolute;
+    top: -40px;
+    height: 30px;
+    background: rgba(30, 36, 43, 0.9);
+    width: 100%;
+    text-align: center;
+    padding: 9px 0 5px 0;
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 15px;
+    border-top: #262D35 1px solid;
+    color: #fff;
+}
+
+
+  #container_ClanContent .container_groupChatMessages .loading {
+    position: absolute;
+    height: 20px;
+    background: rgba(30, 36, 43, 0.9);
+    width: 100%;
+    text-align: center;
+    padding: 3px 0 5px 0;
+    border-top: grey;
+    cursor: pointer;
+    font-weight: 200;
+    font-size: 15px;
+    border-bottom: #262D35 1px solid;
+    z-index: 3;
+    color: #fff;
+}
+
+.react-mobile #container_ClanContent .chatbar {
+    margin-bottom: 0;
+    display: flex;
+	flex-flow:column nowrap;
+}
+
+#container_ClanContent .chatbar .whoistyping {
+    background: rgba(30, 36, 43, 0.9) none repeat scroll 0 0;
+    border-top: 1px solid #262d35;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 200;
+    padding: 4px 0px 12px 13px;
+    text-align: left;
+    width: 100%;
+	height: 10px;
+}
+
+
+#container_ClanContent .list_clanChat .displayName {
+    color: #fff;
+        padding-bottom: 6px;
+          margin-top: 0;
+}
+
+#container_ClanContent .list_clanChat .body {
+    color: rgba(255, 255, 255, 0.7); 
+    max-width: 93%;
+	word-break: initial;
+	word-wrap: break-word;
+}
+
+#container_ClanContent  .chatbar label {
+    display: none;
+  
+}
+
+#container_ClanContent .chatbar .container_textarea {
+    background: none repeat scroll 0 0 #282F38;
+    border: none;
+	min-width: 0;
+    width: 100%;
+    border-radius: 0;
+    height:70px;
+    font-weight: 200;
+     box-sizing: border-box;
+	     padding: 15px;
+}
+
+.react-mobile #container_ClanContent .chatbar .container_textarea {
+    display: flex;
+    flex: 3;
+    
+
+}
+
+#container_ClanContent .chatbar textarea {
+    color: #fff;
+    height: 60px;
+    
+}
+
+#container_ClanContent.GroupChat {
+     background: #12161B;
+}
+
+#container_ClanContent .list_clanChat .wallAction {
+    color: rgba(255, 255, 255, 0.3);
+        padding-left: 10px;
+        font-size: 10px;
+      margin-top: 0px;
+}
+
+#container_ClanContent.GroupChat .customScroll i.customScrollHandle {
+	background: #282F38;
+}
+
+#msg_clanprobation {
+    color: #020202;
+}
+
+.compact #msg_clanprobation, .NoSidebar #msg_clanprobation {
+    background: #cecece none repeat scroll 0 0;
+    font-size: 14px;
+    padding-bottom: 5px;
+    padding-left: 0;
+    padding-top: 12px;
+    position: static;
+    white-space: normal;
+    width: 100%;
+}
+
+#members, #members2 {
+    margin-top: 15px;
+    background-color: #191E24;
+}
+
+#members h4 {
+    color: rgb(242, 193, 97);
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+#AdminPages .section h5, .clanUsersPage .section h5 {
+    color: rgb(242, 193, 97);
+}
+
+#AdminPages .actions a {
+
+    color: rgb(242, 193, 97);
+
+}
+
+#AdminPages .actions a:hover {
+    color: #fff;
+}
+
+.clanUsersPage .list_members li {
+   
+    margin-left: 0;
+    padding: 20px 0;
+   border-bottom: #2F3944 1px solid;
+}
+
+.clanUsersPage .list_members .displayName a {
+    color: #fff;
+}
+
+.clanUsersPage .list_members li {
+
+}
+
+
+/*settings*/
+
+#settings {
+
+}
+
+#ClanAdmin .TabNav_Main {
+    padding-left: 0;
+    display: flex;
+    flex: 6;
+        background: rgba(30, 36, 43, 0.6) none repeat scroll 0 0;
+    margin-left: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    min-height: 700px;
+    flex-direction: column;
+}
+
+.react-medium #ClanAdmin .TabNav_Main {
+    flex:none;
+	margin-left: 0;
+}
+
+#ClanAdmin .TabNav_Side {
+     float: none;
+    /* width: 248px; */
+    background: none;
+    border-right: none;
+    border-left: none;
+    /* overflow: visible; */
+    min-height: 0;
+  
+   
+     margin-left: 0;
+    margin-top: 15px;
+    margin-right: 0;
+    
+}
+
+.react-medium #ClanAdmin .TabNav_Side {
+    margin-left: 0;
+    margin-top: 0;
+    width: 100%;
+}
+
+#ClanAdmin .tabnav_side_list {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: column;
+    flex: 1;
+}
+
+
+body:not(.Profile) .tabnav_side_list li a {
+    width: 100%;
+         text-indent: 7px;
+     background: rgba(30, 36, 43, 0.6) none repeat; 
+     margin-bottom: 3px;
+  
+      border-left: none;
+        border-top: none;
+        font-size: 16px;
+        color: #fff;
+    display: block;
+    font-weight: 200;
+    text-decoration: none;
+        line-height: 46px;
+}
+
+.tabnav_side_list li a:hover {
+       background: rgb(30, 36, 43) none repeat scroll 0 0;
+}
+
+.tabnav_side_list li.on a:hover {
+
+}
+
+.tabnav_side_list li span a:before {
+   
+    content: "\f0c8";
+
+}
+
+.tabnav_side_list li span.fa-square {
+    color: #434f5d;
+    display: inline-block;
+    font-size: 11px;
+    line-height: 0;
+    margin-bottom: 8px;
+    margin-right: 10px;
+    margin-top: 5px;
+    vertical-align: middle;
+}
+
+ 
+body:not(.Profile) .tabnav_side_list li.on a {
+        border-left: none;
+        border-top: none;
+         width: 100%;
+         background: rgb(30, 36, 43) none repeat scroll 0 0;
+         padding-left: 4px;
+         color: #fff;
+         font-weight: 400;
+}
+
+.tabnav_side_list li.on span.fa-square {
+
+    color: #fff;
+}
+
+#ClanAdmin .TabNav_Side h4 {
+    display:none;
+}
+
+#ClanAdmin:before {
+    display: none;
+}
+
+.react-medium #ClanAdmin .GroupSettingsForm .container_textarea_missionStatement, .react-medium #CreateGroupPanel .container_textarea_missionStatement {
+    width: auto;
+    box-sizing: border-box;
+   
+}
+
+.react-medium #ClanAdmin .GroupSettingsForm .container_textbox, .react-medium #CreateGroupPanel .container_textbox {
+    width: auto;
+    
+}
+
+.react-medium #ClanAdmin .description_section.clanFeatures {
+    display: none;
+}
+
+.react-medium #avatarList {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.react-medium #themeList {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.react-medium .avatarThemeSelectorControls {
+    width: auto;
+}
+
+.react-medium #themeList div.on {
+    width:auto;
+    box-sizing:border-box;
+}
+
+.react-medium #themeList div.on img {
+    
+
+     box-sizing:border-box;
+}
+
+
+#AdminPages .section {
+    border-top: 1px solid #2C3033;
+        margin-bottom: 26px;
+}
+
+#AdminPages .section > *, .clanUsersPage .section > * {
+    margin: 0 17px 0 17px;
+}
+
+.react-medium .alert .content {
+    width: 85vw;
+    left: auto !important;
+   
+}
+ 
+ .TabNav {
+     background: none;
+ }
+
+
+ #AdminPages .section h4, .clanUsersPage .section h4, #CreateGroupPanel h4 {
+    color: rgb(242, 193, 97);
+	text-transform: uppercase;
+    font-size: 16px;
+    line-height: 30px;  
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+ #AdminPages.GroupSettingsForm label[for=textbox_clanId] {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 12px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: 200;
+}
+
+ .avatarThemeSelectorList div.selected:after {
+     box-shadow: 0 0 0 4px #FFF inset;
+ }
+
+ .GroupSettingsForm .container_textbox, 
+ .GroupSettingsForm .container_select, 
+ .GroupSettingsForm .container_textarea {
+	background: #1E242B;
+	border: 1px solid #34393E;
+ }
+ 
+ .GroupSettingsForm .container_checkbox label {
+     color: #EBEBEB;
+ }
+
+ .content_main .container_textbox input {
+     color:#D9D9DB; 
+ }
+
+ .content_main .container_textarea textarea {
+     color:#D9D9DB; 
+ }
+
+ .description_section.clanFeatures {
+     display: none;
+ }
+
+ .btn_clanToggle {
+     width: 100%;
+ }
+
+ .clanSettingsBox {
+     display:flex;
+     width: auto;
+     max-width: 408px;
+ }
+
+ .GroupSettingsForm .container_textbox .helper {
+     background: none;
+ }
+
+ .container_addTag .btn_addTag {
+    border: 2px solid #F7C972;
+    border-radius: 22px;
+    color: #F7C972;
+ }
+
+ .avatarThemeSelectorControls span {
+     color: #fff;
+ }
+
+ .avatarThemeSelectorControls .page.on {
+      background: #F7C972;
+ }
+
+ #AdminPages.GroupSettingsForm .actions .btn_blue, #ClanCreate .btn_createClan {
+    background: rgb(255, 206, 31);
+    color: rgb(30, 36, 43);
+    margin-right: 15px;
+    margin-top: 15px;
+ }
+
+        #AdminPages.GroupSettingsForm .actions .btn_blue:hover  {
+            background: rgb(255, 221, 102);
+        }
+
+ 			
+
+ 
+ 
+ #AdminPages.GroupSettingsForm .actions .btn_gray, #ClanCreate .btn_cancelClanCreation {
+     background: #1E242B;
+         margin-right: 15px;
+ }
+
+    #AdminPages.GroupSettingsForm .actions .btn_gray:hover {
+        background: #28313b;
+    }
+
+#members {
+    display: flex;
+    flex: 1;
+   
+}
+
+
+
+#container_belowClanHeader .empty  {
+    color: #D9D9DB;
+    font-weight: 200;
+}
+#AdminPages .subsection, .clanUsersPage .subsection {
+    padding-left: 0;
+}
+
+#AdminPages #settings h4, #AdminPages #pending h4, #AdminPages #settings h4 {
+   margin-top:  15px;
+}
+
+#AdminPages .list_pendingMembers li {
+    border: 1px solid #323C48;
+    background: #1E242B;
+    margin: 15px 15px 0 0;
+}
+
+.react-mobile #AdminPages .list_pendingMembers li {
+width: 100%;
+
+}
+
+
+#AdminPages .list_pendingMembers .message {
+        font-weight: 200;
+		background: #2D3540;
+        color: #D0D0D0;
+		overflow:auto;
+		text-overflow:initial;
+		-ms-text-overflow: initial;
+		-o-text-overflow: initial;
+		white-space: initial;
+		line-height: 24px;
+		height: auto;
+		padding: 15px;
+}
+
+#AdminPages .list_pendingMembers .displayName a {
+    color: #fff;
+    font-weight: 200;
+}
+
+#AdminPages .container_pager .currentPage {
+	color: #5A6773;
+}
+
+#members .container_pager .pager, #AdminPages .container_pager .pager {
+	color: #fff;
+	margin-top: 35px;
+}
+
+#members .container_pager .pager a, #AdminPages .container_pager .pager a {
+	color: #63717D;
+}
+
+#members .container_pager .pager .on, #AdminPages .container_pager .pager .on {
+	color: #fff;
+}
+
+.header_alliances {
+    border: none;
+}
+
+.header_alliances h2 {
+    display: none;
+}
+
+.header_alliances .content {
+    background: url("https://www.bungie.net/img/theme/destiny/bgs/bg_groupAlliances.jpg") no-repeat scroll 0 0 #1E242B;
+    float: left;
+    font-weight: 200;
+    font-size: 16px;
+    height: 100%;
+    min-height: 178px;
+    padding-left: 153px;
+    padding-bottom: 15px;
+    padding-right: 10px;
+    color: #D9D9DB;
+}
+
+.react-medium .header_alliances .content {
+    background: #1E242B;
+     padding-left: 15px;
+  
+}
+
+.container_clanSettingsToggle {
+    border: none;
+}
+
+.container_clanSettingsToggle input:checked + label span.off {
+     
+    background: #1E242B;
+    color: #f5f5f5;
+}
+
+.container_clanSettingsToggle label span.off, .container_clanSettingsToggle input:checked + label span.on {
+    background: rgb(87, 98, 111);
+    color: #FFF;
+}
+
+.container_clanSettingsToggle span {
+    background: #1E242B;
+    color: #f5f5f5;
+}
+
+#AdminPages select, #ClanCreate select {
+
+	-moz-appearance: none;
+	-webkit-appearance: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background: rgba(30, 36, 43, 0.6) none repeat scroll 0 0;
+    border: none;
+    box-shadow: none;
+    color: #f5f5f5;
+    font-size: 12px;
+    outline: medium none;
+    padding: 5px 35px 5px 5px;
+    margin-bottom:  0;
+}
+
+#AdminPages .container_select:after, #ClanCreate .container_select:after {
+    color: rgba(245, 245, 245, 1);
+    content: "";
+    font-family: FontAwesome;
+    position: absolute;
+    pointer-events: none;
+    right: 14px;
+    top: 8px;
+}
+
+.container_tags {
+    margin-top: 15px;
+}
+
+.container_addTag .tag {
+    color: #fff;
+
+}
+
+#ClanForum {
+    margin-top: -15px;
+}
+
+.container_GroupMainContent h4 {
+    padding-left: 0;
+}
+
+#forumPost {
+    margin-top: 0 !important;
+}
+
+#topicThread .headerInfo.groupLink {
+    display: none;
+}
+
+#groupHeader .bar_actions .trigger, #groupHeader .btn_saveSettings {
+	background: rgba(30, 36, 43, 0.85);
+    border: 1px solid #313842;
+    border-radius: 0;
+    transition: background-color 0.2s ease 0s;
+    font-size: 12px;
+}
+
+ #groupHeader .bar_actions .trigger_interact {
+        background: rgba(30, 36, 43, 0.85);
+    }
+ 
+    .react-medium  #groupHeader .trigger {
+        background: rgba(45, 55, 66, 0.7);
+        border: none;
+        border-radius: 4px;
+    }
+
+
+    #groupHeader .bar_actions .trigger:hover,
+    .opened#groupHeader .bar_actions .trigger_about,
+    #groupHeader .opened .trigger_interact,
+    .isEditing#groupHeader .btn_displaySettings {
+        background: rgba(54, 64, 76, 0.85);
+    }
+
+    #groupHeader .options {
+        right: 0px;
+        border-radius: 0;
+    }
+
+     .react-medium #groupHeader .options {
+        right: auto;
+        left: auto;
+      
+    }
+
+    .isTyping .chatbar .container_textarea
+    {
+        height:0;
+    }
+
+      #container_ClanContent .groupChats {
+        /* position: static;
+        max-height: 620px;*/
+        margin-top: -15px;
+     
+     }
+
+   .GroupChat.isTyping {
+       padding-bottom: 0 !important;
+       padding-top: 100px;
+   }
+
+   .mobile .btn_submitMessage {
+       display: flex;
+       flex: 1;
+       background-color: #fff;
+       justify-content: center;
+       align-items: center;
+       position: static !important;
+       margin-left: 0;
+       background: none repeat scroll 0 0 #3d4755;
+       color: rgb(242, 193, 97);
+   }
+
+   .container_groupChatMessages a {
+      color: rgb(242, 193, 97);
+   }
+
+   .container_groupChatMessages a:hover {
+       color: #fff;
+   }
+
+   .GroupChat.onpage .groupChats > li {
+       margin-right: -40px;
+   }
+
+   .react-medium .list_clanChat .body img {
+       width: 90% !important;
+   }
+
+   .react-medium .list_clanChat .body a {
+       color: rgb(242, 193, 97);
+   }
+
+   .react-medium .list_clanChat .body a:hover {
+       color: #fff;
+   }
+
+.react-mobile .compact .nav_sub, .NoSidebar .nav_sub {
+
+       overflow-x: scroll;
+       padding-bottom: 40px;
+
+   }
+
+.compact .nav_sub, .NoSidebar .nav_sub {
+
+    overflow-x:auto;
+
+}
+
+/*Leaderboards*/
+
+#container_ClanContent .leaderboards .leaderboard {
+
+    background: rgba(30, 36, 43, 0.6) none repeat scroll 0 0;
+    max-width: 49.2%;
+}
+
+.react-medium .leaderboards .leaderboard {
+    max-width: none !important;
+}
+
+#container_ClanContent .leaderboards .header {
+    background: rgba(30, 36, 43, 0.9) none repeat scroll 0 0;
+    border-bottom: 1px solid rgba(30, 36, 43, 0.9);
+    margin-bottom: 5px;
+}
+
+#container_ClanContent .leaderboard .player {
+    font-weight: 200;
+    padding: 10px 10px 10px 10px;
+}
+
+#container_ClanContent .leaderboard .leaderboard .player .value {
+    padding-right: 20px;
+}
+
+#container_ClanContent .container_leaderboards .tabs {
+    border-top: 1px solid #313842;
+    border-bottom: 1px solid #313842;
+    margin: 0;
+}
+
+.react-mobile #container_ClanContent .container_leaderboards .tabs {
+    border-top: none;
+    border-bottom: none;
+    margin-top: 15px;
+    margin-left: 15px;
+
+}
+
+.react-mobile #container_ClanContent .leaderboards h4 {
+    margin-left: 15px;
+}
+
+.react-mobile #container_ClanContent .container_leaderboards .tab {
+    height: 30px;
+    line-height: 31px;
+}
+
+
+ #container_ClanContent  .container_leaderboards .tab.on {
+     background: rgb(87, 98, 111);
+     color: #fff;
+ }
+
+  #container_ClanContent  .container_leaderboards .tab {
+		background: #1E242B;
+		color: #fff;
+ }
+
+ 
+   #container_ClanContent  .leaderboards {
+		margin: 0;
+   }
+
+   #container_ClanContent .leaderboard .player .value {
+		padding-right: 20px;
+   }
+
+
+   /*Clan Roster */
+
+   #container_ClanContent .clanUsersPage {
+       background-color: #191E24;
+   }
+
+   #container_ClanContent #clanMembersContainer h4 {
+       margin: 0 0 0 15px;
+   }
+
+  #clanMembersContainer .clanErrorMessage {
+    background: #252B31 none repeat scroll 0 0;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 48px;
+    text-align: center;
+    margin: 15px 15px 0;
+    padding-left: 0; 
+    position: relative;
+}
+
+  #clanMembersContainer .clanErrorMessage::before {
+      display: none;
+  }
+
+  #clanMembersContainer .container_editClanName {
+      background: #1E242B;
+    border: 1px solid #34393E;
+    margin: 15px;
+  }
+
+  #clanMembersContainer label[for=textbox_clanName] {
+          color: rgb(242, 193, 97);
+    text-transform: uppercase;
+    font-size: 14px;
+    margin: 15px 15px 0 15px;
+  }
+  
+  
+  /*Error Messages*/
+
+  #container_belowClanHeader .GroupChat .msg_nomessages {
+      top: 0;
+      color: #fff;
+  }
+
+ /*Group Search*/
+
+ #GroupSearchPanel {
+    /* flex-grow: 1; */
+    position: relative;
+    display: flex;
+   
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1280px;
+  
+}
+
+  #GroupSearchPanel .list_groups {
+    width: 100%;
+    max-width: 1280px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+ #GroupSearchPanel .list_yourgroups {
+     display: flex;
+     flex-direction: column;
+ }
+
+.groupCard.extended {
+     border-radius: 0;
+     padding-bottom: 0;
+ }
+
+.groupCard {
+    
+     box-shadow: none;
+     color: #fff;
+}
+
+ .groupCard .avatar {
+     margin-left: 10px;
+ }
+
+ .groupCard.extended .container_basic {
+    position: static;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+ }
+
+.groupCard.clan .icon_clan {
+     background: rgba(0, 0, 0, 0) url("https://www.bungie.net/img/theme/destiny/icons/icon_clan_white.png") no-repeat scroll 0 0 / 18px auto;
+     opacity: 0.5;
+ }
+
+ .react-mobile .groupCard {
+	width: 100vw;
+    box-sizing: border-box;
+    margin: 0 0 5px 0;
+     
+ }
+
+  .react-mobile .groupCard .bg {
+  
+    display: none;
+     
+ }
+
+
+.groupCard .content {
+     padding: 0 16px;
+ }
+
+
+.groupCard .bg {
+     border-radius: 0;
+     height: 85px;
+ }
+
+.groupCard .members {
+     margin-top: 5px;
+     font-weight: 200;
+     font-size: 14px;
+ }
+ 
+.groupCard .name a {
+     color: #fff;
+     font-weight: 200;
+     font-size: 15px;
+ }
+
+.groupCard.extended .container_basic:last-child {
+     border-radius: 0;
+ }
+
+.groupCard .container_basic {
+     background: rgba(30, 36, 43, 0.6) none repeat scroll 0 0;
+ }
+
+ #GroupSearchPanel .header_clan  {
+     padding-left: 20px;
+     padding-bottom: 3px;
+     margin-bottom: 25px;
+     margin-top: 23px;
+     margin-right: 10px;
+     
+ }
+
+  #GroupSearchPanel .header_clan p {
+      
+      line-height: 23px;
+      color: #fff;
+     font-weight: 200;
+  }
+
+ /* Suggested Groups*/
+
+ #GroupSearchPanel .list_suggestedGroups {
+     border-top: none;
+     box-shadow: none;
+ }
+ 
+ #GroupSearchPanel .container_checkbox {
+     display: none;
+ }
+
+.filterBar {
+    height: 100%;
+    margin-top: 10px;
+    padding-top: 10px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+
+.header_groupIndex .searchForClans {
+     display: flex;
+ }
+
+.filterBar .container_select {
+     display: flex;
+	 padding-right:0;
+	 cursor:pointer;
+ }
+	.filterBar .container_select:after{
+		pointer-events:none;
+	}
+
+.header_groupIndex {
+    height: auto;
+    border-bottom: 2px solid rgba(30, 36, 43, 0.95);
+}
+
+.react-mobile .header_groupIndex {
+
+    background-position: 40% 10%;
+}
+
+.groupHeaderContent .btn_goCreateClan {
+     margin-bottom: 25px;
+    margin-top: 20px;
+}
+
+.react-mobile .groupHeaderContent .btn_goCreateClan {
+    margin-bottom: 20px;
+    margin-top: 5px;
+    line-height: 25px;
+}
+
+.header_groupIndex .filterBarContainer {
+    margin-top: 0;
+    background: rgb(25, 30, 36);
+}
+
+
+
+.filterBar {
+    margin-top: 0;
+    padding-bottom: 15px;
+}
+
+.react-medium .filterBar {
+    flex-direction: column;
+    align-items: initial;    
+    align-content: initial;
+    padding: 15px 15px 12px 25px;
+}
+
+.react-medium .header_groupIndex .searchForClans {
+    width: auto;
+}
+
+.react-medium .header_groupIndex {
+   
+}
+
+.react-medium .filterBar .filter-bar-search-box, .react-medium .filterBar .container_select {
+    margin-bottom: 5px;
+}
+
+.react-medium .filterBar .filter-bar-search-box {
+    margin-bottom: 20px;
+}
+
+
+.react-medium .filterBar .container_select {
+    height: 40px;
+}
+
+.react-medium .filterBar .container_select::after {
+    top: 15px
+}
+
+.groupHeaderContent {
+}
+
+.groupHeaderContent .btn_goCreateClan::before {
+    display: none;
+}
+
+
+
+.react-mobile .groupHeaderContent p {
+
+    display: none;
+}
+
+.GroupSettingsForm .section {
+    border: none;
+}
+
+.react-medium .header_groupIndex h1 {
+
+}
+
+/*Create Group*/
+
+ #CreateGroupPanel {
+    z-index: 2;
+    position: relative;
+    max-width: 1280px;
+    margin: auto;
+    background: rgba(30, 36, 43, 0.6) none repeat scroll 0 0;
+}
+
+ #CreateGroupPanel h4 {
+     margin-top: 15px;
+ }
+
+ #CreateGroupPanel .description_section.clanFeatures {
+	display: flex;
+    width: auto;
+    max-width: 850px;
+ }
+
+    
+     .react-mobile #CreateGroupPanel .description_section.clanFeatures {
+     display: flex;
+     background-image:none;
+     width: auto;
+     min-height: 0;
+     border-top: none;
+ }
+
+   .react-mobile #CreateGroupPanel .description_section.clanFeatures p {
+
+    text-align: left;
+    padding-right: 15px;
+    width: auto;
+    margin-left: 15px;
+
+    }
+
+#container_ClanContent .container_GroupSidebar .feedback-link { 
+	background: #12161b none repeat scroll 0 0;
+}
+
+.feedback-link a
+{
+	color: rgba(245, 245, 245, 0.65);
+	line-height: 34px;
+	font-size: 12px;
+	text-align: left;
+}
+
+	.feedback-link a:hover
+	{
+		color: #F5F5F5;
+	}
+
+	.feedback-link a .fa
+	{
+		margin-right: 2px;
+	}
+
+
+.react-medium #ClanCreate .container_addTag{
+	float:none;
+}
+	.react-medium #ClanCreate .container_addTag .container_tags{
+		width:100%;
+	}
+
+
+
+#iconmenu{
+	position:absolute;
+	right:0;
+	width:30%;
+}
+
+	#iconmenu .menu{
+		display: none;
+		flex-flow: row wrap;
+		height: 100px;
+		justify-content: space-between;
+		overflow: auto;
+		position: absolute;
+		top: -100px;
+		width: 100%;
+	}
+
+	#iconmenu.open .menu{
+		display:flex;
+	}	
+
+	#iconmenu a{
+		display:inline-block;
+		width:50px;
+	}
+	#iconmenu a img{
+		width:100%;
+	}

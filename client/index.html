@@ -1,0 +1,58 @@
+<head>
+	<title>Destiny Tournament - Home</title>
+</head>
+<body class=" Profile ProfileIndex  Profile  Companion  NoSidebar  fr  bg cf ">
+</body>
+
+<template name="Header">
+	<header>
+		<nav class="Nav_Top">
+			<ul class="nav_top cf">
+				<li class="left nav_logo h1">
+					<div class="small-menu"></div>
+					<h1 class="dropTrigger">
+						<a href="/" class="ir logo">Destiny Tournament</a>
+					</h1>
+				</li>
+				<li id="nav-items" class="left">
+						<div class="nav-bucket " data-id="home">
+							<a href="/" class="" >Destiny Tournament</a>
+						</div>
+					<div class="nav-bucket " data-id="legend-wrapper">
+						<a href="/group/762833" class="" >xX Elite Guardians Fr Xx<span class="expandIcon fa"></span></a>
+						<div class="nav-bucket-items">
+							<a class="" data-id="profile" href="#" >Profil</a>
+						</div>
+					</div>
+				</li>
+				<li id="GlobalSearch" class="right nav_top_search open active">
+					<div id="form_search" class="form_search">
+						{{> GroupSearchBar}}
+					</div>
+				</li>
+			</ul>
+		</nav>
+	</header>
+</template>
+
+<template name="Footer">
+	<footer>
+	</footer>
+</template>
+
+<template name="MainLayout">
+	<div class="bg_secondary JS cf">
+	{{> Header}}
+	<div class="header_body_page"></div>
+	{{> Template.dynamic template=main}}
+	<style type="text/css">
+		body
+		{
+			background: rgb(18, 22, 27);
+			background-size: cover;
+		}
+	</style>
+	{{> Footer}}
+</div>
+</template>
+

@@ -1,0 +1,112 @@
+<template name='GroupMemberStats'>
+	<table class="group">
+	<tr>
+	<th rowspan=2>gamertag</th>
+	<th rowspan=2>grimoire</th>
+	<th colspan=3>character</th>
+	<th rowspan=2>Niveau de lumière</th>
+	<th rowspan=2>Raids terminés</th>
+	<th colspan=2>Le Caveau de verre</th>
+	<th colspan=2>La chute de Cropta</th>
+	<th colspan=2>La Chute du roi</th>
+	<th colspan=2>Fureur mécanique</th>
+	</tr>
+	<tr>
+	<th>class</th>
+	<th>race</th>
+	<th>level</th>
+	<td>26</td>
+	<td>30</td>
+	<td>30</td>
+	<td>33</td>
+	<td>Normal</td>
+	<td>Hard</td>
+	<td>Normal</td>
+	<td>Hard</td>
+	</tr>
+	{{#each GroupMemberResults}}
+		{{#if $eq membershipType 1}}
+			{{> GroupMemberStatsSingle}}
+		{{/if}}
+	{{/each}}
+	</table>
+
+	{{#if HasMore}}
+		<div>
+			<button class="moreGroupMemberResults">Suite</button>
+		</div>
+	{{/if}}
+</template>
+
+<template name='GroupMemberStatsSingle'>
+	{{#each destinyAccount in groupMemberSingle.Response.destinyAccounts}}
+		{{#if $eq destinyAccount.userInfo.membershipType 1}}
+			{{#each character in destinyAccount.characters}}
+				{{> GroupCharacterStatsSingle bungieNetUser=groupMemberSingle.Response.bungieNetUser destinyAccount=destinyAccount character=character}}
+			{{/each}}
+		{{/if}}
+	{{/each}}
+</template>
+
+<template name='GroupCharacterStatsSingle'>
+	<tr>
+	<td>{{xboxDisplayName}}</td>
+	<td>{{grimoireScore}}</td>
+	<td>{{character.characterClass.className}}</td>
+	<td>{{character.race.raceName}}</td>
+	<td class='{{#if $eq character.level 40}}levelMax{{else}}levelOther{{/if}}'>{{character.level}}</td>
+	<td class='{{#if $eq character.powerLevel 400}}powerLevelMax{{else}}{{#if $gte character.powerLevel 385}}powerLevelAssault{{else}}powerLevelOther{{/if}}{{/if}}'>{{character.powerLevel}}</td>
+	<td class='{{#if $eq nbRaidCompleted 8}}completed{{/if}}'>{{nbRaidCompleted}}</td>
+	<td class='isCompleted {{#if raids.CV_26.isCompleted}}completed{{/if}}'>{{#if raids.CV_26.isCompleted}}&#10004;{{/if}}</td>
+	<td class='isCompleted {{#if raids.CV_30.isCompleted}}completed{{/if}}'>{{#if raids.CV_30.isCompleted}}&#10004;{{/if}}</td>
+	<td class='isCompleted {{#if raids.CC_30.isCompleted}}completed{{/if}}'>{{#if raids.CC_30.isCompleted}}&#10004;{{/if}}</td>
+	<td class='isCompleted {{#if raids.CC_33.isCompleted}}completed{{/if}}'>{{#if raids.CC_33.isCompleted}}&#10004;{{/if}}</td>
+	<td class='isCompleted {{#if raids.CR.isCompleted}}completed{{/if}}'>{{#if raids.CR.isCompleted}}&#10004;{{/if}}</td>
+	<td class='isCompleted {{#if raids.CR_HARD.isCompleted}}completed{{/if}}'>{{#if raids.CR_HARD.isCompleted}}&#10004;{{/if}}</td>
+	<td class='isCompleted {{#if raids.FM.isCompleted}}completed{{/if}}'>{{#if raids.FM.isCompleted}}&#10004;{{/if}}</td>
+	<td class='isCompleted {{#if raids.FM_HARD.isCompleted}}completed{{/if}}'>{{#if raids.FM_HARD.isCompleted}}&#10004;{{/if}}</td>
+	</tr>
+</template>
+
+<template name='GroupMemberStatsSingleOld'>
+	{{#each destinyAccount in groupMemberSingle.Response.destinyAccounts}}
+		{{#if $eq destinyAccount.userInfo.membershipType 1}}
+		<div id="profileMainTop">
+		
+			<div class="grid account-switcher-wrapper">
+				<div class="grid-col-12">
+					<div class="destiny-account-switcher">
+					<a class="destiny-account current" href="https://www.bungie.net/fr/Profile/1/{{destinyAccount.userInfo.membershipId}}">
+						<div class="icon" style="background-image: url('https://www.bungie.net/common/destiny_content/icons/ee9d2fe8b039751ad3d9e48c7f476dc2.jpg')"></div>
+						<div class="standardTitle display-name">{{groupMemberSingle.Response.bungieNetUser.xboxDisplayName}}</div>
+						<div class="standardTitle display-name">{{destinyAccount.grimoireScore}}</div>
+					</a>
+					</div>
+				</div>
+			</div>
+
+			{{#each character in destinyAccount.characters}}
+			<div class="destiny-info grid flex">
+				<div class="characters grid-block grid-col-4 grid-col-6-large grid-col-12-mobile">
+					<div class="characterList active" data-membershiptype="1">
+						<a id="guardian{{character.characterId}}" class="characterPlate normal" href="/fr/Legend/1/{{destinyAccount.userInfo.membershipId}}/{{character.characterId}}" data-url="https://www.bungie.net/img/placeholders/guardian.png" data-characterid="{{character.characterId}}" data-gender="0" style="background-image: url(https://www.bungie.net/{{character.backgroundPath}});">
+							<div class="emblem" style="background-image: url(https://www.bungie.net/{{character.emblemPath}});"></div>
+							<div class="characterDetails">
+								<span class="characterClass">{{character.characterClass.className}}</span>
+								<span class="raceGender">{{character.race.raceName}}</span>
+								<span class="level">{{character.level}}</span>
+								<span class="powerLevel light">{{character.powerLevel}}</span>
+							</div>
+							<div class="characterProgress">
+								<div class="barFill" style="width: {{character.percentToNextLevel}}%;"></div>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+			{{/each}}
+
+		</div>
+		{{/if}}
+	{{/each}}
+</template>

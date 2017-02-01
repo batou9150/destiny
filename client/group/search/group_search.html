@@ -1,0 +1,18 @@
+<template name='GroupSearchSingle'>
+	<div class='result'>
+		<a href="/group/{{detail.groupId}}">{{detail.name}}</a>
+	</div>
+</template>
+
+<template name='GroupSearch'>
+	<h3>Résultat de la recherche</h3>
+	{{#with GroupSearchResults}}
+		{{#if error}}
+			<p>There was an error: {{error.errorType}} {{error.message}}!</p>
+		{{else}}
+			{{#each GroupSearchResults.Response.results}}
+        		{{> GroupSearchSingle}}
+			{{/each}}
+		{{/if}} 
+	{{/with}}
+</template>

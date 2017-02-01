@@ -1,0 +1,51 @@
+<template name='GroupStats'>
+	{{#with GroupDetailResult.Response.detail}}
+
+	{{> GroupMenu}}
+
+	<div id="outsideContent"></div>
+
+	<div id="content">
+		<div id="mainContent">
+			<div class="content_main" id="ClanDetail">
+				<div class="header cf " id="groupHeader" contenteditable="false">
+					<div class="bg" style="background-image:url('https://www.bungie.net/img/Themes/Group_Guardians/struct_images/group_top_banner.jpg?cv=3983621215&amp;av=1476597941');">
+						<div class="infoAll">
+							<div class="info cf">
+								<div>
+									<a href="https://www.bungie.net/fr/Clan/{{groupId}}" class="avatar" id="avatarPreview">
+										<img id="groupAvatar" src="https://www.bungie.net/img/profile/avatars/group/022.jpg?cv=3983621215&amp;av=1476597941" alt="Group Avatar">
+									</a>
+									<div class="content">
+										<h2>
+											<a href="https://www.bungie.net/fr/Clan/{{groupId}}" id="groupName" class="canEdit">{{name}}</a>
+												<span class="container_clanId">
+													[<span class="canEdit" id="clanId">{{clanCallsign}}</span>]
+												</span>
+										</h2>
+											<p class="motto" data-value="{{motto}}">« {{{motto}}} »</p>
+									</div>
+								</div>
+							</div>
+							<div class="interactJoin">
+								<div class="bar_actions">
+									<div class="actions select">
+										<label class="trigger_interact trigger">Rejoindre</label>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="accountPaneWrapper">
+					<div id="accountPane">
+						{{> GroupMemberStats}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	{{/with}}
+</template>
+
+

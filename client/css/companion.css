@@ -1,0 +1,4891 @@
+/*****************************************************/
+/*
+/*	COMPANION.CSS
+/*
+/*  CSS in this file is companion-related styles that 
+/*  are used in more than one section of the site
+/*
+/*****************************************************/
+
+.ja *
+{
+	font-style: normal !important;
+}
+
+/* 
+=========================	
+	ANIMATIONS
+=========================		
+*/
+
+*, *:after, *:before
+{
+	transition-timing-function: cubic-bezier(.69,0,0,1) !important;
+	animation-timing-function: cubic-bezier(.69,0,0,1) !important;
+}
+
+
+
+/* 
+=========================	
+	UI DISABLED
+=========================		
+*/
+
+
+
+.uiDisabled:not(.chrome) .legendWrapper, 
+.uiDisabled.chrome body:not(.Gear) .legendWrapper, 
+	/* TODO JLAUER - FIGURE OUT A BETTER FIX FOR THIS */
+.uiDisabled #outsideContent,
+.uiDisabled .Sub_Nav
+{
+	opacity: 0.1;
+}
+
+.uiDisabled #mainContent,
+.uiDisabled .Sub_Nav
+{
+	-webkit-transform: translateZ(-10px);
+	transform: translateZ(-10px); /* Make UI not interactable */
+}
+
+
+/* 
+=========================	
+	GROUP CARD		
+=========================		
+*/
+
+
+.groupCard
+{
+	box-shadow: 0 1px 0 0 #C3C7CB;
+	color: #40505A;
+	display: inline-block;
+	font-family: 'Roboto',Arial,sans-serif;
+	margin: 0 19px 38px;
+	text-align: left;
+	vertical-align: top;
+	width: 270px;
+}
+
+	.groupCard.extended
+	{
+		border-radius: 5px;
+		padding-bottom: 61px;
+		position: relative;
+	}
+
+	.groupCard .container_basic
+	{
+		background: #fff;
+	}
+
+	.groupCard.extended .container_basic
+	{
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+	}
+
+		.groupCard.extended .container_basic:last-child
+		{
+			border-radius: 0 0 5px 5px;
+		}
+
+	.groupCard .avatar
+	{
+		width: 61px;
+		height: 61px;
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+	.groupCard .content
+	{
+		font-weight: 400;
+		display: inline-block;
+		vertical-align: middle;
+		padding: 0 11px;
+		max-height: 61px;
+		max-width: 182px;
+	}
+
+	.groupCard .name
+	{
+		margin-bottom: -5px;
+		margin-top: -5px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+		.groupCard .name a
+		{
+			font-size: 14px;
+			color: #40505a;
+		}
+
+	.groupCard .members
+	{
+		font-size: 13px;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		color: #89949b;
+	}
+
+	.groupCard.clan .icon_clan
+	{
+		background: rgba(0, 0, 0, 0) url("/img/theme/destiny/icons/icon_clan.png") no-repeat scroll 0 0 / 18px auto;
+		display:inline-block;
+		font-size: 12px;
+		height: 15px;
+		line-height: 15px;
+		margin-top: 3px;
+		padding-left: 22px;
+		
+	}
+		.groupCard .icon_clan
+		{
+			display:none;
+		}
+
+	
+
+	.groupCard .friends
+	{
+		background: none repeat scroll 0 0 #FFFFFF;
+		border-bottom: 10px solid #FFFFFF;
+		border-radius: 0 0 5px 5px;
+		border-top: 1px solid #E7EAEE;
+		display: block;
+		font-weight: 400;
+		font-size: 13px;
+		line-height: 20px;
+		max-height: 42px;
+		overflow: hidden;
+		padding: 10px 10px 0;
+	}
+
+		.groupCard .friends strong
+		{
+			font-weight: 700;
+		}
+
+	.groupCard .btns_toggleClans
+	{
+		border-top: 1px solid #E7EAEE;
+		border-bottom: 1px solid #E7EAEE;
+	}
+
+#profileMainTop .btns_toggleClans
+{
+	display: none;
+}
+
+.groupCard .btns_toggleClans > p
+{
+	width: 61px;
+	color: #16181c;
+	font-family: 'Roboto', Arial, sans-serif;
+	float: left;
+	line-height: 30px;
+	font-size: 12px;
+	border-right: 1px solid #E7EAEE;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align: center;
+}
+
+.groupCard .btn_toggleClan
+{
+	font-family: 'Roboto', Arial, sans-serif;
+	font-size: 12px;
+	width: 103px;
+	float: left;
+	height: 30px;
+	line-height: 30px;
+}
+
+	.groupCard .btn_toggleClan.demonware
+	{
+		width: 100%;
+		float: none;
+	}
+
+	.groupCard .btn_toggleClan.xbox
+	{
+		border-left: 1px solid #E7EAEE;
+	}
+
+	.groupCard .btn_toggleClan span
+	{
+		vertical-align: middle;
+	}
+
+	.groupCard .btn_toggleClan.enable,
+	.groupCard .btn_toggleClan.disabled
+	{
+		color: #16181c;
+	}
+
+	.groupCard .btn_toggleClan.disabled
+	{
+		cursor: default;
+	}
+
+		.groupCard .btn_toggleClan.enable:before,
+		.groupCard .btn_toggleClan.disabled:before
+		{
+			background-image: url("/img/theme/destiny/icons/sprite_gameplatforms.png");
+			background-repeat: no-repeat;
+			content: "";
+			display: inline-block;
+			height: 15px;
+			position: relative;
+			width: 15px;
+			vertical-align: middle;
+			margin: 0 5px 0 15px;
+		}
+
+	.groupCard .btn_toggleClan.psn.enable:before,
+	.groupCard .btn_toggleClan.psn.disabled:before
+	{
+		background-position: left top;
+	}
+
+	.groupCard .btn_toggleClan.xbox.enable:before,
+	.groupCard .btn_toggleClan.xbox.disabled:before
+	{
+		background-position: right top;
+	}
+
+	.groupCard .btn_toggleClan.disable
+	{
+		color: #fff;
+		position: relative;
+	}
+
+	.groupCard .btn_toggleClan.xbox.disable
+	{
+		background: #1c9a00;
+		border-color: #1c9a00;
+	}
+
+	.groupCard .btn_toggleClan.psn.disable
+	{
+		background: #7e82da;
+	}
+
+	.groupCard .btn_toggleClan.disable span
+	{
+		position: absolute;
+	}
+
+	.groupCard .btn_toggleClan.disable:before
+	{
+		background: url("/img/theme/destiny/icons/icon_checkMark_smaller.png") no-repeat scroll center center rgba(0, 0, 0, 0);
+		border: 1px solid #FFFFFF;
+		border-radius: 15px;
+		content: "";
+		display: inline-block;
+		height: 15px;
+		margin: 0 5px 0 15px;
+		position: relative;
+		vertical-align: middle;
+		width: 15px;
+	}
+
+	.groupCard .btn_toggleClan.disable .action
+	{
+		visibility: hidden;
+	}
+
+	.groupCard .btn_toggleClan.disable:hover
+	{
+	}
+
+		.groupCard .btn_toggleClan.disable:hover:before
+		{
+			background: url("/img/theme/destiny/icons/icon_x.png") no-repeat center center;
+		}
+
+		.groupCard .btn_toggleClan.disable:hover span:first-child
+		{
+			visibility: hidden;
+		}
+
+		.groupCard .btn_toggleClan.disable:hover .action
+		{
+			visibility: visible;
+		}
+
+
+
+.groupCard .bg
+{
+	background-position: 83% top;
+	background-repeat: no-repeat;
+	background-size: auto 100%;
+	height: 112px;
+	display: block;
+	border-radius: 5px 5px 0 0;
+	color: #fff;
+	position: relative;
+	cursor: pointer;
+}
+
+.groupCard .info
+{
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0.8);
+	height: 115px;
+	opacity: 0;
+	padding: 15px;
+
+	transition: opacity 500ms ease-in-out 0s;
+	position: relative;
+	border-radius: 5px 5px 0 0;
+	display: none;
+}
+
+.groupCard:hover .info
+{
+	opacity: 1;
+}
+
+.groupCard .bg .text
+{
+	height: 155px;
+	overflow: hidden;
+	word-wrap: break-word;
+}
+
+.groupCard .bg p
+{
+	font-weight: 400;
+	font-size: 12px;
+	margin-top: 15px;
+}
+
+	.groupCard .bg p:first-child
+	{
+		margin-top: 0;
+	}
+
+.groupCard .bg .text p a
+{
+	color: #479CE4;
+}
+
+.groupCard .bg .link_alliance
+{
+	color: #479CE4;
+	display: block;
+	font-weight: 400;
+	font-size: 16px;
+	margin-bottom: 15px;
+	overflow: hidden;
+	padding-right: 24px;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+.groupCard .extras
+{
+	background-color: rgba(0, 0, 0, 0.8);
+	color: #FFFFFF;
+	font-family: Roboto,Arial,sans-serif;
+	font-size: 12px;
+	left: 0;
+	opacity: 0;
+	position: absolute;
+	top: -49px;
+
+	transition: opacity 500ms ease-in-out 0s;
+	width: 100%;
+	display: none;
+}
+
+.groupCard:hover .extras
+{
+	opacity: 1;
+}
+
+.groupCard .followers
+{
+	float: right;
+	line-height: 29px;
+	margin: 10px 15px;
+}
+
+.groupCard .user_tenure
+{
+	background: url("/img/theme/bungienet/icons/sprite_profile_badge.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+	height: 29px;
+	float: left;
+	margin: 10px 15px;
+}
+
+	.groupCard .user_tenure.grey
+	{
+		background-position: 0 0;
+	}
+
+	.groupCard .user_tenure.green
+	{
+		background-position: 0 -29px;
+	}
+
+	.groupCard .user_tenure.blue
+	{
+		background-position: 0 -58px;
+	}
+
+	.groupCard .user_tenure.red
+	{
+		background-position: 0 -87px;
+	}
+
+	.groupCard .user_tenure.gold
+	{
+		background-position: 0 -116px;
+	}
+
+	.groupCard .user_tenure .year_number
+	{
+		font-weight: 200;
+		font-size: 20px;
+		text-align: center;
+		float: left;
+		line-height: 28px;
+		width: 41px;
+	}
+
+	.groupCard .user_tenure .year_year
+	{
+		height: 38px;
+		font-weight: 500;
+		font-size: 11px;
+		line-height: 28px;
+		padding-left: 10px;
+		float: right;
+		text-transform: uppercase;
+	}
+
+.groupCard .tooltip
+{
+	background: none repeat scroll 0 0 #1A1E24;
+	border-top: 4px solid #479CE4;
+	display: none;
+	font-weight: 400;
+	font-size: 12px;
+	position: absolute;
+	left: 18px;
+	bottom: 18px;
+	z-index: 1;
+	-webkit-box-shadow: 0 9px 35px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0 9px 35px rgba(0,0,0,0.75);
+	box-shadow: 0 9px 35px rgba(0,0,0,0.75);
+}
+
+.groupCard .platform:hover .tooltip
+{
+	display: block;
+}
+
+.groupCard .tooltip p
+{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 0 10px;
+}
+
+	.groupCard .tooltip p:first-child
+	{
+		color: #f5f5f5;
+		margin-top: 4px;
+	}
+
+.groupCard .tooltip .clanMembers
+{
+	color: rgba(245,245,245,.5);
+	margin-bottom: 4px;
+}
+
+.groupCard.simple
+{
+	box-shadow: none;
+	margin: 0;
+	width: 100%;
+}
+
+	.groupCard.simple img,
+	.groupCard.simple .content
+	{
+		display: inline-block;
+		vertical-align: middle;
+	}
+
+		.groupCard.simple .content p
+		{
+			color: rgba(245,245,245,0.7);
+		}
+
+		.groupCard.simple .content .name
+		{
+			font-size: 23px;
+			margin-bottom: 1px;
+		}
+
+		.groupCard.simple .content .members
+		{
+			font-size: 16px;
+		}
+
+	.groupCard.simple img
+	{
+		width: 64px;
+		height: 64px;
+	}
+
+
+/* 
+=========================	
+	GEAR CHARACTER SUMMARY
+=========================		
+*/
+
+.gear-character-summary
+{
+	position: relative;
+	display: block;
+
+	height: 55px;
+	padding: 9px;
+	margin-bottom: 1px;
+
+	color: #F5F5F5;
+	background: rgba(245, 245, 245, 0.05);
+	font-size: 14px;
+
+	cursor: pointer;
+}
+
+	.current .gear-character-summary
+	{
+		border-left: 3px solid rgba(206, 174, 50, 1);
+	}
+
+	.gear-character-summary:hover
+	{
+		background: rgba(245, 245, 245, 0.1);
+	}
+
+	.gear-character-summary .nameplate
+	{
+		position: absolute;
+		z-index: 1;
+
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		background-size: cover;
+	}
+		
+	.gear-character-summary .icon
+	{
+		position: relative;
+		z-index: 2;
+		float: left;
+
+		width: 35px;
+		height: 35px;
+		margin-right: 18px;
+
+		background-size: cover;
+	}
+
+	.gear-character-summary .race-name
+	{
+		position: relative;
+		z-index: 2;
+		font-size: 10px;
+		opacity: 0.5;
+
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	.gear-character-summary .level
+	{
+		position: absolute;
+		z-index: 2;
+			
+		top: 7px;
+		right: 9px;
+
+		text-align: right;
+	}
+
+/* 
+=========================	
+	LEADERBOARD FORMAT
+=========================		
+*/
+
+
+.boards
+{
+	position: relative;
+	display: none;
+	z-index: 5;
+
+	width: 100%;
+	height: 0;
+	
+	opacity: 0;
+
+	transition-property: left, width, opacity, margin;
+	transition-duration: 0.5s;
+	transition-timing-function: ease;
+}
+
+	.boards .boxHeader,
+	.boards .box .boxHeader
+	{
+		position: relative;
+
+		padding-bottom: 5px;
+		margin: 10px 0;
+
+		color: #f5f5f5;
+		font-size: 20px;
+		font-weight: 200;
+		text-transform: uppercase;
+		text-align: left;
+
+		border-bottom: 1px solid rgba(245,245,245,0.5);
+	}
+
+	.boards .header
+	{
+		position: relative;
+		overflow: hidden;
+		white-space: nowrap;
+
+		height: 30px;
+		line-height: 30px;
+		margin-bottom: 1px;
+		padding: 0 8px;
+
+		background: rgba(245,245,245,0.1);
+		text-transform: uppercase;
+		font-size: 13px;
+	}
+
+		.boards .header span
+		{
+			position: relative;
+			display: inline-block;
+
+			vertical-align: top;
+			margin-right: -2px;
+			color: #f5f5f5;
+		}
+
+			.boards .header span.solid
+			{
+				display: block;
+			}
+
+			.boards .header span.current
+			{
+				color: #FFF;
+			}
+
+			.boards .header span.spacer
+			{
+				width: 100%;
+				height: 22px;
+				cursor: default;
+			}
+
+	.boards a
+	{
+		color: #f5f5f5;
+	}
+
+		.boards a:hover
+		{
+			text-decoration: underline;
+		}
+
+	.boards .box
+	{
+		position: relative;
+		display: block;
+
+		padding: 20px 3% 80px;
+
+		text-transform: none;
+		cursor: inherit;
+	}
+
+	.boards .boxContent
+	{
+		position: relative;
+		max-width: 1150px;
+		margin: 0 auto;
+	}
+
+.boxItem
+{
+	display: none;
+}
+
+	.boxItem.current
+	{
+		display: block;
+	}
+
+.boards .box h2
+{
+	margin: 0 0 30px 0;
+
+	font-weight: 200;
+	font-size: 24px;
+	text-align: center;
+}
+
+
+/* 
+=========================	
+	DESTINY TOOLTIP
+=========================		
+*/
+
+
+.destinyTooltip
+{
+	position: absolute;
+	visibility: hidden;
+	z-index: 99;
+	white-space: normal;
+
+	top: -9999px;
+	left: -9999px;
+
+	width: 350px;
+
+	color: rgba(26,30,36,1);
+	text-align: left;
+	border-width: 0 5px 5px 5px;
+	font-size: 16px;
+
+	opacity: 0;
+	box-shadow: 0 9px 25px rgba(0,0,0,0.25);
+	text-shadow: none;
+	background: rgba(30,36,43, 0.95);
+	-webkit-transform: translateY(-10px);
+	transform: translateY(-10px);
+
+	transition: opacity 0.5s, transform 0.5s;
+}
+
+	.destinyTooltip:not(.active)
+	{
+		top: -9999px !important;
+		left: -9999px !important;
+	}
+
+	.destinyTooltip.active
+	{
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+		visibility: visible;
+		opacity: 1;
+	}
+
+	.destinyTooltip .itemTagline
+	{
+		margin: 0 0 10px 0;
+		font-size: 16px;
+		line-height: 20px;
+		opacity: 0.8;
+	}
+
+	.destinyTooltip .itemDescription
+	{
+		margin: 7px 0 9px 0;
+		font-size: 16px;
+		line-height: 20px;
+		font-style: italic;
+		opacity: 0.8;
+	}
+
+		.destinyTooltip .itemDescription + *,
+		.destinyTooltip .itemPerks + .costs
+		{
+			padding-top: 10px;
+			border-top: 1px solid rgba(245, 245, 245, 0.15);
+		}
+
+	.destinyTooltip .modifiers
+	{
+		margin: 7px 0 9px 0;
+	}
+
+		.destinyTooltip .modifiers .modifier
+		{
+			position: relative;
+
+			padding-left: 25px;
+			line-height: 22px;
+
+			background-size: 15px;
+			background-position: 0 34%;
+			background-repeat: no-repeat;
+		}
+		
+	.ja .destinyTooltip .itemDescription
+	{
+		font-style: normal;
+	}
+
+	.destinyTooltip .itemProgressBar
+	{
+		position: relative;
+		height: 25px;
+		margin: 10px 0;
+		background: rgba(0,0,0,0.5);
+	}
+
+		.destinyTooltip .itemProgressBar.completed
+		{
+			background: rgb(255, 206, 31);
+		}
+
+		.destinyTooltip .itemProgressBar .barFill
+		{
+			background: #5da569;
+			height: 100%;
+		}
+
+	.destinyTooltip .itemObjective
+	{
+		margin-top: 9px;
+	}
+
+		.destinyTooltip .itemObjectives .checkbox {
+			display: inline-block;
+			vertical-align: top;
+
+			width: 18px;
+			height: 18px;
+
+			background: rgba(0,0,0,0.5);
+			border: 1px solid rgba(245, 245, 245, 0.5);
+		}
+
+			.destinyTooltip .itemObjectives .complete .checkbox
+			{
+				background: rgb(94, 165, 105);
+			}
+
+		.destinyTooltip .itemObjectives .bar {
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		
+			width: calc(100% - 39px);
+			height: 20px;
+
+			background: rgba(0,0,0,0.5);
+		}
+
+			.destinyTooltip .itemObjectives .barFill
+			{
+				position: absolute;
+				z-index: 1;
+
+				height: 20px;
+
+				background: #5ea569;
+			}
+
+		.destinyTooltip .itemObjectives .barLabel {
+			position: absolute;
+			z-index: 2;
+
+			left: 5px;
+
+			font-size: 12px;
+			font-style: normal;
+		}
+
+		.destinyTooltip .itemObjectives .barPercentage {
+			position: absolute;
+
+			right: 5px;
+			
+			font-size: 12px;
+			font-style: normal;
+			z-index: 2;
+		}
+
+	.damageTypeIcon
+	{
+		position: relative;
+		display: block;
+		float: left;
+
+		width: 45px;
+		height: 45px;
+		margin-right: 5px;
+		margin-bottom: 20px;
+
+		background-size: 35px 35px;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+	}
+
+		.sidebarItem .damageTypeIcon
+		{
+			position: absolute;
+			float: none;
+			bottom: -5px;
+			right: -5px;
+
+			width: 17px;
+			height: 17px;
+			margin: 0;
+
+			background-size: 80% 80%;
+		}
+
+	[data-damagetype="Thermal"] .primaryStat span
+	{
+		color: #f2721b !important;
+	}
+
+	[data-damagetype="Void"] .primaryStat span
+	{
+		color: #b283cc !important;
+	}
+
+	[data-damagetype="Arc"] .primaryStat span
+	{
+		color: #85c5ec !important;
+	}
+
+	[data-damagetype="None"] .itemHeader .damageTypeIcon
+	{
+		display: none;
+	}
+
+
+/* 
+=========================	
+	DESTINY MODALS
+=========================		
+*/
+
+
+.itemBody,
+.itemDetails .itemBody
+{
+	background-size: cover;
+	color: rgba(245,245,245,0.6);
+	font-size: 16px;
+	font-weight: 400;
+	padding:18px;
+}
+
+.destinyTooltip .itemName
+{
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: 500;
+	line-height: 1.1em;
+
+	padding-bottom: 10px;
+
+}
+
+.destinyTooltip .itemHeader
+{
+	position: relative;
+
+	font-weight: 500;
+	color: #f5f5f5;
+	line-height: 18px;
+
+	padding-bottom:10px;
+}
+
+.destinyTooltip .itemSubtitle
+{
+
+}
+
+	.destinyTooltip .itemHeader .itemSubtitle,
+	.destinyTooltip .itemHeader .tierTypeName
+	{
+		position:relative;
+
+		font-size: 17px;
+		line-height: 20px;
+		font-weight: normal;
+		opacity: 0.6;
+	}
+
+	.destinyTooltip .itemHeader .tierTypeName
+	{
+		position: absolute;
+		right: 0;
+
+		color: rgba(245,245,245,1);
+	}
+	
+	.destinyTooltip.nonItem .itemHeader,
+	.destinyTooltip.nonItem .itemBody
+	{
+		padding: 5px 10px;
+	}
+
+.destinyTooltip .itemHeader,
+.destinyTooltip[data-tiertype="Common"],
+.destinyTooltip[data-tiertype="Basic"]
+{
+	color: rgb(30,36,43);
+}
+
+.destinyTooltip .itemHeader
+{
+	background: rgba(245,245,245,0.9);
+	height: inherit;
+}
+
+.tierTypeUncommon .destinyTooltip .itemHeader,
+.destinyTooltip[data-tiertype="Uncommon"] .itemHeader,
+.destinyTooltip[data-tiertype="Common"] .itemHeader
+{
+	background: rgba(47,107,60,0.9);
+	color: #f5f5f5;
+}
+
+.tierTypeRare .destinyTooltip .itemHeader,
+.destinyTooltip[data-tiertype="Rare"] .itemHeader
+{
+	background: rgba(85,127,158,0.9);
+	color: #f5f5f5;
+}
+
+.tierTypeLegendary .destinyTooltip .itemHeader,
+.destinyTooltip[data-tiertype="Legendary"] .itemHeader,
+.tierTypeSuperior .destinyTooltip .itemHeader,
+.destinyTooltip[data-tiertype="Superior"] .itemHeader
+{
+	background: rgba(78,50,99,0.9);
+	color: #f5f5f5;
+}
+
+.tierTypeExotic .destinyTooltip .itemHeader,
+.destinyTooltip[data-tiertype="Exotic"] .itemHeader
+{
+	background: rgba(206,174,50,0.9);
+	color: #f5f5f5;
+}
+
+.tierTypeUncommon .destinyTooltip,
+.destinyTooltip[data-tiertype="Uncommon"],
+.destinyTooltip[data-tiertype="Common"]
+{
+	background: rgba(10,20,12,0.95);
+	color: #f5f5f5;
+}
+
+.tierTypeRare .destinyTooltip,
+.destinyTooltip[data-tiertype="Rare"]
+{
+	background: rgba(12,19,25,0.95);
+	color: #f5f5f5;
+}
+
+.tierTypeLegendary .destinyTooltip,
+.destinyTooltip[data-tiertype="Legendary"],
+.tierTypeSuperior.destinyTooltip,
+.destinyTooltip[data-tiertype="Superior"]
+{
+	background: rgba(17,12,21,0.95);
+	color: #f5f5f5;
+}
+
+.tierTypeExotic .destinyTooltip,
+.destinyTooltip[data-tiertype="Exotic"]
+{
+	background: rgba(24,22,13,0.95);
+}
+
+.destinyTooltip .itemProgressBar
+{
+	position: relative;
+
+	width: 100%;
+	height: 25px;
+	padding: 0;
+
+	border: 0;
+	background: rgba(0,0,0,0.5);
+}
+
+	.destinyTooltip .itemProgressBar .itemProgress
+	{
+		position: absolute;
+		top: 0;
+		right: 10px;
+		line-height: 25px;
+	}
+
+	.destinyTooltip .itemProgressBar .barFill
+	{
+		height: 25px;
+		background: #5da569;
+	}
+
+
+.tierTypeBasic .itemHeader *
+{
+	color: rgba(26,30,36,1);
+}
+
+.destinyTooltip .itemTypeName
+{
+	padding: 0 10px 10px 10px;
+	font-size: 18px;
+}
+
+.destinyTooltip .itemStats
+{
+	top: 0;
+	font-size: 16px;
+}
+
+.destinyTooltip .itemHeader,
+.destinyTooltip .itemBody
+{
+	padding: 18px;
+}
+
+.destinyTooltip .equipFailureReasons,
+.destinyTooltip .vendorFailureReasons
+{
+	border-top: 1px solid #242a30;
+}
+
+	.destinyTooltip .equipFailureReasons > div,
+	.destinyTooltip .vendorFailureReasons > div
+	{
+		position: relative;
+
+		padding: 4px 10px;
+
+		background: #c14443;
+		color: #FFF;
+		border-bottom: 1px solid #a43a39;
+	}
+
+.destinyTooltip .vendorUnlockStatuses > div
+{
+	position: relative;
+	padding: 4px 0;
+}
+
+	.destinyTooltip .vendorUnlockStatuses > div .fail
+	{
+		color: #c14443;
+	}
+
+	.destinyTooltip .vendorUnlockStatuses > div i
+	{
+		font-size: 19px;
+		vertical-align: middle;
+		width: 22px;
+	}
+
+.destinyTooltip .costs,
+.destiny-costs
+{
+	font-size: 1rem;
+}
+
+	.destiny-cost
+	{
+		margin-bottom: 0.5rem;
+	}
+
+		.destinyTooltip .cost .icon,
+		.destiny-cost .icon
+		{
+			position: relative;
+			display: inline-block;
+			vertical-align: -6px;
+
+			width: 1.5rem;
+			height: 1.5rem;
+			margin-right: 0.5rem;
+
+			background-size: contain;
+			background-position: center;
+			background-repeat: no-repeat;
+		}
+
+		.destinyTooltip .cost .values,
+		.destiny-cost .values
+		{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+	
+			width: 20rem;
+			line-height: 1.5rem;
+			padding-left: 3px;
+
+			text-align: right;
+		}
+
+			.destinyTooltip .cost .values .costName,
+			.destiny-cost .values .costName
+			{
+				position: absolute;
+				left: 0;
+				color: #55d34b;
+			}
+	
+				.destinyTooltip .cost .values.cantAfford .costName,
+				.destinyTooltip .cost.cantAfford .values .costName,
+				.destiny-cost .values.cantAfford .costName,
+				.destiny-cost.cantAfford .values .costName
+				{
+					color: #a43a39;
+				}
+
+			.destinyTooltip .cost .values .hasValue,
+			.destiny-cost .values .hasValue
+			{
+				color: #55d34b;
+			}
+	
+				.destinyTooltip .cost .values.cantAfford .hasValue,
+				.destinyTooltip .cost.cantAfford .values .hasValue,
+				.destiny-cost .values.cantAfford .hasValue,
+				.destiny-cost.cantAfford .values .hasValue
+				{
+					color: #a43a39;
+				}
+
+.destinyTooltip.nonItem
+{
+	border-top: 4px solid rgba(165,165,165,0.95);
+}
+
+	.destinyTooltip.nonItem .itemHeader
+	{
+		background: transparent;
+		color: #f5f5f5;
+	}
+
+.destinyTooltip .rewards
+{
+	margin-top: 15px;
+}
+
+	.destinyTooltip .rewardItem
+	{
+		margin-top: 3px;
+	}
+
+		.destinyTooltip .reward .icon
+		{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+
+			width: 20px;
+			height: 20px;
+
+			background-size: cover;
+		}
+
+		.destinyTooltip .reward .name
+		{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+		}
+
+.destinyTooltip .rank
+{
+	position: relative;
+	margin-bottom: 5px;	
+}
+
+.destinyTooltip .progressBar
+{
+	position: relative;
+	display: block;
+
+	height: 20px;
+	padding-right: 5px;
+			
+	background: #000;
+	text-align: right;
+	line-height: 20px;
+}
+
+	.destinyTooltip .progressBar .progressText
+	{
+		position: relative;
+		z-index: 2;
+	}
+
+	.destinyTooltip .progressBar .barFill
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+
+		height: 100%;
+		background: #5da569;
+	}
+
+	.destinyTooltip .innerItem
+	{
+		font-style: normal;
+		color: #F5F5F5;
+		margin: 7px 0 0 0;
+		font-size: 16px;
+		line-height: 20px;
+	}
+
+		.destinyTooltip .innerItem + *
+		{
+			padding-top: 10px;
+			border-top: 1px solid rgba(245, 245, 245, 0.15);
+		}
+
+	.destinyTooltip .innerItem .itemName
+	{
+		padding-top: 2px;
+		text-transform: none;
+		font-size: 12px;
+		line-height: 13px;
+	}
+
+	.destinyTooltip .innerItem .itemType
+	{
+		font-size: 10px;
+	}
+
+	.destinyTooltip .innerItem .icon
+	{
+		position: relative;
+		float: left;
+
+		width: 15px;
+		height: 15px;
+		margin-right: 10px;
+
+		border: 1px solid #F5F5F5;
+		background-size: cover;
+	}
+
+
+/* 
+=========================	
+	GEAR ITEM DETAIL
+=========================		
+*/
+	
+.itemHeader
+{
+	height: 32px;
+	background: rgba(195,188,180,0.9);
+	color: rgb(26, 30, 36);
+}
+
+	.itemHeader .armory-link
+	{
+		display: block;
+
+		width: 25%;
+		padding-left: 13px;
+		line-height: 30px;
+		margin: 0 auto;
+
+		color: rgb(30, 36, 43);
+		font-size: 14px;
+		font-weight: 400;
+		text-align: center;
+	}
+
+		.itemHeader .armory-link:hover
+		{
+			text-decoration: underline;
+		}
+
+.itemDetails .itemBody
+{
+	position: relative;
+	z-index: 5;
+
+	height: 600px;
+	padding: 14px 48px;
+}
+
+.itemDetails .transferOptions
+{
+	position:relative;
+	z-index: 5;
+
+	display: none;
+
+	width: 300px;
+	margin: 0 auto;
+}
+
+	.itemDetails.viewOptions .transferOptions
+	{
+		display: block;
+
+		margin-top: 180px;
+	}
+
+	.itemDetails .transferOptions .transfer-option
+	{
+		height: 35px;
+		margin: 9px 0;
+	}
+
+	.itemDetails.viewOptions .itemBody
+	{
+		display: none;
+	}
+
+.itemDetails .destinyTooltip
+{
+	background: rgba(0,0,0,0.8);
+}
+
+	.itemDetails .destinyTooltip .itemBody
+	{
+		height: auto;
+		color: #f5f5f5;
+		padding: 2px 10px 10px 10px;
+	}
+
+		.itemDetails .destinyTooltip .itemBody .itemDescription
+		{
+			border: 0;
+		}
+
+	.itemDetails.inventoryItemDetails .destinyTooltip .itemHeader
+	{
+		height: auto;
+		padding: 5px 10px;
+		
+		border-top: 3px solid rgba(245,245,245,0.8);
+		background: #000;
+		color: #F5f5f5;
+	}
+
+	.itemDetails .secondaryIcon
+	{
+		position: absolute;
+
+		width: 100%;
+		height: 100%;
+
+		background-position: 100% 70%;
+		background-repeat: no-repeat;
+	}
+
+	.itemDetails .itemInfo
+	{
+		position: relative;
+	}
+
+	.itemDetails .itemIdentification
+	{
+		position: relative;
+		height: 90px;
+	}
+
+	.itemDetails .itemInfo .bucketItem
+	{
+		float: left;
+		margin: 0 10px 0 0;
+	}
+
+	.itemDetails .itemInfo .itemName
+	{
+		padding-top: 5px;
+		font-size: 36px;
+		font-weight: 500;
+	}
+
+		.itemDetails .itemInfo .itemName .itemLock
+		{
+			position: relative;
+			display: inline-block;
+			vertical-align: middle;
+
+			width: 25px;
+			height: 25px;
+		}
+
+			.itemDetails .itemInfo .itemName .itemLock .icon
+			{
+				position: relative;
+
+				width: 25px;
+				height: 25px;
+
+				background-position: 50% 50%;
+				background-repeat: no-repeat;
+				background-size: cover;
+				opacity: 0.3;
+				cursor: pointer;
+			}
+
+				.itemDetails .itemInfo .itemName .itemLock .icon:hover
+				{
+					opacity: 0.6;
+				}
+
+			.itemDetails .itemInfo .itemName .itemLock.itemUnlocked .icon
+			{
+				background-image: url("/img/theme/destiny/icons/icon_gear_unlockeditem.png");
+			}
+
+			.itemDetails .itemInfo .itemName .itemLock.itemLocked .icon
+			{
+				background-image: url("/img/theme/destiny/icons/icon_gear_lockeditem.png");
+			}
+
+	.itemDetails .itemInfo .itemType
+	{
+		line-height: 23px;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.itemDetails .itemMaterials
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		width: 120px;
+		height: 38px;
+		padding-left: 42px;
+		padding-top: 9px;
+
+		background: url("/img/theme/destiny/icons/icon_material_details.png") 0 8px no-repeat;
+		background-size: 35px;
+	}
+
+		.itemDetails .itemMaterials .material
+		{
+			position: relative;
+			padding-left: 80px;
+			margin: 10px 0 15px 0;
+			min-height: 64px;
+		}
+
+			.itemDetails .itemMaterials .material .name
+			{
+				margin-bottom: 5px;
+			}
+
+			.itemDetails .itemMaterials .material .itemSource
+			{
+				font-size: 14px;
+				opacity: 0.8;
+			}
+
+			.itemDetails .itemMaterials .material .icon
+			{
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				width: 60px;
+				height: 60px;
+
+				border: 2px solid #f5f5f5;
+				background-size: cover;
+			}
+
+	.itemDetails .itemDescription
+	{
+		margin: 5px 0;
+		color: rgba(255,255,255,0.7);
+	}
+
+	.itemDetails > .itemBody > .itemStats
+	{
+		position: relative;
+
+		width: 615px;
+		margin: 5px 0;
+		padding: 10px 0;
+
+		border: 4px solid rgba(245,245,245,0.25);
+		border-width: 4px 0;
+	}
+
+		.itemDetails > .itemBody > .itemStats.noStats
+		{
+			height: 0;
+			padding-top: 0;
+			border-top: 0;
+		}
+
+	.itemStats .primaryStat
+	{
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+
+		width: 170px;
+	}
+
+		.itemStats .primaryStat .statValue
+		{
+			position: relative;
+			display: inline-block;
+
+			font-size: 50px;
+			font-weight: bold;
+			line-height: 50px;
+			color: rgba(245,245,245,1);
+		}
+			.statValue:after{
+				background: url("/img/theme/destiny/icons/icons_gearCompare.png") no-repeat -100px -100px;
+				content: "";
+				display: inline-block;
+				height: 20px;
+				margin-left: 10px;
+				vertical-align: middle;
+				width: 21px;
+			}
+			.statValue.positive:after {
+				background-position:center bottom;
+			}
+			.statValue.negative:after {
+				background-position:center top;
+			}
+
+		.itemStats .primaryStat .statName
+		{
+			position: relative;
+			display: block;
+		
+			margin-top: -5px;
+
+			font-size: 18px;
+			line-height: 22px;
+			font-weight: 400;
+			text-transform: uppercase;
+		}
+
+		.itemPerks
+		{
+			padding-top: 10px;
+			margin-top: 5px;
+			border-top: 1px solid rgba(245, 245, 245, 0.15);
+		}
+
+			.itemPerks .itemPerk
+			{
+				position: relative;
+
+				min-height: 30px;
+				margin: 7px 0 9px 0;
+				padding-left: 40px;
+
+				opacity: 0.25;
+			}
+
+				.itemPerks .itemPerk.active
+				{
+					opacity: 1;
+				}
+
+			.itemPerks .itemPerk .itemPerkDescription
+			{
+				display: inline-block;
+				line-height: 18px;
+			}
+
+			.itemPerks .itemPerk .icon
+			{
+				position: absolute;
+				top: 0;
+				left: 0;
+
+				display: block;
+				width: 30px;
+				height: 30px;
+				background-size: cover;
+			}
+
+	.itemDetails .itemStats .damageTypeIcon
+	{
+		position: relative;
+		float: left;
+		top: 0;
+
+		margin-bottom: 50px;
+	}
+
+	.itemDetails[data-damagetype] .itemStats .primaryStat span
+	{
+		color: #F5F5F5 !important;
+	}
+
+	.armorStatGroup
+	{
+		display: inline-block;
+		vertical-align: top;
+		width: 315px;
+	}
+
+		.armorStatGroup .itemStat
+		{
+			position: relative;
+			display: inline-block;
+			vertical-align: top;
+			width: 50px;
+			text-align: center;
+		}
+
+			.armorStatGroup .itemStat .icon
+			{
+				position: relative;
+				width: 50px;
+				height: 50px;
+				background-size: cover;
+			}
+
+	.itemStatTable
+	{
+		display: inline-block;
+		vertical-align: top;
+
+		width: 315px;
+		border-collapse: collapse;
+	}
+
+		.itemStatTable .itemStat td:first-child
+		{
+			vertical-align: top;
+
+			padding-right: 9px;
+			padding-bottom: 4px;
+			line-height: 20px;
+
+			text-align: right;
+		}
+
+		.itemStatTable .itemStat td.valueBar
+		{
+			display: block;
+
+			width: 185px;
+			height: 20px;
+			line-height: 20px;
+
+			color: rgba(245,245,245,1);
+		}
+		
+			.itemStats .valueNumber:after {
+				background: url("/img/theme/destiny/icons/icons_gearCompare.png") no-repeat scroll -100px -100px;
+				content: "";
+				background-size:100% auto;
+				display: inline-block;
+				height: 10px;
+				margin-left: 10px;
+				width: 10px;
+			}
+			.itemStats .valueNumber.positive:after {
+				background-position: center bottom;
+			
+			}
+			.itemStats .valueNumber.negative:after {
+				background-position: center top;
+			
+			}
+			.itemStatTable .itemStat td.valueBar.barStat
+			{
+				background: rgba(245,245,245,0.1);
+			}
+
+			.itemStatTable .itemStat td.valueBar.statBar
+			{
+				background: rgba(245,245,245,0.05);
+				padding: 0;
+			}
+
+		.itemStatTable .itemStat .valueBar .value
+		{
+			position: relative;
+			display: block;
+
+			height: 20px;
+			background: rgba(245,245,245,0.8);
+
+			color: rgb(30, 36, 43);
+			font-size: 12px;
+			font-weight: bold;
+			line-height: 20px;
+			text-indent: 3px;
+		}
+
+		.itemStatTable .itemStat.usesStatNumbers:not([data-id="STAT_MAGAZINE_SIZE"]) .valueBar:before
+		{
+			content: "+";
+		}
+
+
+		.itemStatTable .itemStat .valueBar .valueModifiedByNode
+		{
+			position: absolute;
+			display: block;
+		
+			width: 100%;
+			height: 20px;
+		}
+			#gearItemWrapper .itemStatTable .itemStat .valueBar .valueModifiedByNode
+			{
+				width: 185px;
+			}
+
+
+			.itemStatTable .itemStat .valueBar .valueModifiedByNode .valueModified
+			{
+				position: absolute;
+				display: block;
+				height: 20px;
+			}
+
+			.itemStatTable .itemStat .valueBar .valueModifiedByNode.positive
+			{
+				right:0;
+				left:auto;
+			}
+				#gearItemWrapper .itemStatTable .itemStat .valueBar .valueModifiedByNode.positive
+				{
+					left: 100%;
+					right:auto;
+				}
+
+			.itemStatTable .itemStat .valueBar .valueModifiedByNode.negative
+			{
+				right: 0;
+			}
+
+			.itemStatTable .itemStat .valueBar .valueModifiedByNode.positive .valueModified
+			{
+				background: #73c26d;
+				right:0;
+				left:auto;
+			}
+				#gearItemWrapper .itemStatTable .itemStat .valueBar .valueModifiedByNode.positive .valueModified
+				{
+					left: 0;
+					right:auto;
+				}
+
+				.itemStatTable .itemStat .valueBar .valueModifiedByNode.negative .valueModified {
+					background: #782222;
+					left: 100%;
+					right: auto;
+					z-index: -1;
+				}
+
+				#gearItemWrapper .itemStatTable .itemStat .valueBar .valueModifiedByNode.negative .valueModified
+				{
+					z-index:1;
+					right: 0;
+					left:auto;
+				}
+
+		.itemStatTable .itemStat.usesStatNumbers:not([data-id="STAT_MAGAZINE_SIZE"]) td,
+		.itemStatTable .itemStat.usesStatNumbers:not([data-id="STAT_MAGAZINE_SIZE"]) td.valueBar
+		{
+			display: inline-block;
+			vertical-align: 0;
+
+			min-width: 0;
+			width: auto;
+			height: 29px;
+			padding-bottom: 4px;
+			line-height: 29px;
+		}
+
+		.itemStatTable .itemStat.usesStatNumbers:not([data-id="STAT_MAGAZINE_SIZE"]) .statIcon
+		{
+			display: inline-block;
+			vertical-align: middle;
+			top: -1px;
+			width: 25px;
+			height: 25px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			opacity: 0.7;
+		}
+
+
+	.itemDetails .itemUpgrades
+	{
+		position: relative;
+		height: 210px;
+	}
+
+	.itemDetails .nodes
+	{
+		position: relative;
+		margin-top: 25px;
+	}
+
+	.itemDetails .node
+	{
+		position: absolute;
+		display: inline-block;
+
+		width: 54px;
+		height: 54px;
+
+		background: rgba(255,255,255,0.1);
+		border-radius: 50%;
+	}
+
+		.itemDetails .node:hover .destinyTooltip
+		{
+			bottom: 0;
+			left: 70px;
+			visibility: visible;
+			opacity: 1;
+			bottom: auto;
+		}
+
+		.itemDetails .node[data-column="5"]:hover .destinyTooltip,
+		.itemDetails .node[data-column="6"]:hover .destinyTooltip,
+		.itemDetails .node[data-column="7"]:hover .destinyTooltip,
+		.itemDetails .node[data-column="8"]:hover .destinyTooltip,
+		.itemDetails .node[data-column="9"]:hover .destinyTooltip,
+		.itemDetails .node[data-column="10"]:hover .destinyTooltip
+		{
+			right: 70px;
+			left: auto;
+			visibility: visible;
+			opacity: 1;
+		}
+
+		.itemDetails .node .icon
+		{
+			opacity: 0.25;
+		}
+
+		.itemDetails .node[data-state="CanUpgrade"] .icon
+		{
+			opacity: 1;
+		}
+
+		.itemDetails .node canvas
+		{
+			position: relative;
+			top: -4px;
+			left: -4px;
+		}
+
+		.itemDetails .node.on
+		{
+			width: 62px;
+			height: 62px;
+			margin: -4px 0 0 -4px;
+			opacity: 1;
+			background: #4887ba;
+		}
+
+			.itemDetails .node.on canvas
+			{
+				display: none;
+			}
+
+			.itemDetails .node.on .icon
+			{
+				opacity: 1;
+			}
+
+		.itemDetails .node[data-column='0'].on
+		{
+			opacity: 1;
+			background: rgba(255,255,255,0.4);
+		}
+
+	.itemDetails .itemUpgrades.noZeroColumn
+	{
+		margin-left: -80px;
+	}
+
+	.itemDetails .node[data-column='0']
+	{
+		left: 0;
+		border: 0;
+	}
+
+	.itemDetails .node[data-column='1']
+	{
+		left: 80px;
+	}
+
+	.itemDetails .node[data-column='2']
+	{
+		left: 160px;
+	}
+
+	.itemDetails .node[data-column='3']
+	{
+		left: 240px;
+	}
+
+	.itemDetails .node[data-column='4']
+	{
+		left: 320px;
+	}
+
+	.itemDetails .node[data-column='5']
+	{
+		left: 400px;
+	}
+
+	.itemDetails .node[data-column='6']
+	{
+		left: 480px;
+	}
+
+	.itemDetails .node[data-column='7']
+	{
+		left: 560px;
+	}
+
+	.itemDetails .node[data-column='8']
+	{
+		left: 640px;
+	}
+
+	.itemDetails .node[data-column='9']
+	{
+		left: 720px;
+	}
+
+	.itemDetails .node[data-column='10']
+	{
+		left: 800px;
+	}
+
+	.itemDetails .node[data-row='0']
+	{
+		top: 0;
+	}
+
+	.itemDetails .node[data-row='1']
+	{
+		top: 70px;
+	}
+
+	.itemDetails .node[data-row='2']
+	{
+		top: 140px;
+	}
+
+	.itemDetails .node[data-row='3']
+	{
+		top: 210px;
+	}
+
+	.itemDetails .node[data-row='4']
+	{
+		top: 280px;
+	}
+
+	.itemDetails .node[data-row='5']
+	{
+		top: 350px;
+	}
+
+	.itemDetails .node .step
+	{
+		position: absolute;
+		visibility: hidden;
+		left: 45px;
+
+		width: 100px;
+		padding: 7px;
+
+		color: rgba(26,30,36,0.9);
+		background: rgba(255,255,255,0.7);
+		box-shadow: 0 0 15px rgba(0,0,0,0.2);
+		text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+		opacity: 0;
+
+		transition: opacity 0.5s ease, visibility 0s;
+	}
+
+	.itemDetails .node:hover
+	{
+		z-index: 10;
+	}
+
+		.itemDetails .node:hover .step
+		{
+			visibility: visible;
+			opacity: 1;
+		}
+
+	.itemDetails .node .icon
+	{
+		position: absolute;
+		display: block;
+		top: 0;
+		left: 0;
+
+		width: 100%;
+		height: 100%;
+
+		background-size: 80%;
+		background-repeat: no-repeat;
+		background-position: 50% 50%;
+	}
+
+		.itemDetails .node .cost .icon
+		{
+			position: relative;
+			display: inline-block;
+			top: auto;
+			left: auto;
+		
+			width: 23px;
+			height: 23px;
+
+			opacity: 1;
+			background-size: cover;
+		}
+
+	.itemDetails .controls
+	{
+		position: absolute;
+		bottom: 14px;
+		left: 0;
+
+		width: 100%;
+
+		text-align: center;
+		cursor: default;
+	}
+
+		.itemDetails .controls .btn_blue:hover
+		{
+			box-shadow: none;
+			background: rgb(51, 136, 208);
+		}
+
+		.itemDetails .controls .unavailable
+		{
+			display: none;
+		}
+
+		.itemDetails .controls .transferItem
+		{
+		}
+
+#gearItemWrapperDialogContainer
+{
+	z-index: 999;
+	top: -49px;
+	padding-top: 49px;
+
+	width: calc(100% - 267px);
+}
+
+	.compact #gearItemWrapperDialogContainer,
+	.NoSidebar #gearItemWrapperDialogContainer
+	{
+		width: 100%;
+	}
+			
+	#gearItemWrapperDialogContainer .simpleDialog
+	{
+		overflow: initial;
+		background: rgb(30, 36, 43);
+
+		-webkit-transform-origin: 50% 70%;
+		transform-origin: 50% 70%;
+		transform-origin: 50% calc(50% + 80px);
+	}
+
+		#gearItemWrapperDialogContainer .simpleDialog .loadingOverlay
+		{
+			background: transparent;
+		}
+
+		@media only screen and (max-width: 1200px), (max-height: 750px) {
+
+			#gearItemWrapperDialogContainer .simpleDialog {
+				-webkit-transform: scale(0.8);
+				transform: scale(0.8);
+				-webkit-filter: blur(0);
+				-moz-filter: blur(0);
+				-ms-filter: blur(0);
+				filter: blur(0);
+			}
+		}
+
+		@media only screen and (max-height: 600px) {
+
+			#gearItemWrapperDialogContainer .simpleDialog {
+				-webkit-transform: scale(0.7);
+				transform: scale(0.7);
+				-webkit-filter: blur(0);
+				-moz-filter: blur(0);
+				-ms-filter: blur(0);
+				filter: blur(0);
+			}
+		}
+
+	#gearItemWrapperDialogContainer .simpleDialogContent
+	{
+		overflow: initial;
+	}
+
+		.inventoryItemError
+		{
+			position: relative;
+			z-index: 10;
+			box-sizing: border-box;
+
+			width: 400px;
+			margin-top: 230px;
+			padding: 0 20px;
+
+			color: rgba(245, 245, 245, 0.6);
+			font-weight: 200;
+			text-align: center;
+		}
+
+	#gearItemDetail
+	{
+		position: relative;
+		z-index: 1;
+	}
+
+		#gearItemDetail .errorMessage
+		{
+			position: relative;
+			margin-top: 310px;
+			z-index: 3;
+			left: 0;
+			width: 100%;
+			text-align: center;
+		}
+
+		#gearItemDetail .gear-item-3d
+		{
+			position: absolute;
+			z-index: 1;
+
+			top: 0;
+			left: 0;
+		}
+
+	#gearItemDetail .itemHeader
+	{
+		position: relative;
+		z-index: 5;
+	}
+			
+		[data-tiertype="Common"] .itemHeader
+		{
+			background: rgba(47,107,60,0.9);
+			color: #f5f5f5;
+		}
+		[data-tiertype="Rare"] .itemHeader
+		{
+			background: rgba(85,127,158,0.9);
+			color: #f5f5f5;
+		}
+		[data-tiertype="Superior"] .itemHeader
+		{
+			background: rgba(78,50,99,0.9);
+			color: #f5f5f5;
+		}
+		[data-tiertype="Exotic"] .itemHeader
+		{
+			background: rgba(206,174,50,0.9);
+			color: #f5f5f5;
+		}
+
+
+/* 
+=========================	
+	CHARACTER PLATE
+=========================		
+*/
+
+.characterSwitcher
+{
+	position: absolute;
+	z-index: 20;
+
+	top: 78px;
+	left: 18px;
+	
+	max-width: 336px;
+}
+	
+	.characterSwitcher .characterPlate
+	{
+		transition: 0.25s ease;
+	}
+	
+	.characterSwitcher .characterPlate:first-child
+	{
+		z-index: 3;
+	}
+
+	.characterSwitcher .characterPlate + .characterPlate
+	{
+		margin-top: -55px;
+		z-index: 2;
+		opacity: 0.4;
+	}
+
+		.characterSwitcher .characterPlate + .characterPlate .characterProgress
+		{
+			height: 0;
+		}
+
+		.characterSwitcher .charactersList:hover .characterPlate + .characterPlate .characterProgress
+		{
+			height: 8px;
+		}
+
+	.characterSwitcher .characterPlate:nth-of-type(2)
+	{
+		-webkit-transform: scale(0.95);
+		transform: scale(0.95);
+	}
+
+	.characterSwitcher .characterPlate:nth-of-type(3)
+	{
+		z-index: 1;
+		-webkit-transform: scale(0.9);
+		transform: scale(0.9);
+	}
+
+	.characterSwitcher .charactersList:hover .characterPlate + .characterPlate
+	{
+		margin-top: 1px;
+		opacity: 1;
+
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+	.characterSwitcher .viewProfile
+	{
+		position: absolute;
+
+		top: 66px;
+
+		color: #f5f5f5;
+		font-size: 13px;
+	}
+
+		.characterSwitcher .viewProfile:hover
+		{
+			text-decoration: underline;
+		}
+
+.characterPlate
+{
+	position: relative;
+	display: block;
+	box-sizing: border-box;
+
+	width: 100%;
+	max-width: 336px;
+	height: 43px;
+	padding: 0 0 0 55px;
+	margin: 0 0 1px 0;
+
+	opacity: 1;
+	background: rgba(30,36,43,0.5);
+	color: #f5f5f5;
+	text-decoration: none;
+	background-size: cover;
+	background-repeat: none;
+
+	transition: 0.25s ease;
+}
+
+.boards .characterPlate:hover
+{
+	text-decoration: none;
+	opacity: 1;
+}
+
+.characterPlate:not(.characterPlateGame):first-child
+{
+	width: 273px;
+	height: 68px;
+	margin: 0 0 6px 0;
+	padding: 0 0 0 63px;
+
+	opacity: 1;
+}
+
+.characterPlate:hover
+{
+	background-color: rgba(26,30,36, 0.8);
+}
+
+.characterPlate .emblem
+{
+	position: absolute;
+	top: 2px;
+	left: 2px;
+
+	width: 39px;
+	height: 39px;
+	background-color: rgba(0, 0, 0, 0.2);
+	background-size: cover;
+
+	transition: 0.25s ease;
+}
+
+.characterPlate .characterClass
+{
+	position: relative;
+	display: block;
+	top: 9px;
+
+	font-size: 24px;
+	font-weight: 400;
+}
+
+.characterPlate .raceGender
+{
+	position: relative;
+	top: -15px;
+	opacity: 0;
+
+	transition: 0.25s ease;
+}
+
+.characterPlate .level
+{
+	position: absolute;
+	top: -3px;
+	right: 7px;
+
+	font-size: 27px;
+	font-weight: 200;
+}
+
+.characterPlate .powerLevel
+{
+	position: absolute;
+	right: 7px;
+	top: 30px;
+
+	font-size: 12px;
+}
+
+.characterPlate .characterProgress
+{
+	position: absolute;
+	overflow: hidden;
+	bottom: 1px;
+	left: 1px;
+	right: 1px;
+
+	height: 8px;
+	background: rgba(245,245,245,0.1);
+
+	transition: 0.25s ease;
+}
+
+.characterPlate .barFill
+{
+	position: relative;
+	height: 8px;
+	background: #5da469;
+
+	transition: width 0.5s;
+}
+
+.characterPlate.light .barFill
+{
+	background: #f5dc56;
+}
+
+.characterPlateGame
+{
+	height: 59px;
+}
+
+	.characterPlateGame .emblem
+	{
+		width: 47px;
+		height: 47px;
+	}
+
+	.characterPlateGame .displayName,
+	.characterPlateGame .className
+	{
+		position: absolute;
+		display: block;
+		top: 4px;
+
+		font-size: 18px;
+		font-weight: 400;
+
+		transition: opacity 0.5s;
+	}
+
+	.characterPlateGame .clan,
+	.characterPlateGame .raceGender
+	{
+		position: absolute;
+		display: block;
+		top: 26px;
+
+		opacity: 1;
+		font-size: 13px;
+		font-weight: 200;
+
+		transition: opacity 0.5s;
+	}
+
+	.characterPlateGame .className,
+	.characterPlateGame .raceGender
+	{
+		opacity: 0;
+	}
+
+.characterSwitcher:hover .characterPlateGame .className,
+.characterSwitcher:hover .characterPlateGame .raceGender
+{
+	opacity: 1;
+}
+
+.characterSwitcher:hover .characterPlateGame .displayName,
+.characterSwitcher:hover .characterPlateGame .clan
+{
+	opacity: 0;
+}
+
+.characterPlateGame .level
+{
+	font-size: 27px;
+	top: -3px;
+}
+
+.STAT_LIGHT .value
+{
+	color: rgba(245, 220, 86, 0.5);
+}
+
+
+.light .powerLevel,
+.light.powerLevel
+{
+	color: rgba(245, 220, 86, 1);
+}
+
+	.STAT_LIGHT .value:before,
+	.light .powerLevel:before,
+	.light.powerLevel:before
+	{
+		content: "\2726";
+		display: inline-block;
+		vertical-align: 22%;
+		font-size: 50%;
+	}
+
+
+
+/* 
+=========================	
+	PROGRESS BARS
+=========================		
+*/
+
+.companionProgressBar
+{
+	width: 100%;
+	height: 7px;
+	background: rgba(245,245,245,0.32);
+}
+
+	.companionProgressBar .barFill
+	{
+		width: 0;
+		height: 7px;
+		background: #f5f5f5;
+
+		transition: 0.75s ease;
+	}
+
+
+
+
+/* 
+=========================	
+	BONUSES
+=========================		
+*/
+
+.bonus
+{
+	position: relative;
+	display: block;
+
+	min-height: 55px;
+	padding-left: 83px;
+	padding-top: 3px;
+	margin-bottom: 20px;
+
+	color: #f5f5f5;
+	font-size: 14px;
+}
+
+	.bonus .title
+	{
+		font-size: 18px;
+	}
+
+	.bonus .icon
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+
+		width: 60px;
+		height: 60px;
+
+		border: 2px solid rgb(245, 245, 245);
+		background-size: cover;
+	}
+
+	.bonus .card
+	{
+		font-size: 17px;
+		font-weight: 600;
+	}
+
+	.bonus .desc
+	{
+		font-size: 11px;
+	}
+
+	.bonus .bonusDescription
+	{
+		display: none;
+	}
+
+	.bonus .progressBar
+	{
+		position: relative;
+		width: 100%;
+		height: 7px;
+		margin-top: 5px;
+		background: rgba(245,245,245,0.1);
+	}
+
+	.bonus .barFill
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		height: 7px;
+		background: #f5f5f5;
+	}
+
+	.bonus .flyout
+	{
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 10;
+		display: none;
+
+		background: black;
+	}
+
+	.bonus:hover .flyout
+	{
+		display: block;
+	}
+
+	.bonus .bonusProgressAmount
+	{
+		position: absolute;
+		top: 0;
+		right: 0;
+	}
+
+	.bonus.completed
+	{
+	}
+
+		.bonus.completed .progress
+		{
+			display: none;
+		}
+
+		.bonus.completed .bonusDescription
+		{
+			display: block;
+		}
+
+		.bonus.completed .icon
+		{
+			border-color: #ffce1f;
+		}
+
+		.bonus.completed .bonusProgressAmount
+		{
+			display: none;
+		}
+
+
+
+/* 
+=========================	
+	GRIMOIRE CARDS
+=========================		
+*/
+
+
+
+.cardWrapper
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	width: 323px;
+	height: 419px;
+	margin: 0 7px 12px 0;
+	padding: 0;
+
+	border-radius: 7px;
+	cursor: pointer;
+	
+	-webkit-transition: -webkit-transform 0.45s, opacity 0.45s;
+	transition: transform 0.45s, opacity 0.45s;
+}
+
+	.cardWrapper:not(.isOwned),
+	.cardWrapper:not(.isOwned) .cardImage
+	{
+		cursor: default;
+	}
+
+	.cardWrapper:after
+	{
+		position: absolute;
+		bottom: -14px;
+		content: "";
+
+		width: 100%;
+		height: 10px;
+		opacity: 0.5;
+
+		background: -webkit-radial-gradient(center, ellipse cover, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-radial-gradient(center, ellipse cover, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0) 100%); /* Opera 12+ */
+		background: -ms-radial-gradient(center, ellipse cover, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0) 100%); /* IE10+ */
+		background: radial-gradient(ellipse at center, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 67%,rgba(0,0,0,0) 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 );
+	}
+
+	.cardWrapper.dynamicGrimoireCard:after
+	{
+		display: none;
+	}
+
+.cardsContent .cardWrapper:after
+{
+	display: none;
+}
+
+.cardsContent .cardWrapper
+{
+	opacity: 0;
+	-webkit-transform: translateY(-20px);
+	transform: translateY(-20px);
+}
+
+	.cardsContent .cardWrapper.on
+	{
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+.cardWrapper > div
+{
+	position: absolute;
+	z-index: 2;
+
+	width: 100%;
+	height: 100%;
+
+	font-size: 13px;
+}
+
+	.cardWrapper > div.closeCard
+	{
+		top: -30px;
+		right: 0;
+
+		width: auto;
+		height: auto;
+
+		text-align: right;
+		color: #FFF;
+		opacity: 0.3;
+		cursor: pointer;
+	}
+
+.cardWrapper > .cardFront
+{
+	cursor: pointer;
+	z-index: 7;
+
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-transform: perspective(1100px) rotateY(0deg) scale(1);
+	transform: perspective(1100px) rotateY(0deg) scale(1);
+
+	transition: 0.45s;
+}
+
+.cardWrapper.flipped > .cardFront
+{
+	z-index: 0;
+	-webkit-transform: perspective(1100px) rotateY(-179.9deg);
+	transform: perspective(1100px) rotateY(-179.9deg);
+}
+
+.cardWrapper > .cardFront,
+.cardWrapper > .cardBack
+{
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	border-radius: 7px;
+	color: #FFF;
+	background-size: cover;
+	-webkit-transform-style: preserve-3d;
+	transform-style: preserve-3d;
+	outline: 1px solid transparent;
+}
+
+.cardWrapper > .cardBack
+{
+	position: relative;
+	box-sizing: border-box;
+
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+	padding: 11px;
+
+	color: #434343;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-transform: perspective(1100px) rotateY(180deg);
+	transform: perspective(1100px) rotateY(180deg);
+
+	transition: 0.45s;
+}
+
+.cardWrapper.flipped > .cardBack
+{
+	height: 100%;
+	cursor: auto;
+	-webkit-transform: perspective(1100px) rotateY(0);
+	transform: perspective(1100px) rotateY(0);
+}
+
+.cardWrapper.detailCard.hasBonus > .cardFront:before
+{
+	position: absolute;
+	content: url(/img/theme/destiny/bgs/bg_grimoire_card_has_bonus_left.png);
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.cardWrapper.detailCard.completedBonus > .cardFront:before
+{
+	position: absolute;
+	content: url(/img/theme/destiny/bgs/bg_grimoire_card_completed_bonus_left.png);
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+
+.cardWrapper.detailCard > .cardBack
+{
+	background: url('/img/theme/destiny/bgs/bg_grimoire_card_front.jpg') 0 0 no-repeat;
+}
+
+.cardWrapper > .cardBack .cardBackContent,
+.cards .cardWrapper.infoCard > .cardBack
+{
+	position: relative;
+	z-index: 5;
+	overflow: hidden;
+
+	width: 100%;
+	height: 100%;
+
+	color: #454544;
+	background: url('/img/theme/destiny/bgs/bg_grimoire_card_front.jpg') -11px calc(100% + 11px) no-repeat;
+	outline: 1px solid rgba(0,0,0,0.1);
+	box-shadow: 0 0 1px rgba(0,0,0,0.1);
+	border-radius: 0;
+}
+
+.cardWrapper .cardFrontDetails
+{
+	position: absolute;
+	z-index: 10;
+	bottom: 20px;
+	left: 22px;
+
+	width: 278px;
+
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.detailCard.cardWrapper .cardFrontDetails
+{
+	height: 24px;
+}
+
+.cardWrapper .cardFrontDetails .cardName,
+.cardWrapper .cardFrontDetails .cardValue
+{
+	position: relative;
+	display: inline-block;
+	bottom: 10px;
+}
+	
+	.detailCard.cardWrapper .cardFront > .cardFrontDetails .cardName
+	{
+		position: absolute;
+		left: 0;
+		bottom: 0;
+
+		width: 220px;
+		color: #f5f5f5;
+		white-space: normal;
+	}
+				
+	.cardWrapper .cardFront > .cardFrontDetails .cardName
+	{
+		text-transform: uppercase;
+		color: #f5f5f5;
+	}
+
+.cardWrapper .cardFrontDetails .cardValue
+{
+	margin-left: 10px;
+}
+
+.cardWrapper .cardFrontDetails .cardProgression
+{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 2px;
+
+	width: auto;
+	height: 2px;
+	padding: 2px;
+
+	background: url('/img/theme/destiny/bgs/bg_grimoire_card_progress_bar.png') 0 0 no-repeat;
+}
+
+.cardWrapper .cardFrontDetails .cardProgressBar
+{
+	position: relative;
+	top: 0;
+	left: 0;
+
+	height: 2px;
+
+	background: rgb(151,107,0); /* Old browsers */
+	background: -moz-linear-gradient(left, rgba(151,107,0,1) 0%, rgba(245,215,98,1) 50%, rgba(151,107,0,1) 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(151,107,0,1)), color-stop(50%,rgba(245,215,98,1)), color-stop(100%,rgba(151,107,0,1))); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(left, rgba(151,107,0,1) 0%,rgba(245,215,98,1) 50%,rgba(151,107,0,1) 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(left, rgba(151,107,0,1) 0%,rgba(245,215,98,1) 50%,rgba(151,107,0,1) 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(left, rgba(151,107,0,1) 0%,rgba(245,215,98,1) 50%,rgba(151,107,0,1) 100%); /* IE10+ */
+	background: linear-gradient(to right, rgba(151,107,0,1) 0%,rgba(245,215,98,1) 50%,rgba(151,107,0,1) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#976b00', endColorstr='#976b00',GradientType=1 ); /* IE6-9 */
+}
+
+.cardWrapper .cardFront > .cardFrontDetails .cardValue
+{
+	color: #ffd926
+}
+				
+	.cardWrapper .cardFront > .cardFrontDetails .cardValue
+	{
+		position: absolute;
+		right: 0;
+		bottom: 0;
+
+		color: #f5f5f5;
+	}
+				
+	:not(.themes) .cardWrapper .cardFront > .cardFrontDetails .cardValue img
+	{
+		padding-top: 16px;
+		height: 0;
+
+		background: url('/img/theme/destiny/icons/icon_grimoire_lightgray.png') 0 0 no-repeat;
+		background-size: cover;
+	}
+
+.cardHeader
+{
+	position: relative;
+	white-space: nowrap;
+
+	height: 36px;
+	line-height: 36px;
+
+	font-size: 0;
+	font-weight: 400;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80bfbfbf',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.themes .cardHeader
+{
+	background: -webkit-linear-gradient(top, rgba(64,64,64,0.25) 0%,rgba(0,0,0,0.25) 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, rgba(64,64,64,0.25) 0%,rgba(0,0,0,0.25) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(64,64,64,0.25) 0%,rgba(0,0,0,0.25) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40404040', endColorstr='#40000000',GradientType=0 ); /* IE6-8 */
+	color: rgb(255, 217, 38);
+}
+
+.goldGradient
+{
+	color: #ffd926;
+}
+
+.cardHeader > div
+{
+	display: inline-block;
+	vertical-align: top;
+
+	font-size: 15px;
+	font-weight: 500;
+}
+
+.cardHeader .cardName
+{
+	overflow: hidden;
+	max-width: 195px;
+	text-overflow: ellipsis;
+	text-indent: 6px;
+	text-transform: uppercase;
+}
+
+.cardHeader .cardValue
+{
+	position: absolute;
+	right: 11px;
+	color: #ffd926;
+}
+
+.cards .cardHeader .cardValue,
+.detailCard .cardHeader .cardValue
+{
+	color: #343434;
+}
+
+.cardHeader .unflip:hover,
+.cardHeader .upstack:hover
+{
+	cursor: pointer;
+	background: rgba(0,0,0,0.05);
+}
+
+.cardHeader i
+{
+	position: relative;
+	display: inline-block;
+
+	width: 42px;
+	line-height: 36px;
+
+	text-align: center;
+	font-size: 18px;
+	outline: 1px solid rgba(0,0,0,0.1);
+}
+
+.cardContent
+{
+	position: relative;
+	overflow: hidden;
+
+	height: 361px;
+
+	white-space: normal;
+	font-weight: 500;
+	font-size: 13px;
+	-ms-touch-action: none;
+	touch-action: none;
+}
+
+.hasStats .cardContent
+{
+	height: 321px;
+}
+
+.cardContentItem.customScroll i.customScrollTray
+{
+	right: 15px;
+}
+
+.cardContentItem.customScroll i.customScrollHandle
+{
+	background: rgba(0,0,0,0.5);
+}
+
+.themes .cardContentItem.customScroll i.customScrollHandle
+{
+	background: rgba(255,255,255,0.2);
+}
+
+.cardContent:after
+{
+	position: absolute;
+	content: "";
+	bottom: 0;
+	height: 0;
+
+	width: 100%;
+
+	background: none;
+	box-shadow: 0 -5px 25px 15px #eaebec;
+}
+
+.infoCard .cardContent:after,
+.cardContent.scrollAtBottom:after
+{
+	box-shadow: 0 0 0 #eaebec;
+}
+
+.themes .cardContent:after
+{
+	position: absolute;
+	content: "";
+	bottom: 0;
+
+	height: 0;
+	width: 100%;
+
+	background: none;
+	box-shadow: 0 -5px 25px 15px #0A0A0A;
+}
+
+.cardContent .cardContentItem
+{
+	display: none;
+	overflow: hidden;
+	box-sizing: border-box;
+
+	height: 342px;
+	width: 100%;
+}
+
+.hasStats .cardContent .cardContentItem
+{
+	height: 302px;
+}
+
+.cards .infoCard .cardContent .cardContentItem
+{
+	height: 312px;
+}
+
+.chrome .cardStackCrumbs .cardContent .cardContentItem
+{
+	width: 318px;
+}
+
+.cardContent .cardContentItem.current
+{
+	display: block;
+}
+
+.cardContentItem.stats
+{
+	color: #434343;
+}
+
+.cardContent .cardContentItem.stats
+{
+}
+
+.detailCard .cardContentItem .cardStat
+{
+	position: relative;
+	width: 301px;
+	padding: 0;
+}
+
+.cardStat > div
+{
+	border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+.cardContentItem.stats .label
+{
+	padding: 10px;
+	font-size: 16px;
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+	.cardContentItem.stats .label .statName
+	{
+		display: inline-block;
+		max-width: 240px;
+	}
+
+	.cardContentItem.stats .label .statValue
+	{
+		position: absolute;
+		right: 10px;
+	}
+
+.cardContentItem.stats .display .ranks
+{
+	padding: 10px;
+}
+
+.cardContentItem.stats .display .rank
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: top;
+
+	width: calc(100% / 3);
+	margin-right: -3px;
+
+	text-align: center;
+}
+
+	.cardContentItem.stats .display .rank .rankName
+	{
+		position: absolute;
+		top: 22px;
+		left: 0;
+
+		width: 100%;
+
+		font-size: 14px;
+	}
+
+	.cardContentItem.stats .display .rank .progress
+	{
+		position: absolute;
+		top: 38px;
+		left: 0;
+
+		width: 100%;
+
+		font-size: 11px;
+		color: rgb(67,67,67);
+	}
+
+	.cardContentItem.stats .display .rank .pointsPlusBonus
+	{
+		display: block;
+	}
+
+	.cardContentItem.stats .display .rank.notStarted .pointsPlusBonus
+	{
+		opacity: 0.25;
+	}
+
+	.cardContentItem.stats .display .rank .pointsPlusBonus div
+	{
+		display: inline-block;
+	}
+
+	.cardContentItem.stats .display .rank .pointsPlusBonus .points
+	{
+		padding-left: 15px;
+		background: url(/img/theme/destiny/icons/icon_grimoire_darkgray.png) 0 4px no-repeat;
+		background-size: 11px;
+	}
+
+	.cardContentItem.stats .display .rank.complete .pointsPlusBonus .points
+	{
+		color: #ffce1f;
+		background-image: url(/img/theme/destiny/icons/icon_grimoire_gold.png);
+	}
+
+	.cardContentItem.stats .display .rank .pointsPlusBonus .bonusIcon
+	{
+		height: 18px;
+		background: url(/img/theme/destiny/icons/icon_grimoire_bonus_blue.svg) 100% 50% no-repeat;
+		background-size: contain;
+		padding-right: 23px;
+	}
+
+.cardContentItem.stats .display > .cardBonus
+{
+	position: relative;
+	box-sizing: border-box;
+
+	padding: 5px 5px 5px 50px;
+	background: rgba(36,40,43,0.5);
+	border: 1px solid rgba(36,40,43,0.2);
+	color: #f5f5f5;
+}
+
+	.cardContentItem.stats .display > .cardBonus.inProgress
+	{
+		background: #4398e2;
+		border: 1px solid #3d6d95;
+	}
+
+	.cardContentItem.stats .display > .cardBonus.active
+	{
+		background: #ffce1f;
+		border: 1px solid #d9ae14;
+	}
+
+	.cardContentItem.stats .display > .cardBonus .icon
+	{
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 40px;
+		height: 100%;
+		border-right: 1px solid rgba(0,0,0,0.2);
+		background: url(/img/theme/destiny/icons/icon_grimoire_bonus.svg) 6px 50% no-repeat;
+		background-size: 29px;
+	}
+
+.cardContent h3
+{
+	line-height: 22px;
+	background: rgba(0,0,0,0.1);
+	text-indent: 10px;
+	font-weight: 500;
+	font-size: 13px;
+}
+
+.themes .infoCard .cardContent h3
+{
+	color: rgba(239,239,239,0.75);
+	background: rgba(239,239,239,0.05);
+}
+
+.infoCard .cardContent h3 span.progress
+{
+	position: absolute;
+	right: 10px;
+}
+
+.cardContentItem > div
+{
+	box-sizing: border-box;
+	
+	width: 100%;
+	padding: 10px;
+
+	font-weight: 500;
+}
+
+	.cardContentItem .description.locked
+	{
+		text-align: center;
+		font-size: 16px;
+	}
+		
+		.cardContentItem .description.locked img
+		{
+			display: inline-block;
+			opacity: 0.1;
+			margin: 50px 0 30px;
+		}
+
+.detailCard .cardContentItem > div
+{
+	width: 100%;
+	padding: 10px;
+}
+
+.cardContentItem .intro
+{
+	display: none;
+	margin: 0 0 12px;
+	padding: 10px;
+	background: #DCDCDC;
+	border: 1px solid #D5D5D5;
+}
+
+	.cardContentItem .intro.hasIntro
+	{
+		display: block;
+	}
+
+	.cardContentItem .intro span
+	{
+		display: block;
+	}
+
+	.cardContentItem .intro.hasAttribution span.introText
+	{
+		padding-bottom: 10px;
+	}
+
+	.cardContentItem .intro.hasAttribution span.introTextAttribution
+	{
+		width: 90%;
+		margin-top: 5px;
+		margin-left: 10%;
+		text-align: right;
+	}
+
+		.ja .cardContentItem .intro.hasAttribution span.introTextAttribution
+		{
+			text-align: left;
+			margin-left: 0;
+		}
+
+.detailCard .cardContentItem .endblock
+{
+	position: relative;
+	display: inline-block;
+	vertical-align: -1px;
+	width: 10px;
+	height: 10px;
+	background: #ababab;
+}
+
+.cardContentTabs
+{
+	position: relative;
+	white-space: nowrap;
+	height: 38px;
+	width: 100%;
+	font-size: 0;
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80bfbfbf',GradientType=0 ); /* IE6-9 */
+}
+
+.infoCard .cardContentTabs
+{
+	background: -webkit-linear-gradient(top, rgba(64,64,64,0.25) 0%,rgba(0,0,0,0.25) 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, rgba(64,64,64,0.25) 0%,rgba(0,0,0,0.25) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(64,64,64,0.25) 0%,rgba(0,0,0,0.25) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#40404040', endColorstr='#40000000',GradientType=0 ); /* IE6-8 */
+}
+
+.cards .infoCard .cardContentTabs
+{
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* Chrome10+,Safari5.1+ */
+	background: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* IE10+ */
+	background: linear-gradient(to bottom, rgba(255,255,255,0.5) 0%,rgba(191,191,191,0.5) 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#80ffffff', endColorstr='#80bfbfbf',GradientType=0 ); /* IE6-9 */
+}
+
+.cardContentTabs .cardContentTab
+{
+	position: relative;
+	display: inline-block;
+	width: 150px;
+	height: 38px;
+	line-height: 38px;
+	margin-left: 1px;
+	outline: 1px solid rgba(0,0,0,0.1);
+	font-size: 10px;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight: 700;
+	cursor: pointer;
+	transition: box-shadow 0.4s;
+}
+
+	.cardContentTabs .cardContentTab:first-child
+	{
+		margin-left: 0;
+	}
+
+	.cardContentTabs .cardContentTab:hover
+	{
+		box-shadow: inset 0 0 4px rgba(0,0,0,0.1);
+	}
+
+	.cardContentTabs .cardContentTab.current
+	{
+		box-shadow: inset 0 0 7px rgba(0,0,0,0.2);
+	}
+
+.cardContentTab.details,
+.detailCard .cardContentTab.details.current
+{
+	background: url('/img/theme/destiny/btns/btn_grimoire_details_sm.png') 50% 9px no-repeat;
+}
+
+.themes .cardContentTab.details
+{
+	background-position: 50% -41px;
+}
+
+.cards .cardContentTab.details,
+.detailCard .cardContentTab.details
+{
+	background-position: 50% -141px;
+}
+
+.cardContentTab.stats,
+.detailCard .cardContentTab.stats.current
+{
+	background: url('/img/theme/destiny/btns/btn_grimoire_leaderboards_sm.png') 50% 13px no-repeat;
+}
+
+.themes .cardContentTab.stats
+{
+	background-position: 50% -37px;
+}
+
+.cards .cardContentTab.stats,
+.detailCard .cardContentTab.stats
+{
+	background-position: 50% -137px;
+}
+
+.cardWrapper .cardImage
+{
+	position: absolute;
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.cardImage img
+{
+	position: relative;
+}
+
+.cardWrapper .squareCard .cardImage
+{
+	width: 88px;
+	height: 88px;
+	top: 0;
+	left: 0;
+}
+
+
+
+.cardWrapper.dynamicGrimoireCard
+{
+	position: fixed;
+	left: 50%;
+	z-index: 99;
+
+	margin-left: -161px;
+
+	opacity: 0;
+	
+	-webkit-transform-origin: 50% 50%;
+	transform-origin: 50% 50%;
+	-webkit-transform: scale(0.9);
+	transform: scale(0.9);
+
+	transition: 0.5s;
+}
+
+	.cardWrapper.dynamicGrimoireCard.ready
+	{
+		opacity: 1;
+	
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+
+#dynamicGrimoireCardContainer
+{
+	position: fixed;
+	overflow: visible;
+	background: transparent;
+	height: 900px;
+}
+
+	#dynamicGrimoireCardContainer > .loadingOverlay
+	{
+		background: transparent;
+	}
+
+	#dynamicGrimoireCardContainer .simpleDialog
+	{
+		position: fixed;
+		top: 200px;
+
+		width: 323px;
+		height: 419px;
+
+		background: transparent;
+		box-shadow: none;
+	}
+
+	.uiDisabled .Bonuses #outsideContent,
+	.uiDisabled .Legend.Character #outsideContent
+	{
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		z-index: 10;
+		opacity: 1;
+	}
+
+.simpleDialogContainer.dynamicGrimoireCardContainer,
+.simpleDialogContainer.dynamicGrimoireCardContainer.active
+{
+	-webkit-transform: none;
+	transform: none;
+}
+
+
+
+/* 
+=========================	
+	NUX Window
+=========================		
+*/
+
+#NUX_Container
+{
+	position: fixed;
+	top: 25%;
+	z-index: 99;
+	visibility: hidden;
+
+	width: 100%;
+	min-height: 100px;
+
+	background: rgba(30,36,43, 0.95) url("/img/theme/destiny/bgs/bg_nux.jpg") 0 50% no-repeat;
+	border-top: 4px solid #479ce4;
+	box-shadow: 0 0 80px 30px rgba(0, 0, 0, 0.5);
+	opacity: 0;
+
+	-webkit-transform: translateY(-25px);
+	transform: translateY(-25px);
+
+	transition: 0.5s;
+}
+
+	#NUX_Container.active
+	{
+		visibility: visible;
+		opacity: 1;
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+
+	#NUX_Container .wrapper
+	{
+		position: relative;
+		-webkit-box-sizing: border-box;
+		box-sizing: border-box;
+		width: 1000px;
+		margin: 0 auto;
+		padding: 40px 20px 40px 300px;
+		color: #f5f5f5;
+	}
+
+		#NUX_Container .wrapper .title
+		{
+			font-size: 26px;
+			margin-bottom: 20px;
+		}
+
+		#NUX_Container .wrapper .description
+		{
+			font-size: 18px;
+			font-weight: 200;
+		}
+
+		#NUX_Container .wrapper .btn.action
+		{
+			position: relative;
+			display: inline-block;
+			padding: 8px 15px;
+			margin-top: 35px;
+			font-weight: 200;
+			background: rgba(245,245,245,0.25);
+			border-radius: 3px;
+
+			transition: 0.5s;
+		}
+
+			#NUX_Container .wrapper .btn.action:hover
+			{
+				background: #479ce4;
+				cursor: pointer;
+			}
+			
+
+
+/* 
+=========================	
+	Square Progress
+=========================		
+*/
+
+.squareProgress
+{
+	-webkit-transform: rotateZ(45deg);
+	transform: rotateZ(45deg);
+}
+
+
+
+
+
+/* 
+=========================	
+	jQuery Knob
+=========================		
+*/
+
+.dialInput
+{
+	display: none;
+}
+
+	.dialInput.active
+	{
+		display: inline;
+	}
+
+
+
+
+
+
+/* 
+=========================	
+	ACTIVITIES
+=========================		
+*/
+		
+[data-activitytype*='STORY'] .header,
+[data-activitytype*='STORY'] .itemHeader,
+[data-activitytype*='QUEST'] .header,
+[data-activitytype*='QUEST'] .itemHeader 
+	{ background: rgb(212, 110, 55) !important; }
+[data-activitytype*='EXPLORE'] .header,
+[data-activitytype*='EXPLORE'] .itemHeader 
+	{ background: rgba(80,124,65,1) !important; }
+[data-activitytype*='RAID'] .header,
+[data-activitytype*='RAID'] .itemHeader,
+[data-activitytype*='ARENA'] .header,
+[data-activitytype*='ARENA'] .itemHeader 
+	{ background: rgba(82,119,181,1) !important; }
+[data-activitytype*='PVP'] .header,
+[data-activitytype*='PVP'] .itemHeader 
+	{ background: rgba(159,52,47,1) !important; }
+[data-activitytype*='STRIKE'] .header,
+[data-activitytype*='STRIKE'] .itemHeader,
+[data-activitytype*='NIGHTFALL'] .header,
+[data-activitytype*='NIGHTFALL'] .itemHeader
+	{ background: rgba(85,124,190,1) !important; }
+
+[data-activitytype] .itemHeader
+{
+	color: #f5f5f5;
+}
+
+
+
+
+
+/* 
+=========================	
+	GEAR ITEMS
+=========================		
+*/
+
+.bucketItem,
+.lockedBucket
+{
+	position: relative;
+	z-index: 1;
+
+	width: 82px;
+	height: 82px;
+	margin-bottom: 30px;
+
+	background: #F5F5F5;
+	
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+		
+	-webkit-transform-origin: 100% 0;
+	transform-origin: 100% 0;
+}
+
+	.bucketItem:after
+	{
+		position: absolute;
+		content: "";
+		bottom: 0;
+		left: 0;
+
+		width: 100%;
+		height: 0;
+		background: #FFF;
+		opacity: 0;
+
+		transition: opacity 0.6s, height 0.6s;
+	}
+
+	.bucketItem[data-locked="1"]:before
+	{
+		position: absolute;
+		content: "";
+		z-index: 10;
+		
+		top: 5px;
+		left: 5px;
+		width: 50%;
+		height: 50%;
+		
+		background: url("/img/theme/destiny/icons/icon_gear_lockeditem_corner.png") 0 0 no-repeat;
+		background-size: cover;
+		opacity: 0.5;
+	}
+
+	.bucketItem.equipFeedback:after
+	{
+		top: 0;
+
+		height: 100%;
+		opacity: 1;
+	}
+
+	.lockedBucket
+	{
+		width: 81px;
+		height: 81px;
+		background: rgba(0,0,0,0.2) url(/img/theme/destiny/bgs/bg_inventory_bucket_locked.png) 50% 50% no-repeat;
+		background-size: 40%;
+		outline: 1px solid rgba(245,245,245,0.7);
+	}
+
+	.bucketItem.notEquippable:after
+	{
+		position: absolute;
+		content: "";
+		display: block;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+
+		height: 82px;
+
+		opacity: 1;
+		background: rgba(0,0,0,0.4);
+	}
+
+		.BUCKET_BUILD .bucketItem.notEquippable:after
+		{
+			height: 118px;
+		}
+
+	.bucketsLeft .bucket.BUCKET_BUILD .bucketItem
+	{
+		width: 118px;
+		height: 118px;
+	}
+
+	.unequippedItems .bucketItem
+	{
+		opacity: 0.1;
+	}
+
+		.unequippedItems .bucketItem > .itemImage,
+		.unequippedItems .bucketItem > .topItemLevel
+		{
+			opacity: 0;
+		}
+
+	.unequippedItems .bucketItem.on
+	{
+		opacity: 1;
+	}
+
+		.unequippedItems .bucketItem.on > *
+		{
+			opacity: 1;
+		}
+
+	.bucketItem .itemImage
+	{
+		box-sizing: border-box;
+
+		width: 100%;
+		height: 100%;
+
+		border: 4px solid #DDD;
+		cursor: pointer;
+
+		background-size: contain;
+	}
+
+		.bucketItem.noDetails .itemImage
+		{
+			cursor: default;
+		}
+
+		.bucketItem.gridComplete .itemImage
+		{
+			border-color: rgb(255, 206, 31);
+		}
+
+	.bucketItem .stackSize,
+	.sidebarItem .icon .stackSize
+	{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		z-index: 5;
+				
+		padding: 3px;
+		min-width: 20px;
+		text-align: center;
+
+		background: #F5f5f5;
+		color: rgb(36,40,43);
+	}
+			
+	.sidebarItem .icon .stackSize
+	{
+		font-size: 11px;
+		padding: 2px 3px;
+		line-height: 13px;
+		min-width: 10px;
+	}
+
+	.bucketItem.unequipped
+	{
+		display: inline-block;
+		vertical-align: top;
+	}
+
+	.bucketItem .itemActions
+	{
+		display: none;
+		height: 0;
+		overflow: hidden;
+	}
+
+	.loggedIn .bucketItem .itemActions
+	{
+		position: absolute;
+		top: 76px;
+		right: 5px;
+		z-index: 10;
+
+		width: 64px;
+	}
+
+		.loggedIn .bucketItem .itemActions > div
+		{
+			padding: 3px 6px;
+			margin-bottom: 1px;
+			
+			color: #FFF;
+			text-align: left;
+			background: rgba(85, 85, 85, 0.75);
+
+			cursor: pointer;
+		}
+
+			.loggedIn .bucketItem .itemActions > div:hover
+			{
+				background: #FFF;
+				color: #000;
+			}
+
+.bucketsLeft .bucketItem.unequipped
+{
+	margin-left: 1px;
+	margin-bottom: 3px;
+}
+
+	.bucketsLeft .bucketItem.unequipped.on
+	{
+		margin-left: 2px;
+	}
+
+.bucketsRight .bucketItem.unequipped
+{
+	margin-right: 1px;
+	margin-bottom: 3px;
+}
+
+	.bucketsRight .bucketItem.unequipped.on
+	{
+		margin-right: 2px;
+		margin-bottom: 4px;
+	}
+
+.bucketItem:hover
+{
+	z-index: 5;
+}
+
+	.bucketItem:hover .itemImage
+	{
+		position: relative;
+		z-index: 4;
+	}
+			
+	.bucketItem .itemAction
+	{
+		position: absolute;
+		display: none;
+		top: 4px;
+		right: 4px;
+		bottom: 4px;
+		left: 4px;
+		z-index: 15;
+		
+		line-height: 54px;
+
+		text-align: center;
+		color: #FFF;
+		background: rgba(0,0,0,0.5);
+
+		font-size: 12px;
+
+		cursor: pointer;
+	}
+		
+		.bucket.BUCKET_BUILD .bucketItem .itemAction
+		{
+			line-height: 84px;
+		}
+
+		.bucketItem:hover .itemAction
+		{
+			display: block;
+		}
+
+	.bucketItem .topItemLevel
+	{
+		position: absolute;
+		bottom: 0;
+		right: 0;
+
+		padding: 3px 5px;
+		background: rgba(245,245,245,0.5);
+		color: rgba(26,30,36,1);
+		
+		font-size: 10px;
+		font-weight: 600;
+	}
+
+	.bucketItem:hover .destinyTooltip
+	{
+		z-index: 9;
+		visibility: visible;
+		opacity: 1;
+	}
+
+		.bucketsRight .bucketItem .destinyTooltip
+		{
+			right: -5px;
+			left: auto;
+		}
+
+		.bucketItem .equipFailureReasons 
+		{
+			padding: 10px 0;
+			color: red;
+		}
+
+
+
+
+/* 
+=========================	
+	QUESTS
+=========================		
+*/
+
+
+#content .destiny-quest
+{
+	position: relative;
+	min-height: 140px;
+	padding-left: 94px;
+	margin-top: 18px;
+	margin-bottom: 36px;
+	color: rgba(245, 245, 245, 0.65);
+	cursor: pointer;
+}
+		
+	#content .destiny-quest:nth-of-type(2n + 1)
+	{
+		clear: left;
+	}
+
+	.destiny-quest .background
+	{
+		position: absolute;
+		z-index: 1;
+
+		top: 0;
+		left: 30px;
+		right: 0;
+		bottom: 0;
+
+		opacity: 0;
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0.2) 0, rgba(0,0,0,0) 100);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0,rgba(0,0,0,0.4)), color-stop(100,rgba(0,0,0,0)));
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+		background: -o-linear-gradient(top,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+	}
+
+		#content .destiny-quest:hover
+		{
+			text-decoration: none;
+		}
+
+		.destiny-quest:hover .background
+		{
+			opacity: 0.5;
+		}
+
+	.destiny-quest > *:not(.background)
+	{
+		position: relative;
+		z-index: 2;
+	}
+
+	.destiny-quest > .icon
+	{
+		position: absolute;
+		top: -27px;
+		left: -30px;
+		width: 165px;
+		height: 165px;
+		padding: 0;
+		background-size: cover;
+		background-position: 0 0;
+	}
+
+	.destiny-quest .title
+	{
+		padding: 5px 18px;
+		font-weight: normal;
+		color: #F5F5F5;
+		font-size: 20px;
+	}
+
+	.destiny-quest .summary
+	{
+		padding: 0 18px 9px;
+	}
+
+		.destiny-quest .summary .desc
+		{
+			min-height: 21px;
+		}
+
+		html:not(.ja) .destiny-quest .desc
+		{
+			/* font-style: italic; */
+			font-weight: 200;
+		}
+
+		.destiny-quest .current-step
+		{
+			padding-top: 9px;
+			margin-top: 9px;
+				
+			font-weight: bold;
+		}
+
+
+		.destiny-quest .step
+		{
+			position: relative;
+
+			margin-bottom: 3px;
+
+			opacity: 0.25;
+			color: #F5F5F5;
+		}
+		
+			.destiny-quest .step.current-step
+			{
+				opacity: 1;
+			}
+
+			.destiny-quest .step .step-number
+			{
+				display: inline-block;
+
+				line-height: 30px;
+				width: 30px;
+
+				background: rgb(112, 42, 125);
+
+				text-align: center;
+			}
+
+			.destiny-quest .step .step-name-value
+			{
+				position: relative;
+				display: inline-block;
+				vertical-align: top;
+				overflow: hidden;
+				white-space: nowrap;
+
+				line-height: 36px;
+				height: 36px;
+
+				text-overflow: ellipsis;
+			}
+				
+			.destiny-quest .step-name
+			{
+					position: relative;
+					display: inline-block;
+
+					height: 36px;
+					width: calc(100% - 45px);
+					padding-left: 9px;
+					line-height: 36px;
+
+					font-weight: normal;
+					text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+			}
+
+				.destiny-quest .step-name-value
+				{
+					position: relative;
+					z-index: 2;
+				}
+
+
+
+
+
+
+/* 
+=========================	
+	BOUNTIES
+=========================		
+*/
+
+
+.destiny-bounty
+{
+	position: relative;
+	box-sizing: border-box;
+	vertical-align: top;
+	min-height: 84px;
+	padding: 1rem 3rem 1rem 5.5rem;
+	margin-bottom: 1rem;
+}
+
+	.destiny-bounty:nth-of-type(3n + 1)
+	{
+		clear: both;
+	}
+	.destiny-bounty .track-trigger 
+	{
+		position: absolute;
+
+		top: -5px;
+		right: 7px;
+		width: 20px;
+		height: 20px;
+
+		cursor: pointer;
+		background-size: cover;
+	}
+
+		.destiny-bounty .track-trigger.tracked
+		{
+			background-position: 0 -21px;
+		}
+				
+	.destiny-bounty > .itemName 
+	{
+		color: #F5F5F5;
+		font-size: 1.25rem;
+		width: 100%;
+		font-weight: 300;
+	}
+
+	.destiny-bounty .itemDesc {
+		width: 100%;
+		margin-top: 3px;
+
+		font-size: 1rem;
+		color: rgba(245, 245, 245, 0.5);
+		font-weight: 400;
+	}
+				
+	.destiny-bounty .summaryItemProgress
+	{
+		position: absolute;
+		top: 9px;
+		right: 9px;
+					
+		font-size: 15px;
+	}
+				
+	.destiny-bounty .summaryItemProgressBar
+	{
+		position: relative;
+		display: -ms-flex;
+		display: -webkit-flex;
+		display: flex;
+
+		height: 1.75rem;
+		margin-top: 0.5rem;
+		padding: 0 0.75rem;
+
+		border: 1px solid rgba(245, 245, 245, 0.1);
+
+		font-size: 0.9rem;
+		line-height: 1.75rem;
+	}
+
+		.destiny-bounty .summaryItemProgressBar.completed
+		{
+			background: rgb(255, 206, 31);
+		}
+					
+		.destiny-bounty .summaryItemProgressBar .barFill
+		{
+			position: absolute;
+			left: 0;
+			top: 0;
+			z-index: 1;
+
+			height: 100%;
+			max-width: 100%;
+			background: #5da569;
+		}
+
+		.progressBar .progressText
+		{
+			position: relative;
+			z-index: 2;
+
+			font-size: 0.85rem;
+		}
+
+		.destiny-bounty .summaryItemProgressBar .label
+		{
+			-ms-flex: 1 0;
+			-webkit-flex: 1 0;
+			flex: 1 0;
+
+			z-index: 2;
+
+			margin-top: -1px;
+		}
+
+		.destiny-bounty .summaryItemProgressBar .count
+		{
+			-ms-flex: 1 0;
+			-webkit-flex: 1 0;
+			flex: 1 0;
+
+			margin-top: -1px;
+
+			text-align: right;
+		}
+
+	.destiny-bounty .itemImage
+	{
+		position: absolute;
+			
+		left: 0;
+		width: 4rem;
+		height: 4rem;
+
+		border: 2px solid #fff;
+		background-size: cover;
+	}
+
+		.destiny-bounty:hover .emptyBountyAction
+		{
+			opacity: 1;
+			visibility: visible;
+		}
+
+		.destiny-bounty.completed .itemImage
+		{
+			border-color: rgb(255, 206, 31);
+		}
+
+	.destiny-bounty .available-at-vendor
+	{
+		margin-top: 9px;
+		font-size: 13px;
+		text-align: right;
+	}
+
+		.destiny-bounty .available-at-vendor a
+		{
+			color: #F5F5F5;
+		}
+
+	.destiny-bounty .completed-message
+	{
+		margin-top: 0.5rem;
+
+		color: rgb(255, 206, 31);
+	}
+
+	.destiny-bounty .incomplete-message
+	{
+		margin-top: 0.5rem;
+		
+		color: #F5F5F5;
+	}
+	
+
+.quest-detail
+{
+	position: relative;
+	overflow: hidden;
+
+	max-width: 960px;
+	min-height: 140px;
+	padding: 9px 9px 18px 0;
+	margin-bottom: 72px;
+
+	color: rgba(245, 245, 245, 0.65);
+}
+
+	.react-mobile .quest-detail
+	{
+		padding-left: 9px;
+	}
+		
+	.quest-detail:nth-of-type(2n + 1)
+	{
+		clear: left;
+	}
+
+	.quest-detail .background
+	{
+		position: absolute;
+		z-index: 1;
+
+		top: 0;
+		left: 30px;
+		right: 0;
+		bottom: 0;
+
+		opacity: 0.5;
+		background: -moz-linear-gradient(top,  rgba(0,0,0,0.2) 0, rgba(0,0,0,0) 100);
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0,rgba(0,0,0,0.4)), color-stop(100,rgba(0,0,0,0)));
+		background: -webkit-linear-gradient(top,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+		background: -o-linear-gradient(top,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+		background: -ms-linear-gradient(top,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+		background: linear-gradient(to bottom,  rgba(0,0,0,0.4) 0,rgba(0,0,0,0) 100);
+	}
+
+		.quest-detail:hover .background
+		{
+			opacity: 1;
+		}
+
+	.quest-detail > *:not(.background)
+	{
+		position: relative;
+		z-index: 2;
+	}
+
+	.quest-detail > .icon
+	{
+		position: absolute;
+
+		top: -36px;
+		left: -41px;
+		width: 270px;
+		height: 270px;
+		padding: 0;
+
+		background-size: cover;
+		background-position: 0 0;
+	}
+
+		.quest-detail.bounty > .icon
+		{
+			top: 0;
+			left: 0;
+			width: 176px;
+			height: 136px;
+			background-size: 96px;
+			background-repeat: no-repeat;
+			background-position: 50% 50%;
+		}
+
+		.react-mobile .quest-detail > .icon
+		{
+			display: none;
+		}
+
+	.quest-detail .title
+	{
+
+		font-size: 2.5rem;
+
+		color: #F5F5F5;
+	}
+
+	.quest-detail .summary
+	{
+		padding: 9px 36px 18px 169px;
+	}
+
+		.quest-detail .desc
+		{
+			font-size: 1rem;
+			font-weight: 200;
+		}
+
+			html:not(.ja) .quest-detail .desc
+			{
+				font-style: italic;
+			}
+
+		.quest-detail .rewards
+		{
+			width: 300px;
+			margin-top: 36px;
+		}
+
+			.quest-detail .reward
+			{
+				margin: 9px 0;
+			}
+
+				.quest-detail .reward .icon
+				{
+					position: relative;
+					display: inline-block;
+					vertical-align: top;
+
+					width: 30px;
+					height: 30px;
+
+					background-size: cover;
+					background-position: 50% 50%;
+					background-repeat: no-repeat;
+				}
+
+				.quest-detail .reward .values
+				{
+					display: inline-block;
+					vertical-align: top;
+
+					line-height: 30px;
+					height: 30px;
+					margin-left: 9px;
+				}
+
+					.quest-detail .reward .values .reward-value
+					{
+						float: right;
+					}
+
+		.quest-detail .current-step
+		{
+			padding: 36px;
+				
+			color: #F5F5F5;
+		}
+
+			.quest-detail .step-detail{
+				border-top: 1px solid rgba(245, 245, 245, .1);
+
+				padding-top: 18px;
+			}
+
+			.quest-detail.quest .current-step
+			{
+				padding-left: 54px;
+
+				background: url("/img/theme/destiny/icons/icon-quest.png") 0 26px no-repeat;
+				background-size: 36px;
+			}
+
+			.quest-detail .step-name
+			{
+				padding-left: 0;
+				
+				font-size: 1.375rem;
+				font-weight: normal;
+			}
+
+			.quest-detail .step-desc
+			{
+				padding: 18px 0;
+				margin-bottom: 9px;
+					
+				color: rgba(245, 245, 245, 0.65);
+			}
+
+			.quest-detail .objective
+			{
+				position: relative;
+
+				margin-bottom: 9px;
+				line-height: 30px;	
+					
+				color: rgba(245, 245, 245, 0.65);
+			}
+
+				.quest-detail .objective.complete
+				{
+					color: #F5F5F5;
+
+					opacity: 0.25;
+				}
+
+				.quest-detail .objective .checkbox
+				{
+					position: relative;
+					display: inline-block;
+					vertical-align: middle;
+
+					width: 30px;
+					height: 30px;
+					margin-right: 9px;
+
+					background: rgba(0, 0, 0, 0.25);
+					border: 1px solid rgba(245,245,245,0.5);
+				}
+
+					.quest-detail .objective.complete .checkbox:after
+					{
+						content: "";
+						position: absolute;
+
+						top: 2px;
+						right: 2px;
+						bottom: 2px;
+						left: 2px;
+
+						background: rgb(117, 183, 129);
+					}
+
+
+/* 
+=========================	
+	EVERVERSE
+=========================		
+*/
+
+
+
+body .eververse-action {
+	display: inline-block;
+
+	padding: 4px 8px;
+	margin-top: 5px;
+
+	background: rgb(87,108,165);
+	background: -moz-linear-gradient(left, rgba(87,108,165,1) 0%, rgba(76,97,155,1) 100%);
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(87,108,165,1)), color-stop(100%,rgba(76,97,155,1)));
+	background: -webkit-linear-gradient(left, rgba(87,108,165,1) 0%,rgba(76,97,155,1) 100%);
+	background: -o-linear-gradient(left, rgba(87,108,165,1) 0%,rgba(76,97,155,1) 100%);
+	background: -ms-linear-gradient(left, rgba(87,108,165,1) 0%,rgba(76,97,155,1) 100%);
+	background: linear-gradient(to right, rgba(87,108,165,1) 0%,rgba(76,97,155,1) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#576ca5', endColorstr='#4c619b',GradientType=1 );
+	border: 1px solid rgb(245,245,245);
+	cursor: pointer;
+	
+	color: rgb(245,245,245);
+	line-height: 20px;
+	font-size: 14px;
+}
+
+
+
+/* 
+=========================	
+	GEAR ITEM THUMB BOX
+
+	Note - 
+	The settings here are meant to be suggestions. If you want to mess with 
+	this stuff and change the sizes and stuff, go for it.
+=========================		
+*/
+
+.gear-item-box
+{
+	position: relative;
+	box-sizing: border-box;
+
+	padding: 1.125rem;
+
+	background: rgb(31, 37, 46);
+
+	text-align: center;
+}
+
+	.gear-item-box.owned
+	{
+		opacity: 0.25;
+	}
+
+	.gear-item-box:nth-of-type(3n + 1)
+	{
+		clear: left;
+	}
+
+.next-reward {
+	position: relative;
+}
+
+	.gear-item-box > a,
+	.next-reward > a
+	{
+		position: absolute;
+		z-index: 5;
+
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	.gear-item-box > .icon
+	{
+		position: relative;
+		display: inline-block;
+
+		width: 5.625rem;
+		height: 5.625rem;
+		margin-bottom: 1.125rem;
+
+		background-size: contain;
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		border: 3px solid #FFF;
+	}
+
+		.gear-item-box.owned > .icon:after
+		{
+			position: absolute;
+
+			top: -3px;
+			left: -3px;
+			bottom: -3px;
+			right: -3px;
+
+			background: rgba(0, 0, 0, 0.5);
+		}
+
+		.gear-item-box > .icon .stack-size
+		{
+			position: absolute;
+
+			bottom: 0;
+			right: 0;
+			padding: 1px 3px;
+
+			background: rgba(245, 245, 245, 0.8);
+
+			color: rgb(30, 36, 43);
+			font-size: 0.8rem;
+			font-weight: 500;
+		}
+
+	.gear-item-box .standardTitle
+	{
+		margin-top: 3px;
+	}
+
+	.gear-item-box .standardDesc .requirements
+	{
+		margin-top: 2px;
+		font-size: 12px;
+	}
+
+		.gear-item-box .standardDesc .requirements i
+		{
+			margin-right: 3px;
+		}
+
+		.gear-item-box.cant-afford .standardDesc .requirements
+		{
+			opacity: 0.4;
+		}

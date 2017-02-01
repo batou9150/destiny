@@ -1,0 +1,10 @@
+<template name='GroupMenu'>
+	<nav class="Sub_Nav">
+		<div class="nav_sub characterBar">
+			<a href="/group/{{groupId}}" class="ForumLink {{#if isActiveRoute 'group_detail'}}current{{/if}}">Clan</a>
+			<a href="/group/{{groupId}}/stats/raid" class="ForumLink {{#if isActiveRoute 'group_stats_raid'}}current{{/if}}">Raid</a>
+			<a href="https://www.bungie.net/fr/Clan/Forum/{{groupId}}" target="_blank" class="ForumLink">Forum du groupe</a>
+			<a href="https://www.bungie.net/fr/Clan/Leaderboards/{{groupId}}" target="_blank" class="ForumLink">Classements</a>
+		</div>
+	</nav>
+</template>
