@@ -3,6 +3,7 @@ Managing views for destiny clans
 
 ## install
 curl https://install.meteor.com/ | sh
+
 meteor npm install
 
 ## Configuration : settings.json
