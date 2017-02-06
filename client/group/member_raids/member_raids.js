@@ -13,6 +13,9 @@ Template.GroupCharacterStatsSingle.helpers({
 	character:function(){
 		return Template.instance().data.character;
 	},
+	quests: function () {
+		return {"PIC":{"status":""}};
+	},
 	raids: function () {
 		return Template.instance().asyncGroupCharacterSingle.get();
 	},
