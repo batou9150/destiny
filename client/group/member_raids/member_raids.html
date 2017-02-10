@@ -66,7 +66,7 @@
 	<td class='isCompleted {{#if raids.CR_HARD.isCompleted}}completed{{/if}}'>{{#if raids.CR_HARD.isCompleted}}&#10004;{{/if}}</td>
 	<td class='isCompleted {{#if raids.FM.isCompleted}}completed{{/if}}'>{{#if raids.FM.isCompleted}}&#10004;{{/if}}</td>
 	<td class='isCompleted {{#if raids.FM_HARD.isCompleted}}completed{{/if}}'>{{#if raids.FM_HARD.isCompleted}}&#10004;{{/if}}</td>
-	<td class='{{#if $eq quests.PIC.status finish}}powerLevelMax{{else}}{{#if $eq quests.PIC.status started}}powerLevelAssault{{else}}powerLevelOther{{/if}}{{/if}}'>{{quests.PIC.status}}</td>
+	<td class='{{#if pic}}powerLevelMax{{else}}powerLevelOther{{/if}}'>{{#if pic}}&#10004;{{/if}}</td>
 	</tr>
 </template>
 

@@ -104,6 +104,46 @@ Meteor.methods({
 		var data = null;
 		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
 	},
+	// GetAllItemsSummary :: Character list and Items List
+	'getAllItemsSummary': function (membership_id) {
+		console.log('Method.getAllItemsSummary for', membership_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/1/Account/'+membership_id+'/Items/');
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
+	// GetAccount
+	'getAccount': function (membership_id) {
+		console.log('Method.getAccount for', membership_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/1/Account/'+membership_id+'/');
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
+	// GetAccountSummary
+	'getAccountSummary': function (membership_id) {
+		console.log('Method.getAccountSummary for', membership_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/1/Account/'+membership_id+'/Summary/');
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
+	// GetVault
+	'getVault': function (account_id) {
+		console.log('Method.getVault for', account_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/1/MyAccount/Vault/', {accountId:account_id});
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
+	// GetGrimoireByMembership
+	'getGrimoireByMembership': function (membership_id) {
+		console.log('Method.getGrimoireByMembership for', membership_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/Vanguard/Grimoire/1/'+membership_id+'/');
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
 	// Character Summary
 	'getCharacterSummary': function (membership_id, character_id) {
 		console.log('Method.getCharacterSummary for', membership_id, character_id);
@@ -120,11 +160,35 @@ Meteor.methods({
 		var data = null;
 		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
 	},
+	// GetCharacterInventory
+	'getCharacterInventory': function (membership_id, character_id) {
+		console.log('Method.getCharacterInventory for', membership_id, character_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/1/Account/'+membership_id+'/Character/'+character_id+'/Inventory/');
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
+	// GetCharacterInventorySummary : equiped items
+	'getCharacterInventorySummary': function (membership_id, character_id) {
+		console.log('Method.getCharacterInventorySummary for', membership_id, character_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/1/Account/'+membership_id+'/Character/'+character_id+'/Inventory/Summary/');
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
 	// GetCharacterActivities
 	'getCharacterActivities': function (membership_id, character_id) {
 		console.log('Method.getCharacterActivities for', membership_id, character_id);
 		this.unblock();
 		var apiUrl = getApiUrl('/Destiny/1/Account/'+membership_id+'/Character/'+character_id+'/Activities/');
+		var data = null;
+		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
+	},
+	// GetCharacterProgression : Estime, Carnet
+	'getCharacterProgression': function (membership_id, character_id) {
+		console.log('Method.getCharacterProgression for', membership_id, character_id);
+		this.unblock();
+		var apiUrl = getApiUrl('/Destiny/1/Account/'+membership_id+'/Character/'+character_id+'/Progression/');
 		var data = null;
 		return Meteor.wrapAsync(apiCall)('GET', apiUrl, data);
 	}

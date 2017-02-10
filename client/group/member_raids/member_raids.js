@@ -14,7 +14,10 @@ Template.GroupCharacterStatsSingle.helpers({
 		return Template.instance().data.character;
 	},
 	quests: function () {
-		return {"PIC":{"status":""}};
+		return Template.instance().asyncCharacterQuests.get();
+	},
+	pic: function () {
+		return Template.instance().asyncCharacterPic.get();
 	},
 	raids: function () {
 		return Template.instance().asyncGroupCharacterSingle.get();
@@ -33,6 +36,52 @@ Template.GroupCharacterStatsSingle.helpers({
 		return _nbRaidCompleted;
 	}
 });
+
+var getQuests = function(data){
+	var res = {};
+	res["ALL"] = [];
+	for(var i=0; i < data.buckets.Invisible.length; i++){
+		var progression = data.buckets.Invisible[i];
+		if(progression.bucketHash == 2020263354){
+			res["PIC"] = progression;
+		}
+		else if(progression.bucketHash == 2155266255){
+			res["APP"] = progression;
+		}
+		else if(progression.bucketHash == 1256644900){
+			res["TEST"] = progression;
+		}
+		else if(progression.bucketHash == 1801258597){
+			res["Quest"] = progression;
+		}
+		else{
+			res["ALL"].push(progression.bucketHash);
+		}
+	}
+	return res;
+}
+
+var getWeapons = function(data){
+	var res = [];
+	for(var i=0; i < data.buckets.Equippable.length; i++){
+		if(data.buckets.Equippable[i].bucketHash == 1498876634 // BUCKET_PRIMARY_WEAPON
+			|| data.buckets.Equippable[i].bucketHash == 2465295065 // BUCKET_SPECIAL_WEAPON
+			|| data.buckets.Equippable[i].bucketHash == 953998645 // BUCKET_HEAVY_WEAPON
+			|| data.buckets.Equippable[i].bucketHash == 4046403665 // BUCKET_VAULT_WEAPONS
+			)
+			for(var j = 0; j < data.buckets.Equippable[i].items.length; j++)
+				res.push(data.buckets.Equippable[i].items[j]);
+	}
+	return res;
+}
+
+var getPic = function(weapons){
+	if(Array.isArray(weapons))
+		for(var i = 0; i < weapons.length; i++){
+			if(weapons[i].itemHash == 3742521821) return weapons[i];
+		}
+	return null;
+}
 
 var getRaids = function(data){
 	var res = {};
@@ -69,13 +118,42 @@ var getRaids = function(data){
 		else if(activity.activityHash == 1387993552){
 			res["FM_HARD"] = activity;
 		}
+		else if(activity.activityHash == 1387993552){
+			res["FM_HARD"] = activity;
+		}
 	}
 
 	return res;
 }
 
+var getRecordBooks = function(data){
+	var res = [];
+	for(var i=0; i < data.progressions.length; i++){
+		var progression = data.progressions[i];
+		if(progression.progressionHash == 3433868304){
+			res['rise_of_iron'] = progression;
+		}
+	}
+	return res;
+}
+
+var getPicGrimoreCard = function(data){
+	for(var i=0; i < data.cardCollection.length; i++){
+		var card = data.cardCollection[i];
+		if(card.cardId == 800401){
+			return true;
+		}
+	}
+	return false;
+}
+
 Template.GroupCharacterStatsSingle.onCreated(function () {
 	this.asyncGroupCharacterSingle = new ReactiveVar("Loading");
+	this.asyncCharacterItems = new ReactiveVar("Loading");
+	this.asyncCharacterQuests = new ReactiveVar("Loading");
+	this.asyncCharacterWeapons = new ReactiveVar("Loading");
+	this.asyncCharacterPic = new ReactiveVar(false);
+	this.asyncCharacterProgession = new ReactiveVar(false);
 	var self = this;
 	var membershipId = this.data.destinyAccount.userInfo.membershipId;
 	var characterId = this.data.character.characterId;
@@ -83,9 +161,33 @@ Template.GroupCharacterStatsSingle.onCreated(function () {
 		if (err) {
 			self.asyncGroupCharacterSingle.set({error: err});
 		} else {
+			// console.log('asyncGroupCharacterSingle', res);
 			res = getRaids(res.Response.data);
 			self.asyncGroupCharacterSingle.set(res);
-			// console.log('asyncGroupCharacterSingle', res);
+			return res;
+		}
+	});
+/*
+	Meteor.call('getCharacterInventory', membershipId, characterId, function (err, res) {
+		if (err) {
+			self.asyncCharacterItems.set({error: err});
+		} else {
+			// if(self.data.bungieNetUser.xboxDisplayName != 'Batoucada') return null;
+			self.asyncCharacterItems.set(res);
+			res = getWeapons(res.Response.data);
+			self.asyncCharacterWeapons.set(res);
+			res = getPic(res);
+			self.asyncCharacterPic.set(res);
+			return res;
+		}
+	});
+*/
+	Meteor.call('getGrimoireByMembership', membershipId, function (err, res) {
+		if (err) {
+			self.asyncCharacterProgession.set({error: err});
+		} else {
+			res = getPicGrimoreCard(res.Response.data);
+			self.asyncCharacterPic.set(res);
 			return res;
 		}
 	});
