@@ -148,7 +148,6 @@ Template.GroupMemberExoSingle.helpers({
 				}
 			}
 		}
-		console.log(_weapons);
 		return _weapons;
 	}
 });
@@ -157,13 +156,12 @@ Template.GroupMemberExoSingle.onCreated(function () {
 	this.asyncGroupMemberSingle = new ReactiveVar("Loading");
 	this.asyncWeapons = new ReactiveVar("Loading");
 	var self = this;
-	console.log('user', this.data);
 	Meteor.call('getGrimoireByMembership', this.data.GroupMemberResult.membershipId, function (err, res) {
 		if (err) {
 			self.asyncCharacterProgession.set({error: err});
 		} else {
-			console.log('grimoire', res.Response.data);
 			self.asyncWeapons.set(res.Response.data);
+			// console.log('grimoire', res.Response.data);
 			return res;
 		}
 	});
