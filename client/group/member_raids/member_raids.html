@@ -23,7 +23,6 @@
 	<td>Hard</td>
 	<td>Normal</td>
 	<td>Hard</td>
-	<td>Pic</td>
 	</tr>
 	{{#each GroupMemberResults}}
 		{{#if $eq membershipType 1}}
@@ -66,7 +65,6 @@
 	<td class='isCompleted {{#if raids.CR_HARD.isCompleted}}completed{{/if}}'>{{#if raids.CR_HARD.isCompleted}}&#10004;{{/if}}</td>
 	<td class='isCompleted {{#if raids.FM.isCompleted}}completed{{/if}}'>{{#if raids.FM.isCompleted}}&#10004;{{/if}}</td>
 	<td class='isCompleted {{#if raids.FM_HARD.isCompleted}}completed{{/if}}'>{{#if raids.FM_HARD.isCompleted}}&#10004;{{/if}}</td>
-	<td class='{{#if pic}}powerLevelMax{{else}}powerLevelOther{{/if}}'>{{#if pic}}&#10004;{{/if}}</td>
 	</tr>
 </template>
 

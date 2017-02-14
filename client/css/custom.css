@@ -32,3 +32,26 @@ table.group td.powerLevelAssault, table.group td.levelAssault {
 table.group td.powerLevelOther, table.group td.levelOther {
 	background-color:#ffc7ce;
 }
+
+nav.Nav_Sub_Top {
+	height:50px;
+}
+
+nav.Nav_Sub_Top div.nav-bucket{
+	height:50px;
+	line-height:50px;
+}
+
+nav.Nav_Sub_Top div.nav-bucket div.nav-bucket-items{
+	top:50px;
+}
+
+li#nav-items.center {
+	text-align: center;
+	font-size: 11px;
+}
+
+li#nav-items.center .nav-bucket-items {
+	width: 150px;
+	text-align: left;
+}

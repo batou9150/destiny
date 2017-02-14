@@ -1,10 +1,54 @@
 <template name='GroupMenu'>
-	<nav class="Sub_Nav">
-		<div class="nav_sub characterBar">
-			<a href="/group/{{groupId}}" class="ForumLink {{#if isActiveRoute 'group_detail'}}current{{/if}}">Clan</a>
-			<a href="/group/{{groupId}}/stats/raid" class="ForumLink {{#if isActiveRoute 'group_stats_raid'}}current{{/if}}">Raid</a>
-			<a href="https://www.bungie.net/fr/Clan/Forum/{{groupId}}" target="_blank" class="ForumLink">Forum du groupe</a>
-			<a href="https://www.bungie.net/fr/Clan/Leaderboards/{{groupId}}" target="_blank" class="ForumLink">Classements</a>
-		</div>
+	<nav class="Nav_Top Nav_Sub_Top">
+		<ul class="nav_top cf">
+			<li id="nav-items" class="center">
+				<div class="nav-bucket {{#if isActiveRoute 'group_detail'}}on{{/if}}">
+					<a href="/group/{{groupId}}">Clan</a>
+				</div>
+				<div class="nav-bucket {{#if isActiveRoute 'group_stats_raid'}}on{{/if}}" data-id="legend-wrapper">
+					<a href="/group/{{groupId}}/stats/raid">Raid</a>
+				</div>
+				<div class="nav-bucket {{#if isActiveRoute 'group_stats_exo'}}on{{/if}}" data-id="legend-wrapper">
+					<a href="/group/{{groupId}}/stats/exo/principales">Exo</a>
+					<div class="nav-bucket-items">
+						<a href="/group/{{groupId}}/stats/exo/principales" >Principal</a>
+						<a href="/group/{{groupId}}/stats/exo/speciales" >Spéciale</a>
+						<a href="/group/{{groupId}}/stats/exo/lourdes" >Lourdes</a>
+					</div>
+				</div>
+				<div class="nav-bucket " data-id="legend-wrapper">
+					<a href="https://www.bungie.net/fr/Clan/Forum/{{groupId}}" target="_blank" class="ForumLink">Forum du groupe</a>
+				</div>
+				<div class="nav-bucket " data-id="legend-wrapper">
+					<a href="https://www.bungie.net/fr/Clan/Leaderboards/{{groupId}}" target="_blank" class="ForumLink">Classements</a>
+				</div>
+			</li>
+		</ul>
 	</nav>
+</template>
+
+
+<template name='GroupHeader'>
+	<div class="header cf " id="groupHeader" contenteditable="false">
+		<div class="bg" style="background-image:url('https://www.bungie.net/img/Themes/Group_Guardians/struct_images/group_top_banner.jpg?cv=3983621215&amp;av=1476597941');margin:0;">
+			<div class="infoAll">
+				<div class="info cf">
+					<div>
+						<a href="https://www.bungie.net/fr/Clan/{{groupId}}" class="avatar" id="avatarPreview">
+							<img id="groupAvatar" src="https://www.bungie.net/img/profile/avatars/group/022.jpg?cv=3983621215&amp;av=1476597941" alt="Group Avatar">
+						</a>
+						<div class="content">
+							<h2>
+								<a href="https://www.bungie.net/fr/Clan/{{groupId}}" id="groupName" class="canEdit">{{name}}</a>
+									<span class="container_clanId">
+										[<span class="canEdit" id="clanId">{{clanCallsign}}</span>]
+									</span>
+							</h2>
+								<p class="motto" data-value="{{motto}}">« {{{motto}}} »</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 </template>
