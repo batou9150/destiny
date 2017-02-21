@@ -25,6 +25,7 @@
 		<tr>
 		<td>Gamertag</td>
 		<td>Grimoire Score</td>
+		<td>Ratio</td>
 		{{#each exotic in exotics}}
 			<td>
 			<a href="https://www.bungie.net/fr/Armory/Detail?item={{exotic.itemHash}}" target="_blank">
@@ -52,6 +53,7 @@
 	<tr>
 		<td>{{GroupMemberResult.destinyUserInfo.displayName}}</td>
 		<td>{{weapons.score}}</td>
+		<td class='{{#if $eq weapons.ratio 100}}completed{{/if}}'>{{weapons.ratio}}</td>
 		{{#each exotic in weapons.exotics}}
 		<td class='isCompleted {{#if exotic.completed}}completed{{/if}}'>{{#if exotic.completed}}&#10004;{{/if}}</td>
 		{{/each}}

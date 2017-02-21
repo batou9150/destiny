@@ -67,14 +67,17 @@ Template.GroupMemberExo.helpers({
 	*/
 	var filter = null;
   	if(Template.instance().exoType.get() == 'principales')
-  		filter = {itemSubType:{$in:[6,9,13,14]}};
+  		// filter = {itemSubType:{$in:[6,9,13,14]}};
+  		filter = {'weapons.bucketTypeHash':1498876634};
   	else if(Template.instance().exoType.get() == 'speciales')
-  		filter = {itemSubType:{$in:[7,11,12,17]}};
+  		// filter = {itemSubType:{$in:[7,11,12,17]}};
+  		filter = {'weapons.bucketTypeHash':2465295065};
   	else if(Template.instance().exoType.get() == 'lourdes')
-  		filter = {itemSubType:{$in:[8,10,18]}};
+  		// filter = {itemSubType:{$in:[8,10,18]}};
+  		filter = {'weapons.bucketTypeHash':953998645};
   	else
   		filter = {};
-    return Weapons.find(filter).fetch();
+    return Weapons.find(filter, {sort:{'weapons.bucketTypeHash':1, itemSubType:1}}).fetch();
   }
 });
 
@@ -139,15 +142,23 @@ Template.GroupMemberExoSingle.helpers({
 		var _weapons = Template.instance().asyncWeapons.get();
 		if(_weapons == 'Loading') return _weapons;
 		_weapons['exotics'] = Template.instance().data.exotics;
+		_weapons['total_exotics'] = _weapons['nb_exotics'] = 0;
 		for(var e = 0; e < _weapons['exotics'].length; e++){
 			_weapons['exotics'][e]['completed'] = false;
 			for(var g = 0; g < _weapons.cardCollection.length; g++){
 				var _card = _weapons.cardCollection[g];
 				if(_weapons['exotics'][e]['cardId'] == _card.cardId){
 					_weapons['exotics'][e]['completed'] = true;
+					_weapons['nb_exotics'] += 1;
 				}
 			}
+			if(_weapons['exotics'][e]['itemHash'] != 3688594190
+				&& _weapons['exotics'][e]['itemHash'] != 3490486524
+				&& _weapons['exotics'][e]['itemHash'] != 310074617){
+				_weapons['total_exotics'] += 1;
+			}
 		}
+		_weapons['ratio'] = Math.floor(100 * _weapons['nb_exotics'] / (_weapons['total_exotics']));
 		return _weapons;
 	}
 });

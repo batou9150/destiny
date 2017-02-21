@@ -10,9 +10,11 @@
 		{{#if error}}
 			<p>There was an error: {{error.errorType}} {{error.message}}!</p>
 		{{else}}
+		<p>
 			{{#each GroupSearchResults.Response.results}}
         		{{> GroupSearchSingle}}
 			{{/each}}
+		</p>
 		{{/if}} 
 	{{/with}}
 </template>
